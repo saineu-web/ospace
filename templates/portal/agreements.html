@@ -1,0 +1,26 @@
+{% extends "portal/base_portal.html" %}
+{% block portal %}
+<div class="portal-head"><div><h1>Agreements</h1><p>Read and e-sign each document. You'll get a PDF copy of everything you sign.</p></div></div>
+<div class="checklist">
+  {% for t, current, latest in rows %}
+  <div class="doc-row">
+    <div>
+      <h3>{{ t.title }} {% if not t.required %}<span class="pill pill-grey">Optional</span>{% endif %}
+        {% if current %}<span class="pill pill-ok">Signed</span>{% elif latest %}<span class="pill pill-warn">Updated — please re-sign</span>{% else %}<span class="pill pill-grey">Not signed</span>{% endif %}</h3>
+      <p class="desc">{{ t.summary }}</p>
+      {% if current %}<p class="small muted" style="margin:0">Signed by {{ current.typed_name }} on {{ current.signed_at|date:"M j, Y, g:i A" }} · Ref {{ current.reference }}</p>{% endif %}
+    </div>
+    <div class="doc-actions">
+      {% if current %}
+        <a class="btn btn-secondary btn-sm" href="{% url 'portal:agreement_pdf' current.pk %}" target="_blank">Download PDF</a>
+        <a class="btn btn-ghost btn-sm" href="{% url 'portal:agreement_view' current.pk %}">View</a>
+      {% else %}
+        <a class="btn btn-primary btn-sm" href="{% url 'portal:sign' t.slug %}">Read &amp; sign</a>
+      {% endif %}
+    </div>
+  </div>
+  {% empty %}
+  <div class="card"><p class="muted">No agreements have been configured yet.</p></div>
+  {% endfor %}
+</div>
+{% endblock %}

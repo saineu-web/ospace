@@ -1,0 +1,64 @@
+{% extends "portal/base_portal.html" %}
+{% block portal %}
+<div class="portal-head">
+  <div>
+    <h1>Welcome, {{ user.first_name|default:"there" }}</h1>
+    <p>Your application status: <span class="pill {% if driver.status == 'approved' %}pill-ok{% elif driver.status == 'submitted' %}pill-purple{% elif driver.status == 'changes_requested' or driver.status == 'rejected' %}pill-bad{% else %}pill-grey{% endif %}">{{ driver.get_status_display }}</span></p>
+  </div>
+  {% if driver.status == 'approved' %}<a class="btn btn-primary" href="{% url 'web:app' %}">Set up the driver app &rarr;</a>{% endif %}
+</div>
+
+{% if driver.review_message %}
+<div class="banner {% if driver.status == 'approved' %}ok{% elif driver.status == 'rejected' %}bad{% else %}warn{% endif %}"><div><strong>Message from Ospace:</strong> {{ driver.review_message|linebreaksbr }}</div></div>
+{% endif %}
+
+{% if driver.status == 'submitted' %}
+<div class="banner info"><div><strong>We're reviewing your application.</strong> You'll get an email as soon as there's news, usually within a few business days. You can still update your documents if something changes.</div></div>
+{% elif driver.status == 'approved' %}
+<div class="banner ok"><div><strong>You're approved!</strong> Install the ADROIT Driver app, enter service number {{ SITE.service_number }}, and start accepting rides near you. Welcome to the team.</div></div>
+{% endif %}
+
+<div class="card">
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px"><h3 style="margin:0">Onboarding progress</h3><strong>{{ driver.overall_pct }}%</strong></div>
+  <div class="progress"><span style="width:{{ driver.overall_pct }}%"></span></div>
+</div>
+
+<div class="checklist">
+  <div class="check-row">
+    <div class="ico {% if driver.profile_pct == 100 %}done{% elif driver.profile_pct > 0 %}partial{% endif %}"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg></div>
+    <div><h3>Complete your profile</h3><p>{% if driver.profile_pct == 100 %}All personal, license, vehicle and insurance details are in.{% else %}{{ driver.profile_pct }}% complete · {{ missing|length }} field{{ missing|length|pluralize }} still needed.{% endif %}</p></div>
+    <a class="btn btn-secondary btn-sm" href="{% url 'portal:profile' %}">{% if driver.profile_pct == 100 %}Edit{% else %}Continue{% endif %}</a>
+  </div>
+  <div class="check-row">
+    <div class="ico {% if docs.required and docs.uploaded == docs.required and docs.rejected == 0 %}done{% elif docs.uploaded %}partial{% endif %}"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6M7 3h7l5 5v13H7V3zm7 0v5h5"/></svg></div>
+    <div><h3>Upload your documents</h3><p>{{ docs.uploaded }} of {{ docs.required }} required documents uploaded{% if docs.approved %} · {{ docs.approved }} approved{% endif %}{% if docs.rejected %} · <strong style="color:var(--bad)">{{ docs.rejected }} need re-upload</strong>{% endif %}.</p></div>
+    <a class="btn btn-secondary btn-sm" href="{% url 'portal:documents' %}">{% if docs.uploaded == docs.required %}Review{% else %}Upload{% endif %}</a>
+  </div>
+  <div class="check-row">
+    <div class="ico {% if agreements.required and agreements.signed == agreements.required %}done{% elif agreements.signed %}partial{% endif %}"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.2 4.8l4 4L8 20H4v-4L15.2 4.8zM3 21h18"/></svg></div>
+    <div><h3>Sign the driver agreements</h3><p>{{ agreements.signed }} of {{ agreements.required }} required agreements signed.</p></div>
+    <a class="btn btn-secondary btn-sm" href="{% url 'portal:agreements' %}">{% if agreements.signed == agreements.required %}View{% else %}Sign{% endif %}</a>
+  </div>
+  <div class="check-row">
+    <div class="ico {% if driver.status == 'approved' %}done{% elif driver.status == 'submitted' %}partial{% endif %}"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+    <div><h3>Submit for review</h3><p>{% if driver.status == 'draft' or driver.status == 'changes_requested' %}{% if driver.can_submit %}Everything's in. Send your application to our team.{% else %}Unlocks once the three steps above are complete.{% endif %}{% elif driver.status == 'submitted' %}Submitted {{ driver.submitted_at|date:"M j, Y" }}. We're on it.{% else %}{{ driver.get_status_display }}{% if driver.reviewed_at %} on {{ driver.reviewed_at|date:"M j, Y" }}{% endif %}.{% endif %}</p></div>
+    {% if driver.status == 'draft' or driver.status == 'changes_requested' %}
+    <form method="post" action="{% url 'portal:submit' %}" style="margin:0">{% csrf_token %}<button class="btn btn-primary btn-sm" type="submit" {% if not driver.can_submit %}disabled{% endif %}>Submit application</button></form>
+    {% endif %}
+  </div>
+</div>
+
+<div class="grid grid-2">
+  <div class="card">
+    <h3>Recent activity</h3>
+    <ul class="activity">
+      {% for a in activity %}<li><time>{{ a.created_at|date:"M j, g:i A" }}</time><span>{{ a.action }}{% if a.detail %} — <span class="muted">{{ a.detail }}</span>{% endif %}</span></li>{% empty %}<li class="muted">Nothing yet.</li>{% endfor %}
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Need a hand?</h3>
+    <p class="muted small">Our team is happy to walk you through any step.</p>
+    <p style="margin:0"><a class="btn btn-secondary btn-sm" href="{{ SITE.phone_href }}">Call {{ SITE.phone }}</a> <a class="btn btn-ghost btn-sm" href="mailto:{{ SITE.email }}">Email us</a></p>
+  </div>
+</div>
+{% endblock %}

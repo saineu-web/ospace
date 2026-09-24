@@ -1,0 +1,231 @@
+Privacy Policy explains our practices regarding the collection, use and disclosure of information that Ospace Advanced Technologies, Inc.
+
+receive when users use our Services. Ospace Advanced Technologies, Inc. and its affiliates and subsidiaries (collectively, “Ospace”, “we”, “us”, or “our”) has created this privacy policy (“Privacy Policy”) in order to describe to you our practices regarding the Personal Information (defined below) we collect from you, our user, (“you” or “your”) of our website, www.ospace.com (“Site”), our mobile application(s) (collectively, the “Application”), and any related services provided through either (together with the Site and Application, the “Services”).
+
+Capitalized terms not defined in this Privacy Policy will have the meaning ascribed to them in our Terms of Use (“Terms of Use”). So we are clear on the terminology we use, “Personal Information” means information that allows someone to identify or contact an individual, including, for example, your contact information (i.e., your name, address, email address, and/or telephone number), photograph, payment information, and any other non-public information that is associated with or linked to that information.
+
+Personal Information includes your Personal Information and/or the Personal Information of others, including Rider(s), that you provide to us.
+
+“Anonymous Information” means information that is not associated with or linked to Personal Information, and does not, by itself, permit someone to identify an individual.
+
+We collect Personal Information and Anonymous Information as described in this Privacy Policy. A Note to Users Outside of the United States.
+
+IF YOU ARE A NON U. S. USER OF THE SITE, APPLICATION, OR SERVICES, BY USING OUR SITE, APPLICATION OR SERVICES OR SUBMITTING INFORMATION THROUGH OUR SITE, APPLICATION OR SERVICES, YOU ACKNOWLEDGE AND AGREE THAT PERSONAL INFORMATION MAY BE PROCESSED FOR THE PURPOSES IDENTIFIED IN THIS PRIVACY POLICY. IN ADDITION, PERSONAL INFORMATION MAY BE PROCESSED BY US OR ON OUR BEHALF IN THE COUNTRY WHERE IT WAS COLLECTED AS WELL AS OTHER COUNTRIES (INCLUDING THE UNITED STATES) WHERE LAWS REGARDING PROCESSING OF PERSONAL INFORMATION MAY BE LESS STRINGENT THAN THE LAWS IN YOUR COUNTRY. BY PROVIDING YOUR INFORMATION, YOU CONSENT TO SUCH TRANSFER. Children.
+
+THE APPLICATION,SITE AND SERVICES ARE NOT DIRECTED TO CHILDREN AND CHILDREN ARE NOT ELIGIBLE TO USE OUR SITES AND SERVICES.
+
+Protecting the privacy of children is very important to us.
+
+In connection with your use of the Services, you may have the option to provide us with certain Personal Information of Riders, such as the Rider’s first and last name, phone number and/or photograph. IN THE EVENT THAT SUCH RIDER IS UNDER 13 YEARS OF AGE, BY PROVIDING SUCH PERSONAL INFORMATION, YOU (A) REPRESENT AND WARRENT THAT YOU ARE SUCH RIDER'S PARENT OR GUARDIAN OR THAT YOU HAVE ALL REQUISITE AUTHORITY FROM SUCH RIDER'S PARENT OR GUARDIAN TO PROVIDE US WITH SUCH PERSONAL INFORMATION AS SET FORTH IN THIS PRIVACY POLICY, (B) HEREBY CONSENT TO OUR COLLECTION, USE AND PROCESSING OF THIS AND OTHER PERSONAL INFORMATION AS DESCRIBED IN THIS PRIVACY POLICY (ON BEHALF OF YOURSELF OR SUCH RIDER'S PARENT OR GUARDIAN), (C) ACKNOWLEDGE AND AGREE THAT WE WILL DISCLOSE CERTAIN OF SUCH RIDER'S INFORMATION TO THE DRIVERS WHO PROVIDE YOUR RIDES AND PARTICIPANTS WHO PARTICIPATE IN SUCH RIDES.
+
+Drivers will have access to the following information about Riders, including Riders who are children: a masked version of a Rider’s phone number (the actual phone number will not be visible to Drivers), the Rider’s first and last name, the Rider’s photo, as well as information regarding such Rider’s schedule (e.g., the activities that the Account Passenger is engaged in immediately prior to or after the Ride).
+
+If you choose to provide your Rider’s phone number, Drivers will be able to communicate directly with Riders, including children under the age of 13, over the course of providing a Ride, via voice call and/or text message (through the masked phone number).
+
+In addition, Participants will be able to see information about Riders, including Riders who are children, such as such Riders’ first and last name, and photo. Through the use of the Services, we may also collect indirect location information regarding Riders, including Riders who are children, via the location information we collect from Drivers during a Ride that is associated with such Riders. Our Enterprise Customers may be able to arrange Rides for your child through the Services.
+
+By using the Services, in connection with such Enterprise Customers arranging Rides for your child, you acknowledge and agree (i) that we may collect Personal Information of your child from such Enterprise Customers and use and process such Personal Information as described herein and (ii) that we may disclose your child’s Personal Information to such Enterprise Customers to such Enterprise Customers. IN GENERAL, OUR SERVICES ARE DESIGNED FOR PARENTS, GUARDIANS, AND OTHER ADULTS WHO ARE AUTHORIZED TO USE THE SERVICES IN ORDER TO ARRANGE AND PROVIDE RIDES, AND ONLY PARENTS, GUARDIANS, AND OTHER SUCH ADULTS SHOULD USE OUR SERVICES. INFORMATION COLLECTEDPersonal InformationIn general, the Personal Information we gather enables us to provide the Services to you.
+
+We require certain Personal Information when you sign up for our Services, including your full name, email address, phone number, home address, and password.
+
+We may also collect billing or payment related information so we can process transactions via the Services and determine your eligibility to be a Driver, though some of this information may be transmitted directly to our payment processor or other third party service provider. We collect any information that you provide to us voluntarily, such as any information, including Personal Information, that you add to your account, We also collect Personal Information from you when you make or accept requests for Rides and otherwise use our Services, such as Ride Description and information about your Riders, such as Riders’ first and last name, phone number and/or photograph.
+
+Users may provide emergency contact information for their account, including such contact’s full name, phone number, and relationship. When you send an email or otherwise communicate with Ospace, we may retain those communications in order to process your inquiries, respond to your requests and improve our Services.
+
+When you download the Application, we may collect your device type, your wireless carrier, and a device ID and we associate this with your Personal Information. Ospace collects certain information from Drivers during the Driver on-boarding process, such as the Driver’s: driver’s license information, expiration, proof of insurance, vehicle registration, etc. In addition, we collect location-based information through the Application, including, but not limited to geographic areas and other traffic and transportation-related data. If you are a Driver, (i) in situations when a Ride is imminent, we may collect a single GPS coordinate when you claim such a Ride to assure that you will be able to arrive at the pickup location on time, and (ii) we collect your GPS coordinates from the time that you check in for a Ride until such Ride has been completed. Most GPS enabled mobile devices can define one’s location to within 50 feet. The location information with respect to a particular Ride will be associated with that Ride and with the Arranger and Rider(s) of that Ride.
+
+You can choose not to provide us with certain information by disabling this functionality on your mobile device, but this may limit the features of the Application or Services you are able to use.
+
+For example, Drivers cannot provide Rides with this functionality disabled. We collect this information for various purposes – including improving and enhancing our Services and for our internal business purposes.
+
+If you participate in a contest or giveaway with us, we may ask you for your email address and/or home number (to notify you if you win or not).
+
+We may also ask for first and last names, and sometimes post office addresses to verify your identity. In some situations we may need additional information as a part of the entry process, such as a prize selection choice. These contests are voluntary.
+
+We recommend that you read the rules for each contest that you enter.
+
+We may record calls placed or received via the Application (such as between Drivers and Arrangers) and such calls may be recorded and stored by us. We use this information to facilitate the Services, investigate User complaints and claims, and otherwise provide and improve the Services.
+
+Drivers may upload photographs and a short bio, which may contain Personal Information and will be visible to Arrangers and Participants.
+
+We may conduct comprehensive background checks on Drivers which may include fingerprinting, drug screening, verification of medical examinations, and/or TB skin tests and will collect certain of the information you provide as part of these checks, such as criminal background checks.
+
+We collect this information to provide and improve the Services and if you fail to provide any information related to such screenings, you may not be able to perform Rides.
+
+Ospace (directly or through a service provider) may collect driving and other location-based data while the Application is open. For example, Ospace utilizes ZenDrive (or such other driving behavior monitor provider) to monitor Driver behavior and check for certain crash predictors and may use this information to provide feedback on your Rides and improve the Services.
+
+The information collected by ZenDrive will be used in accordance with their Privacy Policy located here.
+
+Ospace (directly or through a service provider) may collect certain information relating to calls and/or text messages/SMS communications placed via the App.
+
+For example, we currently utilize Firebase to allow users to place such calls and/or text messages/SMS communications via the App.
+
+The information collected by Firebase will be used in accordance with their Privacy Policy located here. For Affiliates, we collect certain information via business-specific landing pages and may use that information as described in this Privacy Policy. If you provide us feedback or contact us via email, we will collect your name and email address, as well as any other content included in the email, in order to send you a reply.
+
+To the extent you post information in comments in a publicly available area of our Services (e.g., feedback and reviews on the Driver and the Ride), it will be available to other users of the Services who may use it at their discretion. Please be thoughtful about the information that you post in any forums or comments.
+
+Information Collected by Our Servers. To make our Site, Application and Services more useful to you, our servers (which may be hosted by a third party service provider) collect information from you, including your browser type, operating system, Internet Protocol (“IP”) address (a number that is automatically assigned to your computer when you use the Internet, which may vary from session to session), domain name, and/or a date/time stamp for your visit. Log Files.
+
+As is true of most websites, we gather certain information automatically and store it in log files.
+
+This information includes IP addresses, browser type, Internet service provider (“ISP”), referring/exit pages, operating system, date/time stamp, and clickstream data. We use this information to analyze trends, administer the Services, track users’ movements around the Services, gather demographic information about our user base as a whole, and better tailor our Services to our users’ needs.
+
+For example, some of the information may be collected so that when you visit the Application or the Services again, it will recognize you and the information could then be used to show you advertisements and other information appropriate to your interests. Cookies. Like many online services, we use cookies to collect information. “Cookies” are small pieces of information that a website sends to your computer’s hard drive while you are viewing the website.
+
+We may use both session Cookies (which expire once you close your web browser) and persistent Cookies (which stay on your computer until you delete them) to provide you with a more personal and interactive experience within our Services and for showing you advertisements.
+
+This type of information is collected to make the Services more useful to you and to tailor the experience with us to meet your special interests and needs.
+
+If you decide at any time that you no longer wish to accept Cookies from our Services for any of the purposes described above, then you can instruct your browser, by changing its settings, to stop accepting Cookies or to prompt you before accepting a Cookie from the websites you visit.
+
+Consult your browser’s technical information. If you do not accept Cookies, however, you may not be able to use all portions of the Services or all functionality of the Services. Pixel Tags.
+
+In addition, we use “Pixel Tags” (also referred to as clear Gifs, Web beacons, or Web bugs). Pixel Tags are tiny graphic images with a unique identifier, similar in function to Cookies, that are used to track online movements of Web users. In contrast to Cookies, which are stored on a user’s computer hard drive, Pixel Tags are embedded invisibly in Web pages. Pixel Tags also allow us to send email messages in a format users can read, and they tell us whether emails have been opened to ensure that we are sending only messages that are of interest to our users.
+
+We may use this information to reduce or eliminate messages sent to a user.
+
+We do not tie the information gathered by Pixel Tags to our users’ Personal Information. Collection of Information by Advertisers.
+
+We may use third parties to show you ads on the Site and Application. Certain third parties may automatically collect information about your visits to this and other websites, your IP address, your ISP, the browser you use to visit our Services (but not your name, address, email address or telephone number).
+
+They do this by using Cookies or other technologies.
+
+Information collected may be used, among other things, to deliver advertising targeted to your interests and to better understand the usage and visitation of our Services and the other sites tracked by these third parties.
+
+This policy does not apply to, and we are not responsible for, Cookies or pixel tags in third party ads, and we encourage you to check the privacy policies of advertisers and/or ad services to learn about their use of Cookies and other technologies.
+
+If you would like more information about this practice and to know your choices about not having this information used by these companies, click here: http://www.aboutads.info/choices or http://www.networkadvertising.org.
+
+How We Respond to Do Not Track Signals. We do not currently respond to “do not track” signals or other mechanisms that might enable consumers to opt out of tracking on our Site. Mobile Services. We may also collect non-personal information from your mobile device if you have downloaded our Application to your mobile device.
+
+This information is generally used to help us deliver the most relevant information to you. Examples of information that may be collected and used include your geographic location, how you use our mobile services(s), and information about the type of device you use.
+
+In addition, in the event our Application crashes on your mobile device, we will receive information about your mobile device model software version and device carrier, which allows us to identify and fix bugs and otherwise improve the performance of our Application.
+
+This information is sent to us as aggregated information and is not traceable to any individual and cannot be used to identify an individual. Analytics Services and Interest-Based Advertising. In addition to the tracking technologies we place, other companies may set their own cookies or similar tools when you visit our Site or Application.
+
+This includes third party analytics services, including but not limited to Google Analytics (“Analytics Services”), that we engage to help analyze how users use the Site and Application, as well as third parties that deliver content or offers.
+
+We may receive reports based on these parties’ use of these tools on an individual or aggregate basis. We use the information we get from Analytics Services to improve our Site, Application and Services. The information generated by the Cookies or other technologies about your use of our Site, Application and Services (the “Analytics Information”) is transmitted to the Analytics Services.
+
+The Analytics Services use Analytics Information to compile reports on user activity. The Analytics Services may also transfer information to third parties where required to do so by law, or where such third parties process Analytics Information on their behalf.
+
+Each Analytics Services’ ability to use and share Analytics Information is restricted by such Analytics Services’ Terms of Use and Privacy Policy. By using our Site, Application and Services, you consent to the collection, use and processing of data about you by Analytics Services in the manner and for the purposes set out above.
+
+For a full list of Analytics Services, please contact us at legal@ospacegroup.com.
+
+We may also partner with ad companies to support our marketing efforts, including by serving you ads better tailored to your likely interests.
+
+If you don’t want to take advantage of these services, you may be able to opt-out by visiting http://www.aboutads.info/ or http://networkadvertising.org/choices/. Contacts.
+
+If you permit Adroit to access the address book on your device through the permission system used by your mobile platform in order to invite individuals in your address book to participate in a carpool, "refer-a-friend" promotion, or other similar program, we may access names and contact information from your address book to facilitate invitations and social interactions that you initiate through our Services and for other purposes described in this Privacy Policy or at the time of consent or collection.
+
+In addition, if you initiate a Carpool through the Services, we may collect the first and last names and either their phone numbers or email addresses and we may use that information as described in this Privacy Policy.
+
+USE OF COLLECTED INFORMATIONHow we use the Personal Information we collect Our primary purpose in collecting Personal Information is to provide you with the Services.
+
+We may use Personal Information to:Facilitate the creation of and administer your account;To make calls and send text messages/SMS communications to you, either from Adroit or other Users, including Drivers and Arrangers, in order to perform and improve the Services and to store such calls and text messages/SMS communications; If you are a Driver, to share information with you about Rides you have claimed and other Rides that may be available for you to claim;Determine your eligibility to participate in the Services;Assist in the arrangement of Rides;Provide the Services and customer support you request;Process transactions and send notices about your transactions;Resolve disputes, collect fees, and troubleshoot problems;Prevent potentially prohibited or illegal activities, and enforce our Terms of Use;Market our products and services (and those of third parties) to you that we believe may be of interest to you;Customize, measure, and improve our Services, Site and Application; or Send you service update notices and administrative emails, and information based on your communication preferences.
+
+We may also use Personal Information to create Anonymous Information records by excluding information that makes the information personally identifiable to you.
+
+You can opt out of receiving certain communications from the Services such as our newsletter by clicking the “Unsubscribe” link at the bottom of each email or emailing us at legal@ospacegroup.com.
+
+Please note that even if you unsubscribe or opt-out, we may still send you Application and Services related communications (e.g., emails related to your Rides or comments).
+
+Anonymous Information We reserve the right to use Anonymous Information for any purpose and disclose Anonymous Information to third parties in our sole discretion.
+
+HOW WE SHARE INFORMATIONHow we share Personal Information with UsersAs you know, our Services are designed to connect Arrangers and Drivers for Rides.
+
+As such, if you are an Arranger, we must share Personal Information about you and the Riders to Drivers and if you are a Driver, we must share some of Personal Information with the Arranger.
+
+You hereby authorize all such disclosures.
+
+We request that Users use this information for the purposes of the provision of the obtaining or provide the Ride and not store this information beyond the duration of the individual Ride provided.
+
+This information does not include billing information.
+
+If you invite Participants to participate in a Ride, such Participants will have the ability to see certain information in your account and certain information about the Ride, such as Driver information, Driver photograph and bio, details about the Ride, Arranger’s name, Riders’ names.
+
+To the extent you or any other Users post information in comments in a publicly available area of our Services (e.g., Driver and Ride feedback and reviews), it will be available to other users of the Services who may use it at their discretion. Please be thoughtful about the information that you post in any forums or comments.
+
+Please remember that this Privacy Policy addresses only our use and disclosure of information we collect from and/or about you or your Rider(s) (including children) (as applicable).
+
+When you authorize us to disclose information to other Users, the use and disclosure restrictions contained in this Privacy Policy will not apply to them. While we encourage them to comply with our data protection requirements, we will not be responsible if these Users fail to comply with this Privacy Policy with respect to your information.
+
+We do not control the privacy policies or actions of third parties, including Users. Any complaints or inquiries regarding use of your information by a User should be addressed directly to the User in question.
+
+How we share Personal Information with other partiesIn addition to the ways we share Personal Information as described elsewhere in this Privacy Policy, we may share Personal Information with other third parties in the following manners:Third Parties Designated by You. When you use the Services, the Personal Information provided to us under this Privacy Policy will be shared with the third parties that you authorize to receive such information, including as set forth above. Third Party Service Providers.
+
+We may share Personal Information with our third party service providers that help us provide Services that we offer. Payment Processing Information.
+
+For online payments and/or Automated Clearing House (ACH) payouts, we use the payment services of Stripe. We do not process, record or maintain your credit card or bank account information or other related information necessary to process payments.
+
+For more information on how payments are handled, or to understand the data security and privacy afforded such information, please see https://stripe.com/us/privacy. Governmental Entities. Adroit may be asked or required by certain applicable governmental entities to report certain information about Drivers and your Rides. If you live in California, no further consent from you is needed for the disclosure of this information. Affiliates.
+
+We may share Personal Information with our parent company, subsidiaries, joint ventures, or other companies under a common control (“Corporate Affiliates”), if we have such Corporate Affiliates in the future, in which case we will require our Corporate Affiliates to honor this Privacy Policy. Corporate Restructuring.
+
+We may share some or all of Personal Information in connection with or during negotiation of any merger, financing, acquisition or dissolution, transaction or proceeding involving sale, transfer, divestiture, or disclosure of all or a portion of our business or assets. In the event of an insolvency, bankruptcy, or receivership, Personal Information may also be transferred as a business asset.
+
+If another company acquires our company, business, or assets, that company will possess the Personal Information collected by us and will assume the rights and obligations regarding Personal Information as described in this Privacy Policy.
+
+Other Disclosures. Regardless of any choices you make regarding Personal Information (as described below), we may disclose Personal Information if we believe in good faith that such disclosure is necessary (a) in connection with any legal investigation; (b) to comply with relevant laws or to respond to subpoenas, warrants or other requests for information served on us; (c) to protect or defend our rights or property or other users of the Services; and/or (d) to investigate or assist in preventing any violation or potential violation of the law, this Privacy Policy, or our Terms of Use.
+
+Disclosure to Third Party Companies.
+
+We may enter into agreements with companies that desire access to Personal Information that we collect from you. AS A RESULT, WE MAY PROVIDE PERSONAL INFORMATION TO SUCH THIRD PARTY COMPANIES. BECAUSE WE DO NOT CONTROL THE PRIVACY PRACTICES OF THESE THIRD PARTY COMPANIES, YOU SHOULD READ AND UNDERSTAND THEIR PRIVACY POLICIES. NOTICE TO TEXAS RESIDENTS – YOUR TEXAS PRIVACY RIGHTS (AS PROVIDED BY TEXAS CIVIL CODE SECTION)If we share Personal Information WITH third parties for their own direct marketing purposes, then you have the right to receive information about the ENTITIES to which we have disclosed such information.
+
+To submit your written request, please send it to us at legal@ospacegroup.com and put the following words in the subject line of the email: "Texas Privacy Request" Within 30 days after receipt of your request, we will send you a list of the categories of Personal Information that we disclosed to third parties for their direct marketing purposes during the immediately preceding calendar year, along with the names and addresses such third parties, if any.
+
+Please note that the TEXAS "Shine the Light" law does not cover all categories of information that may be collected and disclosed or shared, and our policy relates only to information covered by the law. Please note that we are required to respond to one request per California user each year and we are not required to respond to requests made by means other than through this email address. Anonymous InformationWe reserve the right to disclose Anonymous Information, including publicly, without restriction.
+
+YOUR CHOICES REGARDING YOUR INFORMATION. Email Communications.
+
+We may periodically send you free newsletters and emails that directly promote the use of our Application or Services. When you receive newsletters or promotional communications from us, you may indicate a preference to stop receiving further communications from us and you will have the opportunity to “opt-out” by following the unsubscribe instructions provided in the email you receive or by contacting us directly (please see contact information below).
+
+Despite your indicated email preferences, we may send you service related communications, including notices of any updates to our Terms of Use or Privacy Policy, which you may not opt out of. Text Communications. You may opt-out from calls and text message/SMS communications that we send by emailing legal@ospacegroup.com, but will no longer be able to use the Services as a Driver or Arranger if you do so, as such communications are necessary for providing certain of the Services.
+
+Notwithstanding any opt-out, we may contact you with any method available (e.g., call, text message/SMS communication, or email) in the case of an emergency.
+
+Cookies: If you decide at any time that you no longer wish to accept Cookies from our Services for any of the purposes described above, then you can instruct your browser, by changing its settings, to stop accepting Cookies or to prompt you before accepting a Cookie from the websites you visit.
+
+Consult your browser’s technical information. If you do not accept Cookies, however, you may not be able to use all portions of the Services or all functionality of the Services. Changing or Deleting Personal Information.
+
+You may review, update, or correct the Personal Information in your account by editing your account or contacting us. You may request deletion of Personal Information provided to us, and we will use commercially reasonable efforts to honor your request, but please note that we may be required to keep such information and not delete it (or to keep this information for a certain time, in which case we will comply with your deletion request only after we have fulfilled such requirements). When we delete any information, it will be deleted from the active database, but may remain in our archives.
+
+We may also retain your information for fraud or similar purposes. Please remember, however, if we have already disclosed some of such Personal Information to third parties, we cannot access that Personal Information any longer and cannot force the deletion or modification of any such information by the parties to whom we have made those disclosures.
+
+Certain information is necessary in order for us to provide the Services; therefore, if you delete such necessary information you may not be able to use the Services. Application.
+
+You can stop all collection of information by the Application by uninstalling the Application).
+
+You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.
+
+You may at any time opt-out from further allowing us to have access to your location data by disabling this functionality on your mobile device. FEEDBACKIf you provide feedback to us, we may use and disclose such feedback in accordance with the terms in our Terms of Use, provided we do not associate such feedback with Personal Information.
+
+We will collect any information contained in such feedback and will treat the Personal Information in it in accordance with this Privacy Policy, provided that we may contact you in regards to such feedback. THIRD PARTY SITES AND SERVICESThe Services may contain links to other websites, applications and services (“Third Party Services”).
+
+Ospace is not responsible for the privacy practices or the content of these Third Party Services.
+
+This Privacy Policy applies solely to information collected by us through the Services and does not apply to these Third Party Services.
+
+We encourage you to read the privacy policies of each and every Third Party Service you visit.
+
+You should always use caution and common sense when choosing to provide Personal Information on the Internet, particularly when it comes to information such as credit cards and other payment information.
+
+The ability to access information of third parties from the Services is for your convenience and does not signify our endorsement of such third parties, their services, applications, websites, locations or their contents.
+
+NOTIFICATION OF CHANGESThis Privacy Policy is subject to occasional revision, and if we make any material changes in the way we use Personal Information, we will notify you by sending you an e-mail to the last email address you provided to us and/or by prominently posting notice of the changes on our Site and/or Application.
+
+We will also update the “Last Updated” date at the top of this Privacy Policy.
+
+Any changes to this Privacy Policy will be effective upon the earlier of thirty (30) calendar days following our dispatch of an email notice to you or thirty (30) calendar days following our posting of notice of the changes on our Site and/or Application.
+
+These changes will be effective immediately for new users of our Services. Please note that at all times you are responsible for updating Personal Information you provide to us and for providing us with your most current email address.
+
+In the event that the last email address that you have provided us is not valid, or for any reason is not capable of delivering to you the notice described above, our dispatch of the email containing such notice will nonetheless constitute effective notice of the changes described in the notice.
+
+If you do not wish to permit changes in our use of Personal Information we collect, you must notify us prior to the effective date of the changes that you wish to deactivate your account with us.
+
+Continued use of our Site, Application or Services, following notice of such changes shall indicate your acknowledgement of such changes and agreement to be bound by the terms and conditions of such changes.
+
+ADDITIONAL INFORMATIONQuestions regarding this Privacy Policy or our data collection and processing practices of the Services should be directed to Ospace by emailing such questions to: legal@ospacegroup.com.

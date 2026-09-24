@@ -1,0 +1,6 @@
+{{ driver.full_name }} ({{ driver.email }}, {{ driver.phone }}) has submitted their driver application for review.
+
+Vehicle: {{ driver.vehicle_year }} {{ driver.vehicle_make }} {{ driver.vehicle_model }}
+Availability: {{ driver.availability_label }}
+
+Review: {{ url }}

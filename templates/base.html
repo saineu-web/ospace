@@ -1,0 +1,103 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Ospace | Student Transportation & Driver Jobs in Houston, TX{% endblock %}</title>
+<meta name="description" content="{% block description %}Ospace connects Houston families and schools with vetted drivers for safe student rides. Drive your own car, set your hours and earn $150+ a day.{% endblock %}">
+<link rel="canonical" href="{{ SITE_URL }}{{ request.path }}">
+<meta property="og:site_name" content="Ospace">
+<meta property="og:title" content="{% block og_title %}Ospace — Safe student rides, flexible driver income{% endblock %}">
+<meta property="og:description" content="{% block og_description %}Houston's student transportation service. Vetted drivers, your own vehicle, flexible hours.{% endblock %}">
+<meta property="og:image" content="{{ SITE_URL }}{% static 'img/media-square.jpg' %}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ SITE_URL }}{{ request.path }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5b21b6">
+<link rel="icon" href="{% static 'img/favicon.ico' %}" sizes="32x32">
+<link rel="icon" type="image/png" href="{% static 'img/icon-192.png' %}" sizes="192x192">
+<link rel="apple-touch-icon" href="{% static 'img/icon-180.png' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/site.css' %}">
+{% block head %}{% endblock %}
+</head>
+<body class="{% block body_class %}has-mobile-cta{% endblock %}">
+{% block header %}
+<header class="header">
+  <div class="container">
+    <a class="brand" href="{% url 'web:home' %}" aria-label="Ospace home"><img src="{% static 'img/logo.png' %}" alt="Ospace" width="130" height="38"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="{% url 'web:drivers' %}">Become a driver</a>
+      <a href="{% url 'web:how_it_works' %}">How it works</a>
+      <a href="{% url 'web:families' %}">Families &amp; schools</a>
+      <a href="{% url 'web:app' %}">Driver app</a>
+      <a href="{% url 'web:about' %}">About</a>
+      <a href="{% url 'web:faq' %}">FAQ</a>
+      <a href="{% url 'web:contact' %}">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-secondary btn-sm" href="{% url 'portal:login' %}">Driver portal</a>
+      <a class="btn btn-primary btn-sm" href="{% url 'web:drivers' %}#apply">Apply now</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% if messages %}<div class="messages">{% for m in messages %}<div class="alert {{ m.tags }}">{{ m }}</div>{% endfor %}</div>{% endif %}
+
+<main>{% block content %}{% endblock %}</main>
+
+{% block footer %}
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="{% static 'img/logo-white.png' %}" alt="Ospace" width="117" height="34">
+        <p class="small">Safe, reliable student transportation in {{ SITE.region }}, driven by vetted local drivers in their own vehicles.</p>
+        <div class="social">
+          {% if SITE.facebook %}<a href="{{ SITE.facebook }}" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8h3.3z"/></svg></a>{% endif %}
+          {% if SITE.instagram %}<a href="{{ SITE.instagram }}" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zM17.3 5.5a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zM21.5 8c-.1-1.6-.4-3-1.6-4.2S17.2 2.3 15.6 2.2C14 2.1 10 2.1 8.4 2.2 6.8 2.3 5.4 2.6 4.2 3.8S2.7 6.4 2.6 8c-.1 1.6-.1 5.6 0 7.2.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.6.1 5.6.1 7.2 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.6.1-5.6 0-7.2zm-2.2 8.8c-.3.9-1 1.6-1.9 1.9-1.3.5-4.5.4-5.9.4s-4.6.1-5.9-.4c-.9-.3-1.6-1-1.9-1.9-.5-1.3-.4-4.5-.4-5.9s-.1-4.6.4-5.9c.3-.9 1-1.6 1.9-1.9 1.3-.5 4.5-.4 5.9-.4s4.6-.1 5.9.4c.9.3 1.6 1 1.9 1.9.5 1.3.4 4.5.4 5.9s.1 4.6-.4 5.9z"/></svg></a>{% endif %}
+          {% if SITE.linkedin %}<a href="{{ SITE.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.4 2H3.6C2.7 2 2 2.7 2 3.6v16.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V3.6c0-.9-.7-1.6-1.6-1.6zM8 19H5V9.5h3V19zM6.5 8.2a1.7 1.7 0 110-3.4 1.7 1.7 0 010 3.4zM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5S12.7 13 12.7 14.3V19h-3V9.5h2.9v1.3c.4-.8 1.4-1.5 2.8-1.5 3 0 3.6 2 3.6 4.6V19z"/></svg></a>{% endif %}
+        </div>
+      </div>
+      <div>
+        <h4>Drivers</h4>
+        <a href="{% url 'web:drivers' %}">Become a driver</a>
+        <a href="{% url 'web:drivers' %}#requirements">Requirements</a>
+        <a href="{% url 'web:app' %}">Driver app</a>
+        <a href="{% url 'portal:login' %}">Driver portal</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="{% url 'web:about' %}">About Ospace</a>
+        <a href="{% url 'web:how_it_works' %}">How it works</a>
+        <a href="{% url 'web:families' %}">Families &amp; schools</a>
+        <a href="{% url 'web:media' %}">Media</a>
+        <a href="{% url 'web:faq' %}">FAQ</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="{{ SITE.phone_href }}">{{ SITE.phone }}</a>
+        <a href="mailto:{{ SITE.email }}">{{ SITE.email }}</a>
+        <a href="{% url 'web:contact' %}">Send a message</a>
+        <p class="small" style="margin-top:8px">{{ SITE.region }}</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; {% now "Y" %} {{ SITE.legal_name }}. All rights reserved.</span>
+      <span><a href="{% url 'web:privacy' %}" style="display:inline">Privacy policy</a></span>
+    </div>
+  </div>
+</footer>
+<div class="mobile-cta">
+  <a class="btn btn-secondary" href="{{ SITE.phone_href }}">Call us</a>
+  <a class="btn btn-primary" href="{% url 'web:drivers' %}#apply">Apply to drive</a>
+</div>
+{% endblock %}
+<script src="{% static 'js/site.js' %}" defer></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

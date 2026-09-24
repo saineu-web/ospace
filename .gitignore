@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+db.sqlite3
+media/
+staticfiles/
+.env
+source-media/*.html
+source-media/check-*.jpg
+private/
+source-media/shots/

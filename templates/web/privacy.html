@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Privacy Policy | Ospace{% endblock %}
+{% block description %}How Ospace collects, uses and shares personal information for riders, drivers and website visitors.{% endblock %}
+{% block content %}
+<section class="page-hero"><div class="container"><span class="eyebrow">Legal</span><h1>Privacy policy</h1><p>Questions about this policy: <a href="mailto:{{ SITE.legal_email }}">{{ SITE.legal_email }}</a></p></div></section>
+<section class="section">
+  <div class="container prose">
+    {% for p in paragraphs %}
+      {% if p|length < 60 and not p|slice:"-1:" == "." %}<h2>{{ p }}</h2>{% else %}<p>{{ p }}</p>{% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

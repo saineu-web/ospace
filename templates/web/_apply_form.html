@@ -1,0 +1,20 @@
+{% comment %}Quick driver application. Expects `form` (DriverApplyForm). Posts to the drivers page.{% endcomment %}
+<form class="form" method="post" action="{% url 'web:drivers' %}#apply" novalidate>
+  {% csrf_token %}
+  {{ form.website }}
+  {% if form.non_field_errors %}<div class="banner bad">{{ form.non_field_errors|join:" " }}</div>{% endif %}
+  {% include "web/_form_field.html" with f=form.name %}
+  <div class="form-row">
+    {% include "web/_form_field.html" with f=form.email %}
+    {% include "web/_form_field.html" with f=form.phone %}
+  </div>
+  <div class="form-row">
+    {% include "web/_form_field.html" with f=form.city %}
+    {% include "web/_form_field.html" with f=form.vehicle_year %}
+  </div>
+  {% include "web/_form_field.html" with f=form.vehicle %}
+  {% include "web/_form_field.html" with f=form.message %}
+  {% include "web/_form_field.html" with f=form.over_21 %}
+  <button class="btn btn-primary btn-lg btn-block" type="submit">Send my application</button>
+  <p class="form-note center">Takes two minutes. We'll reply by phone or email, usually the same business day. No obligation.</p>
+</form>

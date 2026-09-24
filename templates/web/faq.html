@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}FAQ | Ospace Drivers & Families{% endblock %}
+{% block description %}Answers about earnings, vehicle requirements, hours, hand-over, approval times and contractor status for Ospace drivers.{% endblock %}
+{% block content %}
+<section class="page-hero"><div class="container"><span class="eyebrow">FAQ</span><h1>Frequently asked questions</h1><p>Can't find what you need? Call {{ SITE.phone }} or <a href="{% url 'web:contact' %}">send us a message</a>.</p></div></section>
+<section class="section">
+  <div class="container narrow">
+    <div class="faq">{% for q, a in faq %}<details{% if forloop.first %} open{% endif %}><summary>{{ q }}</summary><p>{{ a }}</p></details>{% endfor %}
+      <details><summary>Where does Ospace operate?</summary><p>We are headquartered in Houston, Texas and serve Houston and the surrounding areas. Rides are matched to the driver closest to the student's home.</p></details>
+      <details><summary>How do I upload my documents?</summary><p>After applying you'll get access to the driver portal. Upload your license, insurance, registration, photos and test results there, e-sign the driver agreements and submit for review. You can track the status of every item.</p></details>
+      <details><summary>Which app do I use?</summary><p>Ospace rides are dispatched through the ADROIT Driver app for iPhone and Android. Enter service number {{ SITE.service_number }} when you set up your account. See the <a href="{% url 'web:app' %}">set-up guide</a>.</p></details>
+      <details><summary>I'm a parent. How do I book rides?</summary><p>Use the <a href="{% url 'web:families' %}#request">ride request form</a> or call us. We'll confirm availability, pricing and your driver's details before the first ride.</p></details>
+    </div>
+  </div>
+</section>
+{% endblock %}

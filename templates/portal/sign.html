@@ -1,0 +1,23 @@
+{% extends "portal/base_portal.html" %}
+{% block portal %}
+<div class="portal-head"><div><p class="breadcrumb"><a href="{% url 'portal:agreements' %}">Agreements</a> / Sign</p><h1>{{ template.title }}</h1><p>Version {{ template.version }} · Please read the whole document, then sign below.</p></div></div>
+
+<div class="agreement-doc">
+  {% include "portal/_agreement_body.html" with body=body %}
+</div>
+<p class="small muted" data-scroll-hint>Scroll to the end of the document to enable signing.</p>
+
+<form class="card form" method="post" novalidate>
+  {% csrf_token %}
+  {% if form.errors %}<div class="banner bad"><div>{% for e in form.non_field_errors %}{{ e }} {% endfor %}{% for f in form %}{% for e in f.errors %}{{ e }} {% endfor %}{% endfor %}</div></div>{% endif %}
+  {% include "web/_form_field.html" with f=form.typed_name %}
+  <div class="field">
+    <label>Draw your signature</label>
+    <div class="sig-pad"><canvas></canvas><button class="btn btn-secondary btn-sm sig-clear" type="button">Clear</button><div class="hint">Sign here with your finger or mouse</div></div>
+    {{ form.signature }}
+  </div>
+  {% include "web/_form_field.html" with f=form.consent %}
+  <p class="small muted">By clicking "Sign document" you agree that your typed name and drawn signature are your legal electronic signature, with the same effect as signing on paper. We record the date, time and IP address of your signature.</p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn btn-primary btn-lg" type="submit" disabled>Sign document</button><a class="btn btn-ghost btn-lg" href="{% url 'portal:agreements' %}">Cancel</a></div>
+</form>
+{% endblock %}

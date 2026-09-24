@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Student Rides for Families & Schools | Ospace Houston{% endblock %}
+{% block description %}Safe school-run rides in Houston with vetted, background-checked drivers. Pick-up, drop-off and recurring schedules for families and schools. Request a ride today.{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <div class="split">
+      <div>
+        <span class="eyebrow">Families &amp; schools</span>
+        <h1>Safe rides to school and back, from drivers you can trust</h1>
+        <p>Ospace connects families, schools and communities with vetted local drivers. Set up a recurring school run or a one-off ride and know exactly who is behind the wheel.</p>
+        <div class="hero-actions"><a class="btn btn-primary btn-lg" href="#request">Request rides</a><a class="btn btn-secondary btn-lg" href="{{ SITE.phone_href }}">Call {{ SITE.phone }}</a></div>
+      </div>
+      <img src="{% static 'img/driver-1.jpg' %}" alt="Student smiling in the back seat of an Ospace ride" width="600" height="737">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Our services</span><h2>What we offer</h2></div>
+    <div class="grid grid-3">
+      <div class="card card-hover">
+        <div class="icon-badge"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M5 6h14l2 4v8a1 1 0 01-1 1h-1a2 2 0 11-4 0H9a2 2 0 11-4 0H4a1 1 0 01-1-1v-8l2-4z"/></svg></div>
+        <h3>Pick them up to and from school</h3>
+        <p class="muted">Door-to-school and school-to-door rides on a recurring weekday schedule. Same driver whenever possible.</p>
+        <span class="pill pill-purple">Morning &amp; afternoon</span>
+      </div>
+      <div class="card card-hover">
+        <div class="icon-badge"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 11c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm0 2c-2.7 0-8 1.3-8 4v2h16v-2c0-2.7-5.3-4-8-4z"/></svg></div>
+        <h3>Vetted local drivers</h3>
+        <p class="muted">Every driver is background-checked, drug and TB screened, insured and driving a reviewed four-door vehicle.</p>
+        <span class="pill pill-ok">Background-checked</span>
+      </div>
+      <div class="card card-hover">
+        <div class="icon-badge"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+        <h3>Drop them off to their home or school</h3>
+        <p class="muted">One-way rides when you need them. Drop-off from <strong>$25</strong>. Hand-over to a parent, guardian or teacher every time.</p>
+        <span class="pill pill-grey">From $25</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="split">
+      <img src="{% static 'img/students.jpg' %}" alt="Students walking to school" loading="lazy" width="1000" height="988">
+      <div>
+        <span class="eyebrow">Safety first</span>
+        <h2>How we keep students safe</h2>
+        <ul class="feature-list">
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div><strong>Driver screening</strong> <span class="muted">— background check, drug &amp; TB tests, license and insurance verified</span></div></li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div><strong>In-person hand-over</strong> <span class="muted">— students are never left unattended</span></div></li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div><strong>Know your driver</strong> <span class="muted">— name, photo and vehicle shared before the ride</span></div></li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div><strong>Ride tracking</strong> <span class="muted">— driver location is logged from check-in to drop-off</span></div></li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div><strong>Conduct policy</strong> <span class="muted">— every driver signs our student safety standards</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="request">
+  <div class="container">
+    <div class="split">
+      <div>
+        <span class="eyebrow">Request rides</span>
+        <h2>Tell us what you need</h2>
+        <p class="lead">Parents, guardians and schools: share the pick-up area, destination and schedule and we'll confirm availability and pricing, usually within one business day.</p>
+        <p class="muted">Prefer to talk? Call <a href="{{ SITE.phone_href }}">{{ SITE.phone }}</a> or email <a href="mailto:{{ SITE.email }}">{{ SITE.email }}</a>.</p>
+      </div>
+      <div class="card">
+        <form class="form" method="post" novalidate>
+          {% csrf_token %}
+          {{ form.website }}
+          {% include "web/_form_field.html" with f=form.name %}
+          <div class="form-row">{% include "web/_form_field.html" with f=form.email %}{% include "web/_form_field.html" with f=form.phone %}</div>
+          <div class="form-row">{% include "web/_form_field.html" with f=form.organisation %}{% include "web/_form_field.html" with f=form.students %}</div>
+          <div class="form-row">{% include "web/_form_field.html" with f=form.pickup_area %}{% include "web/_form_field.html" with f=form.school %}</div>
+          {% include "web/_form_field.html" with f=form.schedule %}
+          {% include "web/_form_field.html" with f=form.message %}
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Request rides</button>
+          <p class="form-note center">No commitment. We'll get back to you with options.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

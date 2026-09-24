@@ -1,0 +1,18 @@
+{% extends "portal/base_auth.html" %}
+{% block auth_title %}Create account{% endblock %}
+{% block auth_class %}wide{% endblock %}
+{% block auth %}
+<span class="eyebrow">Driver portal</span>
+<h1>Create your driver account</h1>
+<p class="muted">Your secure space to complete your profile, upload documents and e-sign the driver agreements.</p>
+<form class="form" method="post" novalidate>
+  {% csrf_token %}
+  {% if form.non_field_errors %}<div class="banner bad">{{ form.non_field_errors|join:" " }}</div>{% endif %}
+  <div class="form-row">{% include "web/_form_field.html" with f=form.first_name %}{% include "web/_form_field.html" with f=form.last_name %}</div>
+  <div class="form-row">{% include "web/_form_field.html" with f=form.email %}{% include "web/_form_field.html" with f=form.phone %}</div>
+  <div class="form-row">{% include "web/_form_field.html" with f=form.password1 %}{% include "web/_form_field.html" with f=form.password2 %}</div>
+  {% include "web/_form_field.html" with f=form.agree %}
+  <button class="btn btn-primary btn-block btn-lg" type="submit">Create account</button>
+</form>
+<p class="center small" style="margin-top:16px">Already have an account? <a href="{% url 'portal:login' %}"><strong>Sign in</strong></a></p>
+{% endblock %}

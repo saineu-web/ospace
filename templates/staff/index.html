@@ -1,0 +1,36 @@
+{% extends "portal/base_portal.html" %}
+{% block title %}Staff desk | Ospace{% endblock %}
+{% block content %}
+<div class="container" style="padding:28px 20px 64px;display:grid;gap:22px">
+  <div class="portal-head"><div><h1>Driver onboarding desk</h1><p>{{ total }} driver account{{ total|pluralize }} · review documents, agreements and approve drivers.</p></div><a class="btn btn-secondary btn-sm" href="{% url 'admin:index' %}">Full admin (document types, agreements, inquiries)</a></div>
+  <div class="tiles">
+    {% for code, label, n in tiles %}<a class="tile {% if status == code %}active{% endif %}" href="?status={{ code }}"><strong>{{ n }}</strong><span>{{ label }}</span></a>{% endfor %}
+  </div>
+  <form class="toolbar" method="get">
+    <input type="search" name="q" value="{{ q }}" placeholder="Search name, email or phone">
+    {% if status %}<input type="hidden" name="status" value="{{ status }}">{% endif %}
+    <button class="btn btn-secondary btn-sm" type="submit">Search</button>
+    {% if q or status %}<a class="btn btn-ghost btn-sm" href="{% url 'staff:index' %}">Clear</a>{% endif %}
+  </form>
+  <div class="table-wrap">
+    <table class="tbl">
+      <thead><tr><th>Driver</th><th>Status</th><th>Profile</th><th>Documents</th><th>Agreements</th><th>Vehicle</th><th>Created</th><th></th></tr></thead>
+      <tbody>
+        {% for d in drivers %}
+        <tr>
+          <td><strong>{{ d.full_name|default:"(no name yet)" }}</strong><br><span class="muted small">{{ d.email }} · {{ d.phone }}</span></td>
+          <td><span class="pill {% if d.status == 'approved' %}pill-ok{% elif d.status == 'submitted' %}pill-purple{% elif d.status == 'changes_requested' or d.status == 'rejected' %}pill-bad{% else %}pill-grey{% endif %}">{{ d.get_status_display }}</span></td>
+          <td>{{ d.profile_pct }}%</td>
+          <td>{{ d.n_docs }} uploaded{% if d.n_pending %} · <span class="pill pill-warn">{{ d.n_pending }} pending</span>{% endif %}</td>
+          <td>{{ d.n_signed }} signed</td>
+          <td class="small">{{ d.vehicle_year|default:"" }} {{ d.vehicle_make }} {{ d.vehicle_model }}</td>
+          <td class="small muted">{{ d.created_at|date:"M j, Y" }}</td>
+          <td><a class="btn btn-primary btn-sm" href="{% url 'staff:driver' d.pk %}">Review</a></td>
+        </tr>
+        {% empty %}<tr><td colspan="8" class="muted center">No drivers match.</td></tr>{% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Driver portal | Ospace{% endblock %}
+{% block head %}<meta name="robots" content="noindex,nofollow">{% endblock %}
+{% block body_class %}portal-body{% endblock %}
+{% block header %}
+<div class="portal-top">
+  <div class="container">
+    <a class="brand" href="{% url 'portal:dashboard' %}"><img src="{% static 'img/logo.png' %}" alt="Ospace" width="110" height="32"></a>
+    <div class="who">
+      {% if user.is_authenticated %}
+        <span>Signed in as <strong>{{ user.get_full_name|default:user.email }}</strong></span>
+        {% if user.is_staff %}<a href="{% url 'staff:index' %}">Staff desk</a>{% endif %}
+        <form method="post" action="{% url 'portal:logout' %}" style="margin:0">{% csrf_token %}<button class="btn btn-secondary btn-sm" type="submit">Sign out</button></form>
+      {% else %}
+        <a href="{% url 'web:home' %}">&larr; ospacegroup.com</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="portal-layout">
+    <aside class="portal-nav">
+      {% with p=request.resolver_match.url_name %}
+      <a href="{% url 'portal:dashboard' %}" class="{% if p == 'dashboard' %}active{% endif %}">Overview</a>
+      <a href="{% url 'portal:profile' %}" class="{% if p == 'profile' %}active{% endif %}">My profile <span class="dot {% if driver.profile_pct == 100 %}done{% elif driver.profile_pct > 0 %}partial{% endif %}"></span></a>
+      <a href="{% url 'portal:documents' %}" class="{% if p == 'documents' %}active{% endif %}">Documents <span class="dot {% with s=driver.documents_summary %}{% if s.required and s.uploaded == s.required %}done{% elif s.uploaded %}partial{% endif %}{% endwith %}"></span></a>
+      <a href="{% url 'portal:agreements' %}" class="{% if p == 'agreements' or p == 'sign' or p == 'agreement_view' %}active{% endif %}">Agreements <span class="dot {% with s=driver.agreements_summary %}{% if s.required and s.signed == s.required %}done{% elif s.signed %}partial{% endif %}{% endwith %}"></span></a>
+      <a href="{% url 'web:app' %}">Driver app guide</a>
+      <a href="{% url 'web:contact' %}">Help</a>
+      {% endwith %}
+    </aside>
+    <div class="portal-main">{% block portal %}{% endblock %}</div>
+  </div>
+</div>
+{% endblock %}
+{% block footer %}{% endblock %}
+{% block scripts %}<script src="{% static 'js/portal.js' %}" defer></script>{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{% block auth_title %}Sign in{% endblock %} | Ospace driver portal{% endblock %}
+{% block head %}<meta name="robots" content="noindex,nofollow">{% endblock %}
+{% block body_class %}portal-body{% endblock %}
+{% block header %}
+<div class="portal-top"><div class="container"><a class="brand" href="{% url 'web:home' %}"><img src="{% static 'img/logo.png' %}" alt="Ospace" width="110" height="32"></a><div class="who"><a href="{% url 'web:home' %}">&larr; Back to ospacegroup.com</a></div></div></div>
+{% endblock %}
+{% block content %}<div class="auth-wrap"><div class="card auth-card {% block auth_class %}{% endblock %}">{% block auth %}{% endblock %}</div></div>{% endblock %}
+{% block footer %}{% endblock %}

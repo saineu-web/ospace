@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Contact Ospace | Houston Student Transportation{% endblock %}
+{% block description %}Call, email or message Ospace in Houston. Driver applications, ride requests and partnerships.{% endblock %}
+{% block content %}
+<section class="page-hero"><div class="container"><span class="eyebrow">Contact</span><h1>Talk to our team</h1><p>Driver questions, rides for your child or school, partnerships: we're happy to help.</p></div></section>
+<section class="section">
+  <div class="container">
+    <div class="split" style="align-items:start">
+      <div class="grid" style="gap:16px">
+        <a class="card card-hover" href="{{ SITE.phone_href }}" style="text-decoration:none;color:inherit">
+          <div class="icon-badge"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.3a1 1 0 01.9.7l1.5 4.5a1 1 0 01-.5 1.2l-2.3 1.1a11 11 0 005.6 5.6l1.1-2.3a1 1 0 011.2-.5l4.5 1.5a1 1 0 01.7.9V19a2 2 0 01-2 2h-1C10.2 21 3 13.8 3 5z"/></svg></div>
+          <h3>Call us</h3><p class="muted" style="margin:0">{{ SITE.phone }}<br><span class="small">Talk with one of our expert staff about joining.</span></p>
+        </a>
+        <a class="card card-hover" href="mailto:{{ SITE.email }}" style="text-decoration:none;color:inherit">
+          <div class="icon-badge"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"/></svg></div>
+          <h3>Email</h3><p class="muted" style="margin:0">{{ SITE.email }}<br><span class="small">Legal &amp; privacy: {{ SITE.legal_email }}</span></p>
+        </a>
+        <div class="card">
+          <div class="icon-badge"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-6.3 7-11.5A7 7 0 005 9.5C5 14.7 12 21 12 21zm0-9a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"/></svg></div>
+          <h3>Where we are</h3><p class="muted" style="margin:0">{{ SITE.region }}<br><span class="small">Serving Houston and surrounding areas.</span></p>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Send a message</h3>
+        <form class="form" method="post" novalidate>
+          {% csrf_token %}
+          {{ form.website }}
+          {% include "web/_form_field.html" with f=form.name %}
+          <div class="form-row">{% include "web/_form_field.html" with f=form.email %}{% include "web/_form_field.html" with f=form.phone %}</div>
+          {% include "web/_form_field.html" with f=form.topic %}
+          {% include "web/_form_field.html" with f=form.message %}
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Send message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

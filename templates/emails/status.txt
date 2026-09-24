@@ -1,0 +1,11 @@
+Hi {{ driver.user.first_name }},
+
+Your Ospace driver application status is now: {{ driver.get_status_display }}
+{% if driver.review_message %}
+Message from our team:
+{{ driver.review_message }}
+{% endif %}
+Open your portal: {{ url }}
+
+The Ospace team
+{{ SITE.phone }}

@@ -1,0 +1,8 @@
+Hi {{ driver.user.first_name }},
+
+Thanks - we have received your driver application and everything you uploaded. Our team will review it and get back to you within a few business days.
+
+You will get an email as soon as there is news. You can check your status any time at {{ SITE_URL }}/portal/
+
+The Ospace team
+{{ SITE.phone }}

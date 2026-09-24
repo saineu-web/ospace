@@ -1,0 +1,59 @@
+{% extends "portal/base_portal.html" %}
+{% block portal %}
+<div class="portal-head"><div><h1>My profile</h1><p>Details we need to verify you and your vehicle. Everything is kept private.</p></div><span class="pill {% if driver.profile_pct == 100 %}pill-ok{% else %}pill-warn{% endif %}">{{ driver.profile_pct }}% complete</span></div>
+<form class="form" method="post" novalidate>
+  {% csrf_token %}
+  {% if form.errors %}<div class="banner bad"><div>Please fix the highlighted fields.</div></div>{% endif %}
+
+  <div class="card">
+    <h3>Personal</h3>
+    <div class="form">
+      <div class="form-row">{% include "web/_form_field.html" with f=form.first_name %}{% include "web/_form_field.html" with f=form.last_name %}</div>
+      <div class="form-row">{% include "web/_form_field.html" with f=form.phone %}{% include "web/_form_field.html" with f=form.date_of_birth %}</div>
+      <div class="form-row">{% include "web/_form_field.html" with f=form.address1 %}{% include "web/_form_field.html" with f=form.address2 %}</div>
+      <div class="form-row-3">{% include "web/_form_field.html" with f=form.city %}{% include "web/_form_field.html" with f=form.state %}{% include "web/_form_field.html" with f=form.zip_code %}</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Driver's license</h3>
+    <div class="form-row-3">{% include "web/_form_field.html" with f=form.license_number %}{% include "web/_form_field.html" with f=form.license_state %}{% include "web/_form_field.html" with f=form.license_expiry %}</div>
+  </div>
+
+  <div class="card">
+    <h3>Vehicle</h3>
+    <p class="small muted">Four-door, model year within the last 15 years.</p>
+    <div class="form">
+      <div class="form-row-3">{% include "web/_form_field.html" with f=form.vehicle_year %}{% include "web/_form_field.html" with f=form.vehicle_make %}{% include "web/_form_field.html" with f=form.vehicle_model %}</div>
+      <div class="form-row-3">{% include "web/_form_field.html" with f=form.vehicle_color %}{% include "web/_form_field.html" with f=form.vehicle_plate %}{% include "web/_form_field.html" with f=form.vehicle_seats %}</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Auto insurance</h3>
+    <div class="form-row-3">{% include "web/_form_field.html" with f=form.insurance_provider %}{% include "web/_form_field.html" with f=form.insurance_policy %}{% include "web/_form_field.html" with f=form.insurance_expiry %}</div>
+  </div>
+
+  <div class="card">
+    <h3>Emergency contact</h3>
+    <div class="form-row-3">{% include "web/_form_field.html" with f=form.emergency_name %}{% include "web/_form_field.html" with f=form.emergency_phone %}{% include "web/_form_field.html" with f=form.emergency_relationship %}</div>
+  </div>
+
+  <div class="card">
+    <h3>Availability</h3>
+    <p class="small muted">School runs are weekday mornings (about 6–9 AM) and afternoons (about 2–5 PM). Tick every window you can drive.</p>
+    <div class="avail">
+      {% for key, label, slots in days %}
+      <div class="avail-row">
+        <strong>{{ label }}</strong>
+        <label><input type="checkbox" name="avail_{{ key }}_am" {% if 'am' in slots %}checked{% endif %}> Morning</label>
+        <label><input type="checkbox" name="avail_{{ key }}_pm" {% if 'pm' in slots %}checked{% endif %}> Afternoon</label>
+      </div>
+      {% endfor %}
+    </div>
+    <div style="margin-top:16px">{% include "web/_form_field.html" with f=form.how_heard %}</div>
+  </div>
+
+  <div style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn btn-primary btn-lg" type="submit">Save profile</button><a class="btn btn-ghost btn-lg" href="{% url 'portal:dashboard' %}">Cancel</a></div>
+</form>
+{% endblock %}

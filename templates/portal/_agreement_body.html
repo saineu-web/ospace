@@ -1,0 +1,1 @@
+{% load portal_extras %}{% for kind, text in body|agreement_blocks %}{% if kind == "h" %}<h3>{{ text }}</h3>{% else %}<p>{{ text|linebreaksbr }}</p>{% endif %}{% endfor %}

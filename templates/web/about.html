@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}About Ospace | Student Transportation in Houston, Texas{% endblock %}
+{% block description %}Ospace is a Houston-based student transportation service that believes rides should be safe, reliable and built around people's needs.{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">About</span>
+    <h1>All about us</h1>
+    <p>We're Ospace, a company that believes transportation should be safe, reliable, and built around people's needs.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <div>
+        <h2>Connecting families, schools and communities with drivers they can trust</h2>
+        <p class="lead">Ospace is a student transportation service headquartered in Houston, Texas. We match students with dependable local drivers for the school commute, and give independent drivers a flexible way to earn using their own vehicle.</p>
+        <p>For parents, that means peace of mind: a vetted driver, an in-person hand-over at both ends, and the same familiar face on the school run. For drivers, it means real flexibility: choose your days, choose your windows, and get paid per ride.</p>
+        <p><strong>Great service begins with great people and real experience.</strong> That is why we are selective about who drives with us, and why we aim to exceed expectations on every ride across the Houston area.</p>
+      </div>
+      <img src="{% static 'img/hero.jpg' %}" alt="Ospace driver" loading="lazy" width="1920" height="965">
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">What we stand for</span><h2>Our values</h2></div>
+    <div class="grid grid-3">
+      <div class="card"><div class="icon-badge"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Safety</h3><p class="muted">Screening, hand-over protocols and conduct standards that every driver signs. No shortcuts.</p></div>
+      <div class="card"><div class="icon-badge"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3>Reliability</h3><p class="muted">On time, every school day. Families and schools plan their mornings around us.</p></div>
+      <div class="card"><div class="icon-badge"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.4-1.8M17 20H7m10 0v-2c0-.7-.1-1.3-.4-1.8M7 20H2v-2a3 3 0 015.4-1.8M7 20v-2c0-.7.1-1.3.4-1.8m0 0a5 5 0 019.2 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div><h3>Community</h3><p class="muted">Local drivers, local families, local schools. Built around people's needs, not the other way around.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Drivers feedback</span><h2>The people behind the wheel</h2></div>
+    <div class="grid grid-3">
+      {% for t in testimonials %}
+      <div class="card testimonial">
+        <div class="testimonial-head"><span class="avatar">{{ t.name|first }}</span><div><strong>{{ t.name }}</strong><span>{{ t.role }}</span></div></div>
+        <blockquote>“{{ t.quote }}”</blockquote>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+    <div class="cta-band">
+      <div><h2>Want to talk to us?</h2><p>{{ SITE.phone }} · {{ SITE.email }} · {{ SITE.region }}</p></div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-light btn-lg" href="{% url 'web:contact' %}">Contact us</a><a class="btn btn-outline-light btn-lg" href="{% url 'web:drivers' %}#apply">Drive with us</a></div>
+    </div>
+  </div>
+</section>
+{% endblock %}

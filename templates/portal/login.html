@@ -1,0 +1,17 @@
+{% extends "portal/base_auth.html" %}
+{% block auth %}
+<span class="eyebrow">Driver portal</span>
+<h1>Welcome back</h1>
+<p class="muted">Sign in to upload documents, sign agreements and track your application.</p>
+<form class="form" method="post" novalidate>
+  {% csrf_token %}
+  {% if form.non_field_errors %}<div class="banner bad">Email or password is incorrect.</div>{% endif %}
+  <div class="field"><label for="id_username">Email</label><input type="email" name="username" id="id_username" autocomplete="email" required autofocus></div>
+  <div class="field"><label for="id_password">Password</label><input type="password" name="password" id="id_password" autocomplete="current-password" required></div>
+  <input type="hidden" name="next" value="{{ next }}">
+  <button class="btn btn-primary btn-block btn-lg" type="submit">Sign in</button>
+  <p class="form-note center"><a href="{% url 'portal:password_reset' %}">Forgot your password?</a></p>
+</form>
+<hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
+<p class="center small">New driver? <a href="{% url 'portal:register' %}"><strong>Create your account</strong></a></p>
+{% endblock %}

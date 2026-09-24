@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}How a Ride Works | Ospace Student Transportation{% endblock %}
+{% block description %}What happens in an Ospace ride: nearby matching, in-person hand-over by a parent or teacher, and a safe trip to school and back.{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">In the ride</span>
+    <h1>We give you the ride that is near to you</h1>
+    <p>Ospace assigns rides to the closest available driver, so drivers spend less time on the road between jobs and families get someone from their own neighbourhood.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <img src="{% static 'img/driver-2.jpg' %}" alt="Parent walking students to the vehicle" loading="lazy" width="600" height="737">
+      <div>
+        <span class="eyebrow">Hand-over protocol</span>
+        <h2>The parent or the teacher takes the kids from and to the car</h2>
+        <p class="lead">Drivers never enter a home or a school building. At every pick-up and drop-off, an adult you know walks the student to or from the vehicle and the driver confirms the hand-over in the app.</p>
+        <ul class="feature-list">
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div><strong>Location</strong> <span class="muted">— the driver waits at the agreed pick-up spot</span></div></li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div><strong>Hand-over</strong> <span class="muted">— parent, guardian or teacher brings the student to the car</span></div></li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div><strong>Seat belts on</strong> <span class="muted">— every student, every ride, no exceptions</span></div></li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div><strong>Arrival</strong> <span class="muted">— the student is released only to the designated adult</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container narrow">
+    <div class="section-head"><span class="eyebrow">A typical school day</span><h2>Morning run, afternoon run</h2></div>
+    <ol class="timeline">
+      <li><div class="step-num">1</div><div><h3>Ride offered in the app</h3><p class="muted">The driver closest to the student's home sees the ride first, with the pick-up time, address and school.</p></div></li>
+      <li><div class="step-num">2</div><div><h3>Pick-up at home</h3><p class="muted">The driver arrives a few minutes early. The parent walks the student to the car and the driver taps "picked up".</p></div></li>
+      <li><div class="step-num">3</div><div><h3>Drop-off at school</h3><p class="muted">A teacher or school staff member receives the student at the designated spot. Driver taps "dropped off" and the family is notified.</p></div></li>
+      <li><div class="step-num">4</div><div><h3>Afternoon, in reverse</h3><p class="muted">Same driver where possible, same hand-over at both ends, home safe.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">For drivers</span><h2>Getting started is four steps</h2></div>
+    <div class="grid grid-4">
+      {% for title, text in steps %}
+      <div class="card"><div class="step-num">{{ forloop.counter }}</div><h3>{{ title }}</h3><p class="muted">{{ text }}</p></div>
+      {% endfor %}
+    </div>
+    <p class="center" style="margin-top:32px"><a class="btn btn-primary btn-lg" href="{% url 'web:drivers' %}#apply">Apply to drive</a> <a class="btn btn-ghost btn-lg" href="{% url 'web:families' %}">Request rides for a student</a></p>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "portal/base_portal.html" %}
+{% block portal %}
+<div class="portal-head"><div><h1>Documents</h1><p>Upload a clear photo or PDF of each item. PDF, JPG, PNG, HEIC or WEBP, up to 10 MB.</p></div></div>
+<div class="checklist">
+  {% for t, d in rows %}
+  <div class="doc-row">
+    <div>
+      <h3>{{ t.name }}
+        {% if not t.required %}<span class="pill pill-grey">Optional</span>{% endif %}
+        {% if d %}<span class="pill {% if d.status == 'approved' %}pill-ok{% elif d.status == 'rejected' %}pill-bad{% else %}pill-warn{% endif %}">{{ d.get_status_display }}</span>{% elif t.required %}<span class="pill pill-grey">Not uploaded</span>{% endif %}
+      </h3>
+      <p class="desc">{{ t.description }}</p>
+      {% if d %}
+        <div class="file-meta">
+          {% if d.is_image %}<a href="{% url 'portal:document_file' d.pk %}" target="_blank"><img class="thumb" src="{% url 'portal:document_file' d.pk %}" alt=""></a>{% endif %}
+          <span><a href="{% url 'portal:document_file' d.pk %}" target="_blank">{{ d.original_name }}</a><br><span class="muted">{{ d.size|filesizeformat }} · uploaded {{ d.uploaded_at|date:"M j, Y" }}{% if d.expires_on %} · expires {{ d.expires_on|date:"M j, Y" }}{% if d.is_expired %} <strong style="color:var(--bad)">(expired)</strong>{% endif %}{% endif %}</span></span>
+        </div>
+        {% if d.review_note %}<div class="note {% if d.status == 'rejected' %}banner bad{% else %}banner info{% endif %}" style="padding:10px 12px"><div><strong>Note from Ospace:</strong> {{ d.review_note }}</div></div>{% endif %}
+      {% endif %}
+    </div>
+    <div class="doc-actions">
+      {% if not d or d.status != 'approved' %}
+      <form class="upload-form" method="post" action="{% url 'portal:upload_document' t.pk %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if t.has_expiry %}<label class="small muted">Expiry date <input type="date" name="expires_on" value="{{ d.expires_on|date:'Y-m-d' }}" required></label>{% endif %}
+        <label class="btn btn-primary btn-sm" style="cursor:pointer">{% if d %}Replace file{% else %}Choose file{% endif %}<input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png,.heic,.webp,image/*,application/pdf" style="display:none" required></label>
+        <button class="btn btn-secondary btn-sm" type="submit" style="display:none">Upload</button>
+      </form>
+      {% if d %}<form method="post" action="{% url 'portal:delete_document' d.pk %}" onsubmit="return confirm('Remove this file?')">{% csrf_token %}<button class="btn btn-ghost btn-sm" type="submit">Remove</button></form>{% endif %}
+      {% else %}
+      <span class="small muted">Approved · contact us to replace</span>
+      {% endif %}
+    </div>
+  </div>
+  {% empty %}
+  <div class="card"><p class="muted">No document requirements have been configured yet.</p></div>
+  {% endfor %}
+</div>
+<p class="small muted">Your files are stored privately and only visible to you and the Ospace onboarding team.</p>
+{% endblock %}

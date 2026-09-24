@@ -1,0 +1,88 @@
+{% extends "portal/base_portal.html" %}
+{% block title %}{{ driver }} | Staff desk{% endblock %}
+{% block content %}
+<div class="container" style="padding:28px 20px 64px;display:grid;gap:22px">
+  <div class="portal-head">
+    <div><p class="breadcrumb"><a href="{% url 'staff:index' %}">Staff desk</a> / Driver</p><h1>{{ driver.full_name|default:driver.email }}</h1><p><a href="mailto:{{ driver.email }}">{{ driver.email }}</a> · <a href="tel:{{ driver.phone }}">{{ driver.phone }}</a> · account created {{ driver.created_at|date:"M j, Y" }}{% if driver.submitted_at %} · submitted {{ driver.submitted_at|date:"M j, Y" }}{% endif %}</p></div>
+    <span class="pill {% if driver.status == 'approved' %}pill-ok{% elif driver.status == 'submitted' %}pill-purple{% elif driver.status == 'changes_requested' or driver.status == 'rejected' %}pill-bad{% else %}pill-grey{% endif %}" style="font-size:.9rem">{{ driver.get_status_display }}</span>
+  </div>
+
+  <div class="grid grid-2" style="align-items:start">
+    <div class="card">
+      <h3>Decision</h3>
+      <form class="form" method="post" action="{% url 'staff:review_driver' driver.pk %}">
+        {% csrf_token %}
+        {% include "web/_form_field.html" with f=form.status %}
+        {% include "web/_form_field.html" with f=form.review_message %}
+        {% include "web/_form_field.html" with f=form.internal_notes %}
+        <button class="btn btn-primary" type="submit">Save decision</button>
+        <p class="form-note">Changing the status emails the driver with your message. Internal notes are never shown to them.</p>
+      </form>
+    </div>
+    <div class="card">
+      <h3>Profile <span class="pill {% if driver.profile_pct == 100 %}pill-ok{% else %}pill-warn{% endif %}">{{ driver.profile_pct }}%</span></h3>
+      <dl class="kv">
+        <dt>Date of birth</dt><dd>{{ driver.date_of_birth|date:"M j, Y"|default:"—" }}</dd>
+        <dt>Address</dt><dd>{{ driver.address1 }} {{ driver.address2 }}<br>{{ driver.city }}{% if driver.city %},{% endif %} {{ driver.state }} {{ driver.zip_code }}</dd>
+        <dt>License</dt><dd>{{ driver.license_number|default:"—" }} ({{ driver.license_state }}) · exp {{ driver.license_expiry|date:"M j, Y"|default:"—" }}</dd>
+        <dt>Vehicle</dt><dd>{{ driver.vehicle_year|default:"" }} {{ driver.vehicle_make }} {{ driver.vehicle_model }} {{ driver.vehicle_color }} · plate {{ driver.vehicle_plate|default:"—" }} · {{ driver.vehicle_seats|default:"?" }} seats</dd>
+        <dt>Insurance</dt><dd>{{ driver.insurance_provider|default:"—" }} #{{ driver.insurance_policy }} · exp {{ driver.insurance_expiry|date:"M j, Y"|default:"—" }}</dd>
+        <dt>Emergency</dt><dd>{{ driver.emergency_name|default:"—" }} {{ driver.emergency_phone }} ({{ driver.emergency_relationship }})</dd>
+        <dt>Availability</dt><dd>{{ driver.availability_label }}</dd>
+        <dt>Heard via</dt><dd>{{ driver.how_heard|default:"—" }}</dd>
+      </dl>
+      <p style="margin:14px 0 0"><a class="btn btn-ghost btn-sm" href="{% url 'admin:portal_driverprofile_change' driver.pk %}">Edit in admin</a></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Documents</h3>
+    <div class="table-wrap">
+      <table class="tbl">
+        <thead><tr><th>Document</th><th>File</th><th>Expires</th><th>Status</th><th>Review</th></tr></thead>
+        <tbody>
+          {% for t, d in doc_rows %}
+          <tr>
+            <td><strong>{{ t.name }}</strong>{% if not t.required %} <span class="pill pill-grey">optional</span>{% endif %}</td>
+            <td>{% if d %}<div style="display:flex;gap:10px;align-items:center">{% if d.is_image %}<a href="{% url 'portal:document_file' d.pk %}" target="_blank"><img class="thumb" src="{% url 'portal:document_file' d.pk %}" alt=""></a>{% endif %}<span><a href="{% url 'portal:document_file' d.pk %}" target="_blank">{{ d.original_name }}</a><br><span class="muted small">{{ d.size|filesizeformat }} · {{ d.uploaded_at|date:"M j, Y g:i A" }}</span></span></div>{% else %}<span class="muted">Not uploaded</span>{% endif %}</td>
+            <td class="small">{% if d and d.expires_on %}{{ d.expires_on|date:"M j, Y" }}{% if d.is_expired %} <span class="pill pill-bad">expired</span>{% endif %}{% else %}—{% endif %}</td>
+            <td>{% if d %}<span class="pill {% if d.status == 'approved' %}pill-ok{% elif d.status == 'rejected' %}pill-bad{% else %}pill-warn{% endif %}">{{ d.get_status_display }}</span>{% if d.reviewed_by %}<br><span class="muted small">{{ d.reviewed_by.get_full_name|default:d.reviewed_by.username }} · {{ d.reviewed_at|date:"M j" }}</span>{% endif %}{% endif %}</td>
+            <td>{% if d %}
+              <form class="inline-form" method="post" action="{% url 'staff:review_document' d.pk %}">{% csrf_token %}
+                <select name="status">{% for v, l in doc_statuses %}<option value="{{ v }}" {% if d.status == v %}selected{% endif %}>{{ l }}</option>{% endfor %}</select>
+                <input type="text" name="review_note" value="{{ d.review_note }}" placeholder="Note to driver (optional)" maxlength="300">
+                <button class="btn btn-secondary btn-sm" type="submit">Save</button>
+              </form>{% endif %}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Agreements</h3>
+    <div class="table-wrap">
+      <table class="tbl">
+        <thead><tr><th>Agreement</th><th>Status</th><th>Signed</th><th></th></tr></thead>
+        <tbody>
+          {% for t, current, latest in agreement_rows %}
+          <tr>
+            <td><strong>{{ t.title }}</strong> <span class="muted small">v{{ t.version }}</span></td>
+            <td>{% if current %}<span class="pill pill-ok">Signed</span>{% elif latest %}<span class="pill pill-warn">Signed v{{ latest.template_version }} — needs re-sign</span>{% else %}<span class="pill pill-grey">Not signed</span>{% endif %}</td>
+            <td class="small">{% with s=current|default:latest %}{% if s %}{{ s.typed_name }} · {{ s.signed_at|date:"M j, Y g:i A" }} · IP {{ s.ip_address|default:"?" }}{% else %}—{% endif %}{% endwith %}</td>
+            <td>{% with s=current|default:latest %}{% if s %}<a class="btn btn-secondary btn-sm" href="{% url 'portal:agreement_pdf' s.pk %}" target="_blank">PDF</a> <a class="btn btn-ghost btn-sm" href="{% url 'portal:agreement_view' s.pk %}">View</a>{% endif %}{% endwith %}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Activity</h3>
+    <ul class="activity">{% for a in activity %}<li><time>{{ a.created_at|date:"M j, g:i A" }}</time><span>{{ a.action }}{% if a.detail %} — <span class="muted">{{ a.detail }}</span>{% endif %}{% if a.actor %} <span class="muted small">by {{ a.actor.get_full_name|default:a.actor.username }}</span>{% endif %}</span></li>{% empty %}<li class="muted">No activity yet.</li>{% endfor %}</ul>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "portal/base_portal.html" %}
+{% block portal %}
+<div class="portal-head">
+  <div><p class="breadcrumb"><a href="{% url 'portal:agreements' %}">Agreements</a> / Signed copy</p><h1>{{ signed.title }}</h1><p>Signed by {{ signed.typed_name }} on {{ signed.signed_at|date:"F j, Y, g:i A" }} · Ref {{ signed.reference }}</p></div>
+  <a class="btn btn-primary" href="{% url 'portal:agreement_pdf' signed.pk %}" target="_blank">Download PDF</a>
+</div>
+<div class="agreement-doc" style="max-height:none">{% include "portal/_agreement_body.html" with body=signed.rendered_body %}</div>
+<div class="card">
+  <h3>Signature record</h3>
+  <div class="split" style="align-items:start;gap:24px">
+    <img class="sig-preview" src="{% url 'portal:document_file_sig' signed.pk %}" alt="Signature">
+    <dl class="kv">
+      <dt>Signed by</dt><dd>{{ signed.typed_name }}</dd>
+      <dt>Email</dt><dd>{{ signed.driver.email }}</dd>
+      <dt>Date &amp; time</dt><dd>{{ signed.signed_at|date:"F j, Y, g:i A T" }}</dd>
+      <dt>IP address</dt><dd>{{ signed.ip_address|default:"—" }}</dd>
+      <dt>Document version</dt><dd>v{{ signed.template_version }}</dd>
+      <dt>SHA-256</dt><dd class="small" style="word-break:break-all">{{ signed.content_hash }}</dd>
+    </dl>
+  </div>
+</div>
+{% endblock %}

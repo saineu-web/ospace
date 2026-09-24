@@ -1,0 +1,15 @@
+Hi {{ driver.user.first_name }},
+
+Welcome to the Ospace driver portal. This is where you complete your profile, upload your documents and e-sign the driver agreements.
+
+Your portal: {{ url }}
+
+What to do next:
+1. Complete your profile (personal, license, vehicle, insurance)
+2. Upload your documents
+3. Read and sign the driver agreements
+4. Submit for review
+
+Questions? Call {{ SITE.phone }} or reply to this email.
+
+The Ospace team

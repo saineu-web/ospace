@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Become a Driver | Ospace Houston — Earn $150+/day on school runs{% endblock %}
+{% block description %}Drive your own car, choose your hours and earn a minimum of $50 per two rides transporting students in Houston. Requirements, pay and a two-minute application.{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <div class="split">
+      <div>
+        <span class="eyebrow">Become a driver</span>
+        <h1>Become a driver with us now</h1>
+        <p>Supplemental income on your terms. Transport students to and from school in your own vehicle and earn a minimum of $50 per two rides, up to $150+ a day.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#apply">Apply now</a>
+          <a class="btn btn-secondary btn-lg" href="{{ SITE.phone_href }}">Call {{ SITE.phone }}</a>
+        </div>
+      </div>
+      <img src="{% static 'img/driver-4.jpg' %}" alt="Ospace driver in her car" width="1000" height="700">
+    </div>
+  </div>
+</section>
+
+<section class="section" id="requirements">
+  <div class="container">
+    <div class="split">
+      <div>
+        <span class="eyebrow">Requirements</span>
+        <h2>Please review all requirements before applying</h2>
+        <ul class="feature-list">
+          {% for t, s in requirements %}
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div><strong>{{ t }}</strong> <span class="muted">— {{ s }}</span></div></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="card" id="selfcheck" data-selfcheck data-apply-url="#apply">
+        <h3>Do I qualify? Quick self-check</h3>
+        <p class="small muted">Nothing is saved. Just tick what applies to you.</p>
+        <div class="check-list">
+          <label class="check-item"><input type="checkbox"><div><strong>I'm 21 or older</strong><span>and hold a valid U.S. driver's license</span></div></label>
+          <label class="check-item"><input type="checkbox"><div><strong>I have a four-door vehicle</strong><span>model year within the last 15 years</span></div></label>
+          <label class="check-item"><input type="checkbox"><div><strong>I have current auto insurance</strong><span>in my own name</span></div></label>
+          <label class="check-item"><input type="checkbox"><div><strong>I can pass a background check</strong><span>plus drug and TB screening</span></div></label>
+          <label class="check-item"><input type="checkbox"><div><strong>I'm available on weekday mornings and/or afternoons</strong><span>school-run hours</span></div></label>
+        </div>
+        <div class="check-verdict"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The process</span>
+      <h2>How onboarding works</h2>
+    </div>
+    <div class="grid grid-4">
+      {% for title, text in steps %}
+      <div class="card"><div class="step-num">{{ forloop.counter }}</div><h3>{{ title }}</h3><p class="muted">{{ text }}</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="apply">
+  <div class="container">
+    <div class="split">
+      <div>
+        <span class="eyebrow">Apply</span>
+        <h2>Start your application</h2>
+        <p class="lead">Tell us a little about you and your car. One of our team will call you back to walk through the next steps, and you'll get a link to the driver portal to upload your documents.</p>
+        <div class="grid" style="gap:14px;margin-top:24px">
+          {% for t in testimonials|slice:":2" %}
+          <div class="card testimonial" style="padding:20px">
+            <div class="testimonial-head"><span class="avatar">{{ t.name|first }}</span><div><strong>{{ t.name }}</strong><span>{{ t.role }}</span></div></div>
+            <blockquote class="small">“{{ t.quote }}”</blockquote>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="card">
+        {% include "web/_apply_form.html" %}
+        <p class="form-note center" style="margin-top:12px">Already applied? <a href="{% url 'portal:login' %}">Sign in to the driver portal</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container narrow">
+    <div class="section-head"><span class="eyebrow">FAQ</span><h2>Good to know</h2></div>
+    <div class="faq">{% for q, a in faq %}<details><summary>{{ q }}</summary><p>{{ a }}</p></details>{% endfor %}</div>
+  </div>
+</section>
+{% endblock %}

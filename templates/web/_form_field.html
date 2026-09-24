@@ -1,0 +1,11 @@
+{% comment %}Renders one Django form field with label, errors and help. Usage: {% include "web/_form_field.html" with f=form.name %}{% endcomment %}
+<div class="field{% if f.errors %} has-error{% endif %}">
+  {% if f.field.widget.input_type != "checkbox" %}<label for="{{ f.id_for_label }}">{{ f.label }}{% if not f.field.required and not f.field.widget.attrs.data_needed %} <span class="muted">(optional)</span>{% endif %}</label>{% endif %}
+  {% if f.field.widget.input_type == "checkbox" %}
+    <label class="checkbox">{{ f }} <span>{{ f.label }}</span></label>
+  {% else %}
+    {{ f }}
+  {% endif %}
+  {% if f.help_text %}<div class="help">{{ f.help_text|safe }}</div>{% endif %}
+  {% for e in f.errors %}<div class="error">{{ e }}</div>{% endfor %}
+</div>

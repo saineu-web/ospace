@@ -1,0 +1,10 @@
+Hi {{ driver.user.first_name }},
+
+We looked at your {{ document.doc_type.name }} and need you to upload it again.
+{% if document.review_note %}
+Reason: {{ document.review_note }}
+{% endif %}
+Upload here: {{ url }}
+
+The Ospace team
+{{ SITE.phone }}
