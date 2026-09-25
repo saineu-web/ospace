@@ -67,7 +67,9 @@ TEMPLATES = [
 WSGI_APPLICATION = "config.wsgi.application"
 
 # Database: SQLite by default, DATABASE_URL (Postgres) in production.
-DATABASES = {"default": {"ENGINE": "django.db.backends.sqlite3", "NAME": BASE_DIR / "db.sqlite3"}}
+# SQLite file lives OUTSIDE the app directory in production (SQLITE_PATH), because deploy.sh
+# mirrors the repo into the app dir with --delete and would otherwise wipe the database.
+DATABASES = {"default": {"ENGINE": "django.db.backends.sqlite3", "NAME": Path(os.environ.get("SQLITE_PATH", BASE_DIR / "db.sqlite3"))}}
 if os.environ.get("DATABASE_URL"):
     import dj_database_url
 

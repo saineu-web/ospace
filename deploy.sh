@@ -37,7 +37,7 @@ DEST="/srv/ospace/app"
 echo "== Uploading to $HOST:$DEST =="
 # Git Bash on Windows has no rsync, so ship a tarball and let the server rsync it into place
 # (server-side --delete keeps the app dir an exact mirror, while .env survives untouched).
-tar -czf -   --exclude=".git" --exclude="venv" --exclude="__pycache__" --exclude="*.pyc"   --exclude="db.sqlite3" --exclude="media" --exclude="private" --exclude="staticfiles"   --exclude=".env" --exclude="source-media" --exclude=".claude"   . | ssh -i "$KEY" "$HOST" "rm -rf /srv/ospace/incoming && mkdir -p /srv/ospace/incoming && tar -xzf - -C /srv/ospace/incoming   && rsync -a --delete --exclude .env /srv/ospace/incoming/ $DEST/ && rm -rf /srv/ospace/incoming"
+tar -czf -   --exclude=".git" --exclude="venv" --exclude="__pycache__" --exclude="*.pyc"   --exclude="db.sqlite3" --exclude="media" --exclude="private" --exclude="staticfiles"   --exclude=".env" --exclude="source-media" --exclude=".claude"   . | ssh -i "$KEY" "$HOST" "rm -rf /srv/ospace/incoming && mkdir -p /srv/ospace/incoming && tar -xzf - -C /srv/ospace/incoming   && rsync -a --delete --exclude .env --exclude db.sqlite3 /srv/ospace/incoming/ $DEST/ && rm -rf /srv/ospace/incoming"
 
 ssh -o BatchMode=yes -i "$KEY" "$HOST" "
   set -e
