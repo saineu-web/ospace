@@ -62,14 +62,20 @@ lacks a translation. The privacy policy and the signed agreements stay in Englis
 
 ## Deploy (VPS, same pattern as rodsign / huntcustomer)
 
-`deploy.sh` rsyncs the repo to the BioFleet VPS and restarts a gunicorn systemd unit behind Caddy.
+**Live at https://www.ospacegroup.com since 2026-10-07.** DNS stays at Wix's nameservers
+(A `@` and CNAME `www` point at the VPS; Google Workspace mail records untouched). Caddy holds
+the Let's Encrypt certificates and 308s the bare domain to www. The site also reports traffic
+and sign-ups to Zet8 Pulse (`PULSE_TOKEN` in the server `.env`).
+
+`deploy.sh` ships the repo to the BioFleet VPS and restarts a gunicorn systemd unit behind Caddy.
 One-time server setup is documented inside the script. Alternatively the `Procfile` works on
 Railway/Render with `DATABASE_URL` + a persistent volume mounted at `PRIVATE_ROOT`.
 
 Required env in production: `SECRET_KEY`, `DEBUG=0`, `ALLOWED_HOSTS`, `SITE_URL`, `EMAIL_*`,
-`CONTACT_INBOX`, and `PRIVATE_ROOT`/`MEDIA_ROOT` on persistent disk.
+`CONTACT_INBOX`, `SQLITE_PATH` (outside the app dir), and `PRIVATE_ROOT`/`MEDIA_ROOT` on
+persistent disk.
 
-## Before go-live (needs Ospace's input)
+## Still outstanding (needs Ospace's input)
 
 - Real document list + real agreement wording (replace the generic seed in `/admin/`).
 - LinkedIn URL (`SITE["linkedin"]`) — the old site linked to Wix's own LinkedIn page.
