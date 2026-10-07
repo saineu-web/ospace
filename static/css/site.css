@@ -235,6 +235,20 @@ input[type=range] { width: 100%; accent-color: var(--p-600); }
 .store-badge svg { width: 26px; height: 26px; }
 .store-badge small { display: block; font-size: .65rem; opacity: .8; line-height: 1; }
 .store-badge strong { display: block; font-size: 1rem; line-height: 1.1; }
+.app-step-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.app-step-grid.reverse > :first-child { order: 2; }
+@media (max-width: 900px) { .app-step-grid { grid-template-columns: 1fr; gap: 28px; } .app-step-grid.reverse > :first-child { order: 0; } }
+.shots { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; }
+.shots figure { margin: 0; flex: 0 1 190px; text-align: center; }
+.shots img { width: 100%; height: auto; border-radius: 22px; border: 5px solid #1a1030; box-shadow: var(--shadow-lg); background: #1a1030; }
+.shots figcaption { font-size: .8rem; color: var(--ink-3); margin-top: 8px; }
+@media (max-width: 480px) { .shots figure { flex-basis: 150px; } }
+.num-list { padding-left: 0; margin: 0 0 20px; list-style: none; counter-reset: n; }
+.num-list li { counter-increment: n; display: flex; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); color: var(--ink-2); }
+.num-list li::before { content: counter(n); flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--grad); color: #fff; font-weight: 800; font-size: .8rem; display: grid; place-items: center; margin-top: 1px; }
+.service-number { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; padding: 16px 32px; border-radius: 16px; background: var(--grad-soft); border: 2px dashed var(--p-300); margin: 8px 0 14px; }
+.service-number span { font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--p-700); font-weight: 700; }
+.service-number strong { font-family: var(--font-display); font-size: 3rem; line-height: 1; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .phone-shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .phone-shots img { border-radius: 18px; border: 6px solid #1a1030; box-shadow: var(--shadow-lg); }
 @media (max-width: 700px) { .phone-shots { grid-template-columns: repeat(2, 1fr); } }
