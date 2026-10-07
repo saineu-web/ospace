@@ -35,6 +35,20 @@ Nothing is hard-coded. In `/admin/`:
 
 The generic defaults live in `apps/portal/management/commands/seed_portal.py`.
 
+## Languages (English, Spanish, Arabic)
+
+English is served at `/`, Spanish at `/es/...`, Arabic at `/ar/...` (right-to-left). The header
+and footer carry a switcher and every page emits `hreflang` links. Translations live in
+`locale/es.json` and `locale/ar.json` (English string -> translation). After editing either file,
+or after adding `{% translate %}` strings to a template, run:
+
+```bash
+python scripts/i18n_build.py
+```
+
+It regenerates the `.po`/`.mo` files (no GNU gettext needed) and prints any string that still
+lacks a translation. The privacy policy and the signed agreements stay in English on purpose.
+
 ## Where things live
 
 | Path | What |

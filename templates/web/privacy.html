@@ -1,10 +1,12 @@
 {% extends "base.html" %}
-{% block title %}Privacy Policy | Ospace{% endblock %}
-{% block description %}How Ospace collects, uses and shares personal information for riders, drivers and website visitors.{% endblock %}
+{% load i18n %}
+{% block title %}{% translate "Privacy Policy | Ospace" %}{% endblock %}
+{% block description %}{% translate "How Ospace collects, uses and shares personal information for riders, drivers and website visitors." %}{% endblock %}
 {% block content %}
-<section class="page-hero"><div class="container"><span class="eyebrow">Legal</span><h1>Privacy policy</h1><p>Questions about this policy: <a href="mailto:{{ SITE.legal_email }}">{{ SITE.legal_email }}</a></p></div></section>
+<section class="page-hero"><div class="container"><span class="eyebrow">{% translate "Legal" %}</span><h1>{% translate "Privacy policy" %}</h1><p>{% translate "Questions about this policy:" %} <a href="mailto:{{ SITE.legal_email }}">{{ SITE.legal_email }}</a></p></div></section>
 <section class="section">
-  <div class="container prose">
+  <div class="container prose" dir="ltr" lang="en">
+    {% get_current_language as LANG %}{% if LANG != "en" %}<div class="banner info" style="margin-bottom:24px"><div>{% translate "The legally binding version of this policy is the English text below." %}</div></div>{% endif %}
     {% for p in paragraphs %}
       {% if p|length < 60 and not p|slice:"-1:" == "." %}<h2>{{ p }}</h2>{% else %}<p>{{ p }}</p>{% endif %}
     {% endfor %}

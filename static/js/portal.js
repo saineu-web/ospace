@@ -61,7 +61,7 @@
     form.addEventListener('input', gate);
     canvas.addEventListener('pointerup', gate);
     gate();
-    form.addEventListener('submit', function (e) { sync(); if (!hidden.value) { e.preventDefault(); alert('Please draw your signature.'); } });
+    form.addEventListener('submit', function (e) { sync(); if (!hidden.value) { e.preventDefault(); alert(form.dataset.msgSig || 'Please draw your signature.'); } });
   }
 
   // Show chosen file name + auto-submit when a file is picked ----------------

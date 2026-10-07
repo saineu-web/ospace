@@ -4,6 +4,7 @@ from django import forms
 from django.conf import settings
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.utils.translation import gettext_lazy as _
 
 from .models import WEEKDAYS, DriverDocument, DriverProfile
 
@@ -11,11 +12,11 @@ DATE = forms.DateInput(attrs={"type": "date"}, format="%Y-%m-%d")
 
 
 class RegisterForm(UserCreationForm):
-    first_name = forms.CharField(max_length=60)
-    last_name = forms.CharField(max_length=60)
-    email = forms.EmailField()
-    phone = forms.CharField(max_length=40)
-    agree = forms.BooleanField(label="I agree to the privacy policy and to be contacted about my application.")
+    first_name = forms.CharField(max_length=60, label=_("First name"))
+    last_name = forms.CharField(max_length=60, label=_("Last name"))
+    email = forms.EmailField(label=_("Email"))
+    phone = forms.CharField(max_length=40, label=_("Phone"))
+    agree = forms.BooleanField(label=_("I agree to the privacy policy and to be contacted about my application."))
 
     class Meta:
         model = User
@@ -24,7 +25,7 @@ class RegisterForm(UserCreationForm):
     def clean_email(self):
         email = self.cleaned_data["email"].strip().lower()
         if User.objects.filter(username=email).exists() or User.objects.filter(email__iexact=email).exists():
-            raise forms.ValidationError("An account with this email already exists. Try signing in instead.")
+            raise forms.ValidationError(_("An account with this email already exists. Try signing in instead."))
         return email
 
     def save(self, commit=True):
@@ -38,8 +39,8 @@ class RegisterForm(UserCreationForm):
 
 
 class ProfileForm(forms.ModelForm):
-    first_name = forms.CharField(max_length=60)
-    last_name = forms.CharField(max_length=60)
+    first_name = forms.CharField(max_length=60, label=_("First name"))
+    last_name = forms.CharField(max_length=60, label=_("Last name"))
 
     class Meta:
         model = DriverProfile
@@ -70,7 +71,7 @@ class ProfileForm(forms.ModelForm):
     def clean_vehicle_year(self):
         y = self.cleaned_data.get("vehicle_year")
         if y and y < 1990:
-            raise forms.ValidationError("Vehicles must be from the last 15 years.")
+            raise forms.ValidationError(_("Vehicles must be from the last 15 years."))
         return y
 
     def save(self, commit=True):
@@ -95,23 +96,23 @@ class DocumentUploadForm(forms.Form):
         f = self.cleaned_data["file"]
         ext = os.path.splitext(f.name)[1].lower().lstrip(".")
         if ext not in settings.ALLOWED_UPLOAD_EXTENSIONS:
-            raise forms.ValidationError(f"Please upload a {', '.join(settings.ALLOWED_UPLOAD_EXTENSIONS).upper()} file.")
+            raise forms.ValidationError(_("Please upload a PDF, JPG, PNG, HEIC or WEBP file."))
         if f.size > settings.MAX_UPLOAD_MB * 1024 * 1024:
-            raise forms.ValidationError(f"Files must be under {settings.MAX_UPLOAD_MB} MB.")
+            raise forms.ValidationError(_("Files must be under 10 MB."))
         return f
 
 
 class SignForm(forms.Form):
-    typed_name = forms.CharField(max_length=120, label="Type your full legal name")
+    typed_name = forms.CharField(max_length=120, label=_("Type your full legal name"))
     signature = forms.CharField(widget=forms.HiddenInput)  # data:image/png;base64,...
-    consent = forms.BooleanField(label="I have read this document and agree that my electronic signature is legally binding.")
+    consent = forms.BooleanField(label=_("I have read this document and agree that my electronic signature is legally binding."))
 
     def clean_signature(self):
         sig = self.cleaned_data["signature"]
         if not sig.startswith("data:image/png;base64,") or len(sig) < 200:
-            raise forms.ValidationError("Please draw your signature in the box.")
+            raise forms.ValidationError(_("Please draw your signature in the box."))
         if len(sig) > 400_000:
-            raise forms.ValidationError("Signature is too large. Please try again.")
+            raise forms.ValidationError(_("Signature is too large. Please try again."))
         return sig
 
 

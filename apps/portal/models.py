@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 from django.core.files.storage import FileSystemStorage
 from django.db import models
 from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
 
 # Driver uploads (licenses, insurance, signed agreements) never live under MEDIA_ROOT.
 # They are served only through views that check ownership — see views.document_file.
@@ -53,52 +54,52 @@ class DriverProfile(models.Model):
     STATUS_REJECTED = "rejected"
     STATUS_INACTIVE = "inactive"
     STATUS_CHOICES = [
-        (STATUS_DRAFT, "Getting started"),
-        (STATUS_SUBMITTED, "Under review"),
-        (STATUS_CHANGES, "Changes requested"),
-        (STATUS_APPROVED, "Approved"),
-        (STATUS_REJECTED, "Not approved"),
-        (STATUS_INACTIVE, "Inactive"),
+        (STATUS_DRAFT, _("Getting started")),
+        (STATUS_SUBMITTED, _("Under review")),
+        (STATUS_CHANGES, _("Changes requested")),
+        (STATUS_APPROVED, _("Approved")),
+        (STATUS_REJECTED, _("Not approved")),
+        (STATUS_INACTIVE, _("Inactive")),
     ]
 
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="driver")
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default=STATUS_DRAFT, db_index=True)
 
     # Personal
-    phone = models.CharField(max_length=40)
-    date_of_birth = models.DateField(null=True, blank=True)
-    address1 = models.CharField("Street address", max_length=200, blank=True)
-    address2 = models.CharField("Apt / unit", max_length=100, blank=True)
-    city = models.CharField(max_length=100, blank=True)
-    state = models.CharField(max_length=2, choices=US_STATES, default="TX", blank=True)
-    zip_code = models.CharField("ZIP", max_length=12, blank=True)
+    phone = models.CharField(_("Phone"), max_length=40)
+    date_of_birth = models.DateField(_("Date of birth"), null=True, blank=True)
+    address1 = models.CharField(_("Street address"), max_length=200, blank=True)
+    address2 = models.CharField(_("Apt / unit"), max_length=100, blank=True)
+    city = models.CharField(_("City"), max_length=100, blank=True)
+    state = models.CharField(_("State"), max_length=2, choices=US_STATES, default="TX", blank=True)
+    zip_code = models.CharField(_("ZIP"), max_length=12, blank=True)
 
     # Driver's license
-    license_number = models.CharField(max_length=40, blank=True)
-    license_state = models.CharField(max_length=2, choices=US_STATES, default="TX", blank=True)
-    license_expiry = models.DateField(null=True, blank=True)
+    license_number = models.CharField(_("License number"), max_length=40, blank=True)
+    license_state = models.CharField(_("License state"), max_length=2, choices=US_STATES, default="TX", blank=True)
+    license_expiry = models.DateField(_("License expiry"), null=True, blank=True)
 
     # Vehicle
-    vehicle_year = models.PositiveIntegerField(null=True, blank=True)
-    vehicle_make = models.CharField(max_length=60, blank=True)
-    vehicle_model = models.CharField(max_length=60, blank=True)
-    vehicle_color = models.CharField(max_length=40, blank=True)
-    vehicle_plate = models.CharField("License plate", max_length=20, blank=True)
-    vehicle_seats = models.PositiveSmallIntegerField("Passenger seats", null=True, blank=True)
+    vehicle_year = models.PositiveIntegerField(_("Vehicle year"), null=True, blank=True)
+    vehicle_make = models.CharField(_("Vehicle make"), max_length=60, blank=True)
+    vehicle_model = models.CharField(_("Vehicle model"), max_length=60, blank=True)
+    vehicle_color = models.CharField(_("Vehicle color"), max_length=40, blank=True)
+    vehicle_plate = models.CharField(_("License plate"), max_length=20, blank=True)
+    vehicle_seats = models.PositiveSmallIntegerField(_("Passenger seats"), null=True, blank=True)
 
     # Insurance
-    insurance_provider = models.CharField(max_length=100, blank=True)
-    insurance_policy = models.CharField("Policy number", max_length=60, blank=True)
-    insurance_expiry = models.DateField(null=True, blank=True)
+    insurance_provider = models.CharField(_("Insurance provider"), max_length=100, blank=True)
+    insurance_policy = models.CharField(_("Policy number"), max_length=60, blank=True)
+    insurance_expiry = models.DateField(_("Insurance expiry"), null=True, blank=True)
 
     # Emergency contact
-    emergency_name = models.CharField(max_length=120, blank=True)
-    emergency_phone = models.CharField(max_length=40, blank=True)
-    emergency_relationship = models.CharField(max_length=60, blank=True)
+    emergency_name = models.CharField(_("Emergency contact name"), max_length=120, blank=True)
+    emergency_phone = models.CharField(_("Emergency contact phone"), max_length=40, blank=True)
+    emergency_relationship = models.CharField(_("Relationship"), max_length=60, blank=True)
 
     # Availability: {"mon": ["am", "pm"], ...}
     availability = models.JSONField(default=dict, blank=True)
-    how_heard = models.CharField("How did you hear about us?", max_length=120, blank=True)
+    how_heard = models.CharField(_("How did you hear about us?"), max_length=120, blank=True)
 
     # Review
     submitted_at = models.DateTimeField(null=True, blank=True)
@@ -225,7 +226,7 @@ class DriverDocument(models.Model):
     STATUS_PENDING = "pending"
     STATUS_APPROVED = "approved"
     STATUS_REJECTED = "rejected"
-    STATUS_CHOICES = [(STATUS_PENDING, "Pending review"), (STATUS_APPROVED, "Approved"), (STATUS_REJECTED, "Needs re-upload")]
+    STATUS_CHOICES = [(STATUS_PENDING, _("Pending review")), (STATUS_APPROVED, _("Approved")), (STATUS_REJECTED, _("Needs re-upload"))]
 
     driver = models.ForeignKey(DriverProfile, on_delete=models.CASCADE, related_name="documents")
     doc_type = models.ForeignKey(DocumentType, on_delete=models.PROTECT, related_name="documents")

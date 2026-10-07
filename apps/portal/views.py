@@ -9,6 +9,7 @@ from django.core.files.base import ContentFile
 from django.http import FileResponse, Http404
 from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
+from django.utils.translation import gettext as _
 from django.views.decorators.http import require_POST
 
 from . import emails
@@ -36,16 +37,13 @@ def register(request):
     if request.user.is_authenticated:
         return redirect("portal:dashboard")
     initial = request.session.pop("applicant", None) or {}
-    if initial.get("name") and " " in initial["name"]:
-        first, last = initial["name"].split(" ", 1)
-        initial.update(first_name=first, last_name=last)
     form = RegisterForm(request.POST or None, initial=initial)
     if request.method == "POST" and form.is_valid():
         user = form.save()
         user.driver.log("Account created")
         emails.welcome(user.driver)
         login(request, user)
-        messages.success(request, "Welcome! Let's get your profile set up.")
+        messages.success(request, _("Welcome! Let's get your profile set up."))
         return redirect("portal:dashboard")
     return render(request, "portal/register.html", {"form": form})
 
@@ -90,7 +88,7 @@ def profile(request):
         if form.is_valid():
             form.save()
             d.log("Profile updated", actor=request.user)
-            messages.success(request, "Profile saved.")
+            messages.success(request, _("Profile saved."))
             return redirect("portal:dashboard" if not d.profile_missing() else "portal:profile")
     days = [(k, WEEKDAY_LABELS[k], form.availability.get(k, [])) for k in WEEKDAYS]
     return render(request, "portal/profile.html", {"driver": d, "form": form, "days": days})
@@ -130,7 +128,7 @@ def upload_document(request, type_id):
     doc.reviewed_by = None
     doc.save()
     d.log("Document uploaded", actor=request.user, detail=dt.name)
-    messages.success(request, f"{dt.name} uploaded. We'll review it shortly.")
+    messages.success(request, _("%(name)s uploaded. We'll review it shortly.") % {"name": dt.name})
     return redirect("portal:documents")
 
 
@@ -140,13 +138,13 @@ def delete_document(request, pk):
     d = _driver(request)
     doc = get_object_or_404(DriverDocument, pk=pk, driver=d)
     if doc.status == DriverDocument.STATUS_APPROVED:
-        messages.error(request, "Approved documents can't be removed. Contact us if it needs replacing.")
+        messages.error(request, _("Approved documents can't be removed. Contact us if it needs replacing."))
         return redirect("portal:documents")
     name = doc.doc_type.name
     doc.file.delete(save=False)
     doc.delete()
     d.log("Document removed", actor=request.user, detail=name)
-    messages.info(request, f"{name} removed.")
+    messages.info(request, _("%(name)s removed.") % {"name": name})
     return redirect("portal:documents")
 
 
@@ -196,7 +194,7 @@ def sign(request, slug):
         signed.save()
         signed.pdf.save(f"{t.slug}.pdf", ContentFile(build_agreement_pdf(signed)), save=True)
         d.log("Agreement signed", actor=request.user, detail=t.title)
-        messages.success(request, f"{t.title} signed. A PDF copy is saved in your portal.")
+        messages.success(request, _("%(title)s signed. A PDF copy is saved in your portal.") % {"title": t.title})
         return redirect("portal:agreements")
     return render(request, "portal/sign.html", {"driver": d, "template": t, "body": body, "form": form})
 
@@ -234,7 +232,7 @@ def agreement_pdf(request, pk):
 def submit_application(request):
     d = _driver(request)
     if not d.can_submit():
-        messages.error(request, "Please finish every item on the checklist before submitting.")
+        messages.error(request, _("Please finish every item on the checklist before submitting."))
         return redirect("portal:dashboard")
     d.status = DriverProfile.STATUS_SUBMITTED
     d.submitted_at = timezone.now()
@@ -242,5 +240,5 @@ def submit_application(request):
     d.save(update_fields=["status", "submitted_at", "review_message", "updated_at"])
     d.log("Application submitted", actor=request.user)
     emails.submitted(d)
-    messages.success(request, "Application submitted! We'll be in touch within a few business days.")
+    messages.success(request, _("Application submitted! We'll be in touch within a few business days."))
     return redirect("portal:dashboard")

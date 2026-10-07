@@ -1,14 +1,18 @@
-{% load static %}<!DOCTYPE html>
-<html lang="en">
+{% load static i18n i18n_extras %}{% get_current_language as LANG %}{% get_current_language_bidi as RTL %}<!DOCTYPE html>
+<html lang="{{ LANG }}" dir="{% if RTL %}rtl{% else %}ltr{% endif %}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{% block title %}Ospace | Student Transportation & Driver Jobs in Houston, TX{% endblock %}</title>
-<meta name="description" content="{% block description %}Ospace connects Houston families and schools with vetted drivers for safe student rides. Drive your own car, set your hours and earn $150+ a day.{% endblock %}">
+<title>{% block title %}{% translate "Ospace | Student Transportation & Driver Jobs in Houston, TX" %}{% endblock %}</title>
+<meta name="description" content="{% block description %}{% translate "Ospace connects Houston families and schools with vetted drivers for safe student rides. Drive your own car, set your hours and earn $150+ a day." %}{% endblock %}">
 <link rel="canonical" href="{{ SITE_URL }}{{ request.path }}">
+<link rel="alternate" hreflang="en" href="{{ SITE_URL }}{% switch_lang_url 'en' %}">
+<link rel="alternate" hreflang="es" href="{{ SITE_URL }}{% switch_lang_url 'es' %}">
+<link rel="alternate" hreflang="ar" href="{{ SITE_URL }}{% switch_lang_url 'ar' %}">
+<link rel="alternate" hreflang="x-default" href="{{ SITE_URL }}{% switch_lang_url 'en' %}">
 <meta property="og:site_name" content="Ospace">
-<meta property="og:title" content="{% block og_title %}Ospace — Safe student rides, flexible driver income{% endblock %}">
-<meta property="og:description" content="{% block og_description %}Houston's student transportation service. Vetted drivers, your own vehicle, flexible hours.{% endblock %}">
+<meta property="og:title" content="{% block og_title %}{% translate "Ospace — Safe student rides, flexible driver income" %}{% endblock %}">
+<meta property="og:description" content="{% block og_description %}{% translate "Houston's student transportation service. Vetted drivers, your own vehicle, flexible hours." %}{% endblock %}">
 <meta property="og:image" content="{{ SITE_URL }}{% static 'img/media-square.jpg' %}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ SITE_URL }}{{ request.path }}">
@@ -19,7 +23,7 @@
 <link rel="apple-touch-icon" href="{% static 'img/icon-180.png' %}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800{% if RTL %}&family=Cairo:wght@400;500;600;700;800{% endif %}&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{% static 'css/site.css' %}">
 {% block head %}{% endblock %}
 </head>
@@ -27,19 +31,24 @@
 {% block header %}
 <header class="header">
   <div class="container">
-    <a class="brand" href="{% url 'web:home' %}" aria-label="Ospace home"><img src="{% static 'img/logo.png' %}" alt="Ospace" width="130" height="38"></a>
+    <a class="brand" href="{% url 'web:home' %}" aria-label="Ospace"><img src="{% static 'img/logo.png' %}" alt="Ospace" width="130" height="38"></a>
     <nav class="nav" aria-label="Main">
-      <a href="{% url 'web:drivers' %}">Become a driver</a>
-      <a href="{% url 'web:how_it_works' %}">How it works</a>
-      <a href="{% url 'web:families' %}">Families &amp; schools</a>
-      <a href="{% url 'web:app' %}">Driver app</a>
-      <a href="{% url 'web:about' %}">About</a>
-      <a href="{% url 'web:faq' %}">FAQ</a>
-      <a href="{% url 'web:contact' %}">Contact</a>
+      <a href="{% url 'web:drivers' %}">{% translate "Become a driver" %}</a>
+      <a href="{% url 'web:how_it_works' %}">{% translate "In the ride" %}</a>
+      <a href="{% url 'web:families' %}">{% translate "Families & schools" %}</a>
+      <a href="{% url 'web:app' %}">{% translate "Driver app" %}</a>
+      <a href="{% url 'web:about' %}">{% translate "About" %}</a>
+      <a href="{% url 'web:faq' %}">{% translate "FAQ" %}</a>
+      <a href="{% url 'web:contact' %}">{% translate "Contact" %}</a>
     </nav>
     <div class="header-cta">
-      <a class="btn btn-secondary btn-sm" href="{% url 'portal:login' %}">Driver portal</a>
-      <a class="btn btn-primary btn-sm" href="{% url 'web:drivers' %}#apply">Apply now</a>
+      <div class="lang" aria-label="Language">
+        <a href="{% switch_lang_url 'en' %}" {% if LANG == 'en' %}class="active"{% endif %} lang="en" hreflang="en">EN</a>
+        <a href="{% switch_lang_url 'es' %}" {% if LANG == 'es' %}class="active"{% endif %} lang="es" hreflang="es">ES</a>
+        <a href="{% switch_lang_url 'ar' %}" {% if LANG == 'ar' %}class="active"{% endif %} lang="ar" hreflang="ar">عربي</a>
+      </div>
+      <a class="btn btn-secondary btn-sm" href="{% url 'portal:login' %}">{% translate "Driver portal" %}</a>
+      <a class="btn btn-primary btn-sm" href="{% url 'web:drivers' %}#apply">{% translate "Apply now" %}</a>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -56,7 +65,7 @@
     <div class="footer-grid">
       <div>
         <img src="{% static 'img/logo-white.png' %}" alt="Ospace" width="117" height="34">
-        <p class="small">Safe, reliable student transportation in {{ SITE.region }}, driven by vetted local drivers in their own vehicles.</p>
+        <p class="small">{% translate "Safe, reliable student transportation in Houston, Texas, driven by vetted local drivers in their own vehicles." %}</p>
         <div class="social">
           {% if SITE.facebook %}<a href="{{ SITE.facebook }}" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8h3.3z"/></svg></a>{% endif %}
           {% if SITE.instagram %}<a href="{{ SITE.instagram }}" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zM17.3 5.5a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zM21.5 8c-.1-1.6-.4-3-1.6-4.2S17.2 2.3 15.6 2.2C14 2.1 10 2.1 8.4 2.2 6.8 2.3 5.4 2.6 4.2 3.8S2.7 6.4 2.6 8c-.1 1.6-.1 5.6 0 7.2.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.6.1 5.6.1 7.2 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.6.1-5.6 0-7.2zm-2.2 8.8c-.3.9-1 1.6-1.9 1.9-1.3.5-4.5.4-5.9.4s-4.6.1-5.9-.4c-.9-.3-1.6-1-1.9-1.9-.5-1.3-.4-4.5-.4-5.9s-.1-4.6.4-5.9c.3-.9 1-1.6 1.9-1.9 1.3-.5 4.5-.4 5.9-.4s4.6-.1 5.9.4c.9.3 1.6 1 1.9 1.9.5 1.3.4 4.5.4 5.9s.1 4.6-.4 5.9z"/></svg></a>{% endif %}
@@ -64,37 +73,40 @@
         </div>
       </div>
       <div>
-        <h4>Drivers</h4>
-        <a href="{% url 'web:drivers' %}">Become a driver</a>
-        <a href="{% url 'web:drivers' %}#requirements">Requirements</a>
-        <a href="{% url 'web:app' %}">Driver app</a>
-        <a href="{% url 'portal:login' %}">Driver portal</a>
+        <h4>{% translate "Drivers" %}</h4>
+        <a href="{% url 'web:drivers' %}">{% translate "Become a driver" %}</a>
+        <a href="{% url 'web:drivers' %}#requirements">{% translate "Requirements" %}</a>
+        <a href="{% url 'web:app' %}">{% translate "Driver app" %}</a>
+        <a href="{% url 'portal:login' %}">{% translate "Driver portal" %}</a>
       </div>
       <div>
-        <h4>Company</h4>
-        <a href="{% url 'web:about' %}">About Ospace</a>
-        <a href="{% url 'web:how_it_works' %}">How it works</a>
-        <a href="{% url 'web:families' %}">Families &amp; schools</a>
-        <a href="{% url 'web:media' %}">Media</a>
-        <a href="{% url 'web:faq' %}">FAQ</a>
+        <h4>{% translate "Company" %}</h4>
+        <a href="{% url 'web:about' %}">{% translate "About Ospace" %}</a>
+        <a href="{% url 'web:how_it_works' %}">{% translate "In the ride" %}</a>
+        <a href="{% url 'web:families' %}">{% translate "Families & schools" %}</a>
+        <a href="{% url 'web:media' %}">{% translate "Media" %}</a>
+        <a href="{% url 'web:faq' %}">{% translate "FAQ" %}</a>
       </div>
       <div>
-        <h4>Contact</h4>
-        <a href="{{ SITE.phone_href }}">{{ SITE.phone }}</a>
+        <h4>{% translate "Contact" %}</h4>
+        <a href="{{ SITE.phone_href }}" dir="ltr">{{ SITE.phone }}</a>
         <a href="mailto:{{ SITE.email }}">{{ SITE.email }}</a>
-        <a href="{% url 'web:contact' %}">Send a message</a>
-        <p class="small" style="margin-top:8px">{{ SITE.region }}</p>
+        <a href="{% url 'web:contact' %}">{% translate "Send a message" %}</a>
+        <p class="small" style="margin-top:8px">{% translate "Houston, Texas" %}</p>
+        <div class="lang lang-footer">
+          <a href="{% switch_lang_url 'en' %}" lang="en">English</a> · <a href="{% switch_lang_url 'es' %}" lang="es">Español</a> · <a href="{% switch_lang_url 'ar' %}" lang="ar">العربية</a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; {% now "Y" %} {{ SITE.legal_name }}. All rights reserved.</span>
-      <span><a href="{% url 'web:privacy' %}" style="display:inline">Privacy policy</a></span>
+      <span>&copy; {% now "Y" %} {{ SITE.legal_name }}. {% translate "All rights reserved." %}</span>
+      <span><a href="{% url 'web:privacy' %}" style="display:inline">{% translate "Privacy policy" %}</a></span>
     </div>
   </div>
 </footer>
 <div class="mobile-cta">
-  <a class="btn btn-secondary" href="{{ SITE.phone_href }}">Call us</a>
-  <a class="btn btn-primary" href="{% url 'web:drivers' %}#apply">Apply to drive</a>
+  <a class="btn btn-secondary" href="{{ SITE.phone_href }}">{% translate "Call us" %}</a>
+  <a class="btn btn-primary" href="{% url 'web:drivers' %}#apply">{% translate "Apply to drive" %}</a>
 </div>
 {% endblock %}
 <script src="{% static 'js/site.js' %}" defer></script>

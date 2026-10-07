@@ -1,10 +1,13 @@
 {% extends "base.html" %}
-{% load static %}
-{% block title %}{% block auth_title %}Sign in{% endblock %} | Ospace driver portal{% endblock %}
+{% load static i18n i18n_extras %}
+{% block title %}{% block auth_title %}{% translate "Sign in" %}{% endblock %} | {% translate "Ospace driver portal" %}{% endblock %}
 {% block head %}<meta name="robots" content="noindex,nofollow">{% endblock %}
 {% block body_class %}portal-body{% endblock %}
 {% block header %}
-<div class="portal-top"><div class="container"><a class="brand" href="{% url 'web:home' %}"><img src="{% static 'img/logo.png' %}" alt="Ospace" width="110" height="32"></a><div class="who"><a href="{% url 'web:home' %}">&larr; Back to ospacegroup.com</a></div></div></div>
+<div class="portal-top"><div class="container"><a class="brand" href="{% url 'web:home' %}"><img src="{% static 'img/logo.png' %}" alt="Ospace" width="110" height="32"></a><div class="who">
+  {% get_current_language as LANG %}
+  <div class="lang"><a href="{% switch_lang_url 'en' %}" {% if LANG == 'en' %}class="active"{% endif %}>EN</a><a href="{% switch_lang_url 'es' %}" {% if LANG == 'es' %}class="active"{% endif %}>ES</a><a href="{% switch_lang_url 'ar' %}" {% if LANG == 'ar' %}class="active"{% endif %}>عربي</a></div>
+  <a href="{% url 'web:home' %}">&larr; ospacegroup.com</a></div></div></div>
 {% endblock %}
 {% block content %}<div class="auth-wrap"><div class="card auth-card {% block auth_class %}{% endblock %}">{% block auth %}{% endblock %}</div></div>{% endblock %}
 {% block footer %}{% endblock %}

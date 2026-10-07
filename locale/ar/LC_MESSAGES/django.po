@@ -1,0 +1,2549 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ospace\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+
+#: templates\base.html
+msgid "Ospace | Student Transportation & Driver Jobs in Houston, TX"
+msgstr "Ospace | نقل الطلاب ووظائف السائقين في هيوستن، تكساس"
+
+#: templates\base.html
+msgid ""
+"Ospace connects Houston families and schools with vetted drivers for safe "
+"student rides. Drive your own car, set your hours and earn $150+ a day."
+msgstr ""
+"تربط Ospace العائلات والمدارس في هيوستن بسائقين موثوقين لتوصيل الطلاب بأمان."
+" قُد سيارتك، حدّد ساعات عملك، واكسب أكثر من 150 دولارًا يوميًا."
+
+#: templates\base.html
+msgid "Ospace — Safe student rides, flexible driver income"
+msgstr "Ospace — توصيل آمن للطلاب ودخل مرن للسائقين"
+
+#: templates\base.html
+msgid ""
+"Houston's student transportation service. Vetted drivers, your own vehicle, "
+"flexible hours."
+msgstr "خدمة نقل الطلاب في هيوستن. سائقون موثوقون، سيارتك الخاصة، ساعات مرنة."
+
+#: templates\base.html
+msgid "Become a driver"
+msgstr "كن سائقًا"
+
+#: templates\base.html
+msgid "In the ride"
+msgstr "أثناء الرحلة"
+
+#: templates\base.html
+msgid "Families & schools"
+msgstr "العائلات والمدارس"
+
+#: templates\base.html
+msgid "Driver app"
+msgstr "تطبيق السائق"
+
+#: templates\base.html
+msgid "About"
+msgstr "من نحن"
+
+#: templates\base.html
+msgid "FAQ"
+msgstr "الأسئلة الشائعة"
+
+#: templates\base.html
+msgid "Contact"
+msgstr "اتصل بنا"
+
+#: templates\base.html
+msgid "Driver portal"
+msgstr "بوابة السائق"
+
+#: templates\base.html
+msgid "Apply now"
+msgstr "قدّم الآن"
+
+#: templates\base.html
+msgid ""
+"Safe, reliable student transportation in Houston, Texas, driven by vetted "
+"local drivers in their own vehicles."
+msgstr ""
+"نقل آمن وموثوق للطلاب في هيوستن، تكساس، بواسطة سائقين محليين موثوقين "
+"يستخدمون سياراتهم الخاصة."
+
+#: templates\base.html
+msgid "Drivers"
+msgstr "السائقون"
+
+#: templates\base.html
+msgid "Requirements"
+msgstr "الشروط"
+
+#: templates\base.html
+msgid "Company"
+msgstr "الشركة"
+
+#: templates\base.html
+msgid "About Ospace"
+msgstr "عن Ospace"
+
+#: templates\base.html
+msgid "Media"
+msgstr "الإعلام"
+
+#: templates\base.html
+msgid "Send a message"
+msgstr "أرسل رسالة"
+
+#: templates\base.html
+msgid "Houston, Texas"
+msgstr "هيوستن، تكساس"
+
+#: templates\base.html
+msgid "All rights reserved."
+msgstr "جميع الحقوق محفوظة."
+
+#: templates\base.html
+msgid "Privacy policy"
+msgstr "سياسة الخصوصية"
+
+#: templates\base.html
+msgid "Call us"
+msgstr "اتصل بنا"
+
+#: templates\base.html
+msgid "Apply to drive"
+msgstr "قدّم للقيادة"
+
+#: templates\portal\agreements.html
+msgid "Agreements"
+msgstr "الاتفاقيات"
+
+#: templates\portal\agreements.html
+msgid ""
+"Read and e-sign each document. You'll get a PDF copy of everything you sign."
+msgstr "اقرأ كل مستند ووقّعه إلكترونيًا. ستحصل على نسخة PDF من كل ما توقّعه."
+
+#: templates\portal\agreements.html
+msgid "Optional"
+msgstr "اختياري"
+
+#: templates\portal\agreements.html
+msgid "Signed"
+msgstr "موقّع"
+
+#: templates\portal\agreements.html
+msgid "Updated — please re-sign"
+msgstr "تم التحديث — يرجى التوقيع مجددًا"
+
+#: templates\portal\agreements.html
+msgid "Not signed"
+msgstr "غير موقّع"
+
+#: templates\portal\agreements.html
+msgid "Download PDF"
+msgstr "تنزيل PDF"
+
+#: templates\portal\agreements.html
+msgid "View"
+msgstr "عرض"
+
+#: templates\portal\agreements.html
+msgid "Read & sign"
+msgstr "اقرأ ووقّع"
+
+#: templates\portal\agreements.html
+msgid "No agreements have been configured yet."
+msgstr "لم يتم إعداد أي اتفاقيات بعد."
+
+#: templates\portal\agreements.html
+msgid "Agreements are legal documents and are presented in English."
+msgstr "الاتفاقيات مستندات قانونية وتُعرض باللغة الإنجليزية."
+
+#: templates\portal\agreements.html
+msgid "Signed by {{ name }} on {{ date }} · Ref {{ ref }}"
+msgstr "وقّعه {{ name }} بتاريخ {{ date }} · المرجع {{ ref }}"
+
+#: templates\portal\agreement_view.html
+msgid "Signed copy"
+msgstr "النسخة الموقّعة"
+
+#: templates\portal\agreement_view.html
+msgid "Signature record"
+msgstr "سجل التوقيع"
+
+#: templates\portal\agreement_view.html
+msgid "Signed by"
+msgstr "وقّعه"
+
+#: templates\portal\agreement_view.html
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: templates\portal\agreement_view.html
+msgid "Date & time"
+msgstr "التاريخ والوقت"
+
+#: templates\portal\agreement_view.html
+msgid "IP address"
+msgstr "عنوان IP"
+
+#: templates\portal\agreement_view.html
+msgid "Document version"
+msgstr "إصدار المستند"
+
+#: templates\portal\base_auth.html
+msgid "Sign in"
+msgstr "تسجيل الدخول"
+
+#: templates\portal\base_auth.html
+msgid "Ospace driver portal"
+msgstr "بوابة سائقي Ospace"
+
+#: templates\portal\base_portal.html
+msgid "Driver portal | Ospace"
+msgstr "بوابة السائق | Ospace"
+
+#: templates\portal\base_portal.html
+msgid "Signed in as"
+msgstr "مسجّل الدخول باسم"
+
+#: templates\portal\base_portal.html
+msgid "Staff desk"
+msgstr "مكتب الموظفين"
+
+#: templates\portal\base_portal.html
+msgid "Sign out"
+msgstr "تسجيل الخروج"
+
+#: templates\portal\base_portal.html
+msgid "Overview"
+msgstr "نظرة عامة"
+
+#: templates\portal\base_portal.html
+msgid "My profile"
+msgstr "ملفي الشخصي"
+
+#: templates\portal\base_portal.html
+msgid "Documents"
+msgstr "المستندات"
+
+#: templates\portal\base_portal.html
+msgid "Driver app guide"
+msgstr "دليل تطبيق السائق"
+
+#: templates\portal\base_portal.html
+msgid "Help"
+msgstr "مساعدة"
+
+#: templates\portal\dashboard.html
+msgid "Your application status:"
+msgstr "حالة طلبك:"
+
+#: templates\portal\dashboard.html
+msgid "Set up the driver app"
+msgstr "إعداد تطبيق السائق"
+
+#: templates\portal\dashboard.html
+msgid "Message from Ospace:"
+msgstr "رسالة من Ospace:"
+
+#: templates\portal\dashboard.html
+msgid "We're reviewing your application."
+msgstr "نحن نراجع طلبك."
+
+#: templates\portal\dashboard.html
+msgid ""
+"You'll get an email as soon as there's news, usually within a few business "
+"days. You can still update your documents if something changes."
+msgstr ""
+"سنرسل لك بريدًا إلكترونيًا فور وجود أي جديد، عادةً خلال بضعة أيام عمل. يمكنك"
+" تحديث مستنداتك في أي وقت إذا تغيّر شيء."
+
+#: templates\portal\dashboard.html
+msgid "You're approved!"
+msgstr "تمت الموافقة عليك!"
+
+#: templates\portal\dashboard.html
+msgid "Onboarding progress"
+msgstr "تقدّم الانضمام"
+
+#: templates\portal\dashboard.html
+msgid "Complete your profile"
+msgstr "أكمل ملفك الشخصي"
+
+#: templates\portal\dashboard.html
+msgid "All personal, license, vehicle and insurance details are in."
+msgstr "جميع البيانات الشخصية وبيانات الرخصة والسيارة والتأمين مكتملة."
+
+#: templates\portal\dashboard.html
+msgid "Edit"
+msgstr "تعديل"
+
+#: templates\portal\dashboard.html
+msgid "Continue"
+msgstr "متابعة"
+
+#: templates\portal\dashboard.html
+msgid "Upload your documents"
+msgstr "ارفع مستنداتك"
+
+#: templates\portal\dashboard.html
+msgid "approved"
+msgstr "تمت الموافقة"
+
+#: templates\portal\dashboard.html
+msgid "need re-upload"
+msgstr "تحتاج إلى إعادة رفع"
+
+#: templates\portal\dashboard.html
+msgid "Review"
+msgstr "مراجعة"
+
+#: templates\portal\dashboard.html
+msgid "Upload"
+msgstr "رفع"
+
+#: templates\portal\dashboard.html
+msgid "Sign the driver agreements"
+msgstr "وقّع اتفاقيات السائق"
+
+#: templates\portal\dashboard.html
+msgid "Sign"
+msgstr "توقيع"
+
+#: templates\portal\dashboard.html
+msgid "Submit for review"
+msgstr "إرسال للمراجعة"
+
+#: templates\portal\dashboard.html
+msgid "Everything's in. Send your application to our team."
+msgstr "كل شيء جاهز. أرسل طلبك إلى فريقنا."
+
+#: templates\portal\dashboard.html
+msgid "Unlocks once the three steps above are complete."
+msgstr "يُفتح عند إكمال الخطوات الثلاث أعلاه."
+
+#: templates\portal\dashboard.html
+msgid "Submit application"
+msgstr "إرسال الطلب"
+
+#: templates\portal\dashboard.html
+msgid "Recent activity"
+msgstr "النشاط الأخير"
+
+#: templates\portal\dashboard.html
+msgid "Nothing yet."
+msgstr "لا شيء بعد."
+
+#: templates\portal\dashboard.html
+msgid "Need a hand?"
+msgstr "هل تحتاج إلى مساعدة؟"
+
+#: templates\portal\dashboard.html
+msgid "Our team is happy to walk you through any step."
+msgstr "يسعد فريقنا بمساعدتك في أي خطوة."
+
+#: templates\portal\dashboard.html
+msgid "Call"
+msgstr "اتصل"
+
+#: templates\portal\dashboard.html
+msgid "Email us"
+msgstr "راسلنا"
+
+#: templates\portal\dashboard.html
+msgid "Welcome, {{ name }}"
+msgstr "مرحبًا {{ name }}"
+
+#: templates\portal\dashboard.html
+msgid ""
+"Install the ADROIT Driver app, enter service number {{ n }}, and start "
+"accepting rides near you. Welcome to the team."
+msgstr ""
+"ثبّت تطبيق ADROIT Driver، وأدخل رقم الخدمة {{ n }}، وابدأ بقبول الرحلات "
+"القريبة منك. مرحبًا بك في الفريق."
+
+#: templates\portal\dashboard.html
+msgid "{{ pct }}% complete · {{ n }} field(s) still needed."
+msgstr "{{ pct }}% مكتمل · لا يزال {{ n }} حقلًا مطلوبًا."
+
+#: templates\portal\dashboard.html
+msgid "{{ u }} of {{ r }} required documents uploaded"
+msgstr "تم رفع {{ u }} من {{ r }} مستندات مطلوبة"
+
+#: templates\portal\dashboard.html
+msgid "{{ s }} of {{ r }} required agreements signed."
+msgstr "تم توقيع {{ s }} من {{ r }} اتفاقيات مطلوبة."
+
+#: templates\portal\dashboard.html
+msgid "Submitted {{ d }}. We're on it."
+msgstr "أُرسل بتاريخ {{ d }}. نعمل عليه الآن."
+
+#: templates\portal\documents.html
+msgid ""
+"Upload a clear photo or PDF of each item. PDF, JPG, PNG, HEIC or WEBP, up to"
+" 10 MB."
+msgstr ""
+"ارفع صورة واضحة أو ملف PDF لكل عنصر. PDF أو JPG أو PNG أو HEIC أو WEBP، بحد "
+"أقصى 10 ميغابايت."
+
+#: templates\portal\documents.html
+msgid "Not uploaded"
+msgstr "لم يُرفع"
+
+#: templates\portal\documents.html
+msgid "uploaded"
+msgstr "رُفع في"
+
+#: templates\portal\documents.html
+msgid "expires"
+msgstr "ينتهي في"
+
+#: templates\portal\documents.html
+msgid "expired"
+msgstr "منتهي الصلاحية"
+
+#: templates\portal\documents.html
+msgid "Note from Ospace:"
+msgstr "ملاحظة من Ospace:"
+
+#: templates\portal\documents.html
+msgid "Expiry date"
+msgstr "تاريخ الانتهاء"
+
+#: templates\portal\documents.html
+msgid "Replace file"
+msgstr "استبدال الملف"
+
+#: templates\portal\documents.html
+msgid "Choose file"
+msgstr "اختر ملفًا"
+
+#: templates\portal\documents.html
+msgid "Remove this file?"
+msgstr "هل تريد إزالة هذا الملف؟"
+
+#: templates\portal\documents.html
+msgid "Remove"
+msgstr "إزالة"
+
+#: templates\portal\documents.html
+msgid "Approved · contact us to replace"
+msgstr "تمت الموافقة · تواصل معنا لاستبداله"
+
+#: templates\portal\documents.html
+msgid "No document requirements have been configured yet."
+msgstr "لم يتم إعداد متطلبات المستندات بعد."
+
+#: templates\portal\documents.html
+msgid ""
+"Your files are stored privately and only visible to you and the Ospace "
+"onboarding team."
+msgstr "تُحفظ ملفاتك بشكل خاص ولا يراها سواك وفريق الانضمام في Ospace."
+
+#: templates\portal\login.html
+msgid "Welcome back"
+msgstr "مرحبًا بعودتك"
+
+#: templates\portal\login.html
+msgid ""
+"Sign in to upload documents, sign agreements and track your application."
+msgstr "سجّل الدخول لرفع المستندات وتوقيع الاتفاقيات ومتابعة طلبك."
+
+#: templates\portal\login.html
+msgid "Email or password is incorrect."
+msgstr "البريد الإلكتروني أو كلمة المرور غير صحيحة."
+
+#: templates\portal\login.html
+msgid "Password"
+msgstr "كلمة المرور"
+
+#: templates\portal\login.html
+msgid "Forgot your password?"
+msgstr "هل نسيت كلمة المرور؟"
+
+#: templates\portal\login.html
+msgid "New driver?"
+msgstr "سائق جديد؟"
+
+#: templates\portal\login.html
+msgid "Create your account"
+msgstr "أنشئ حسابك"
+
+#: templates\portal\password_reset.html
+msgid "Reset password"
+msgstr "إعادة تعيين كلمة المرور"
+
+#: templates\portal\password_reset.html
+msgid "Reset your password"
+msgstr "أعد تعيين كلمة المرور"
+
+#: templates\portal\password_reset.html
+msgid "Enter the email you registered with and we'll send you a reset link."
+msgstr "أدخل البريد الإلكتروني الذي سجّلت به وسنرسل لك رابط إعادة التعيين."
+
+#: templates\portal\password_reset.html
+msgid "Send reset link"
+msgstr "إرسال رابط إعادة التعيين"
+
+#: templates\portal\password_reset.html
+msgid "Back to sign in"
+msgstr "العودة إلى تسجيل الدخول"
+
+#: templates\portal\password_reset_complete.html
+msgid "Password saved"
+msgstr "تم حفظ كلمة المرور"
+
+#: templates\portal\password_reset_complete.html
+msgid "You can now sign in with your new password."
+msgstr "يمكنك الآن تسجيل الدخول بكلمة المرور الجديدة."
+
+#: templates\portal\password_reset_confirm.html
+msgid "Choose a new password"
+msgstr "اختر كلمة مرور جديدة"
+
+#: templates\portal\password_reset_confirm.html
+msgid "Save password"
+msgstr "حفظ كلمة المرور"
+
+#: templates\portal\password_reset_confirm.html
+msgid "This reset link is invalid or has expired."
+msgstr "رابط إعادة التعيين غير صالح أو منتهي الصلاحية."
+
+#: templates\portal\password_reset_confirm.html
+msgid "Request a new link"
+msgstr "طلب رابط جديد"
+
+#: templates\portal\password_reset_done.html
+msgid "Check your email"
+msgstr "تحقق من بريدك الإلكتروني"
+
+#: templates\portal\password_reset_done.html
+msgid ""
+"If an account exists for that address, a reset link is on its way. It "
+"expires in a few hours."
+msgstr ""
+"إذا كان هناك حساب بهذا العنوان، فالرابط في طريقه إليك. تنتهي صلاحيته خلال "
+"بضع ساعات."
+
+#: templates\portal\profile.html
+msgid ""
+"Details we need to verify you and your vehicle. Everything is kept private."
+msgstr "البيانات التي نحتاجها للتحقق منك ومن سيارتك. كل شيء يبقى خاصًا."
+
+#: templates\portal\profile.html
+msgid "complete"
+msgstr "مكتمل"
+
+#: templates\portal\profile.html
+msgid "Please fix the highlighted fields."
+msgstr "يرجى تصحيح الحقول المحددة."
+
+#: templates\portal\profile.html
+msgid "Personal"
+msgstr "البيانات الشخصية"
+
+#: templates\portal\profile.html
+msgid "Driver's license"
+msgstr "رخصة القيادة"
+
+#: templates\portal\profile.html
+msgid "Vehicle"
+msgstr "السيارة"
+
+#: templates\portal\profile.html
+msgid "Four-door, model year within the last 15 years."
+msgstr "أربعة أبواب، موديل خلال آخر 15 سنة."
+
+#: templates\portal\profile.html
+msgid "Auto insurance"
+msgstr "تأمين السيارة"
+
+#: templates\portal\profile.html
+msgid "Emergency contact"
+msgstr "جهة اتصال للطوارئ"
+
+#: templates\portal\profile.html
+msgid "Availability"
+msgstr "أوقات التوفر"
+
+#: templates\portal\profile.html
+msgid ""
+"School runs are weekday mornings (about 6–9 AM) and afternoons (about 2–5 "
+"PM). Tick every window you can drive."
+msgstr ""
+"رحلات المدارس في أيام الأسبوع صباحًا (حوالي 6–9 صباحًا) وبعد الظهر (حوالي "
+"2–5 مساءً). حدّد كل فترة يمكنك القيادة فيها."
+
+#: templates\portal\profile.html
+msgid "Morning"
+msgstr "صباحًا"
+
+#: templates\portal\profile.html
+msgid "Afternoon"
+msgstr "بعد الظهر"
+
+#: templates\portal\profile.html
+msgid "Save profile"
+msgstr "حفظ الملف الشخصي"
+
+#: templates\portal\profile.html
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: templates\portal\register.html
+msgid "Create account"
+msgstr "إنشاء حساب"
+
+#: templates\portal\register.html
+msgid "Create your driver account"
+msgstr "أنشئ حساب السائق الخاص بك"
+
+#: templates\portal\register.html
+msgid ""
+"Your secure space to complete your profile, upload documents and e-sign the "
+"driver agreements."
+msgstr ""
+"مساحتك الآمنة لإكمال ملفك الشخصي ورفع المستندات وتوقيع اتفاقيات السائق "
+"إلكترونيًا."
+
+#: templates\portal\register.html
+msgid "Already have an account?"
+msgstr "لديك حساب بالفعل؟"
+
+#: templates\portal\sign.html
+msgid "Scroll to the end of the document to enable signing."
+msgstr "مرّر إلى نهاية المستند لتفعيل التوقيع."
+
+#: templates\portal\sign.html
+msgid "Please draw your signature."
+msgstr "يرجى رسم توقيعك."
+
+#: templates\portal\sign.html
+msgid "Draw your signature"
+msgstr "ارسم توقيعك"
+
+#: templates\portal\sign.html
+msgid "Clear"
+msgstr "مسح"
+
+#: templates\portal\sign.html
+msgid "Sign here with your finger or mouse"
+msgstr "وقّع هنا بإصبعك أو بالفأرة"
+
+#: templates\portal\sign.html
+msgid ""
+"By clicking “Sign document” you agree that your typed name and drawn "
+"signature are your legal electronic signature, with the same effect as "
+"signing on paper. We record the date, time and IP address of your signature."
+msgstr ""
+"بالنقر على ”توقيع المستند“ توافق على أن اسمك المكتوب وتوقيعك المرسوم يمثلان "
+"توقيعك الإلكتروني القانوني، وله نفس أثر التوقيع على الورق. نسجّل تاريخ "
+"التوقيع ووقته وعنوان IP."
+
+#: templates\portal\sign.html
+msgid "Sign document"
+msgstr "توقيع المستند"
+
+#: templates\portal\sign.html
+msgid "Version {{ v }} · Please read the whole document, then sign below."
+msgstr "الإصدار {{ v }} · يرجى قراءة المستند كاملًا ثم التوقيع أدناه."
+
+#: templates\web\about.html
+msgid "About Ospace | Student Transportation in Houston, Texas"
+msgstr "عن Ospace | نقل الطلاب في هيوستن، تكساس"
+
+#: templates\web\about.html
+msgid ""
+"Ospace is a Houston-based student transportation service that believes rides"
+" should be safe, reliable and built around people's needs."
+msgstr ""
+"Ospace خدمة نقل طلاب مقرها هيوستن، تؤمن بأن الرحلات يجب أن تكون آمنة وموثوقة"
+" ومصمّمة حول احتياجات الناس."
+
+#: templates\web\about.html
+msgid "All about us"
+msgstr "كل شيء عنا"
+
+#: templates\web\about.html
+msgid ""
+"We're Ospace, a company that believes transportation should be safe, "
+"reliable, and built around people's needs."
+msgstr ""
+"نحن Ospace، شركة تؤمن بأن النقل يجب أن يكون آمنًا وموثوقًا ومصمّمًا حول "
+"احتياجات الناس."
+
+#: templates\web\about.html
+msgid ""
+"Connecting families, schools and communities with drivers they can trust"
+msgstr "نربط العائلات والمدارس والمجتمعات بسائقين يمكنهم الوثوق بهم"
+
+#: templates\web\about.html
+msgid ""
+"Ospace is a student transportation service headquartered in Houston, Texas. "
+"We match students with dependable local drivers for the school commute, and "
+"give independent drivers a flexible way to earn using their own vehicle."
+msgstr ""
+"Ospace خدمة نقل طلاب مقرها هيوستن، تكساس. نربط الطلاب بسائقين محليين موثوقين"
+" لرحلة المدرسة، ونمنح السائقين المستقلين طريقة مرنة لكسب الدخل بسياراتهم "
+"الخاصة."
+
+#: templates\web\about.html
+msgid ""
+"For parents, that means peace of mind: a vetted driver, an in-person hand-"
+"over at both ends, and the same familiar face on the school run. For "
+"drivers, it means real flexibility: choose your days, choose your windows, "
+"and get paid per ride."
+msgstr ""
+"بالنسبة للأهل يعني ذلك راحة البال: سائق موثوق، وتسليم شخصي في الطرفين، ونفس "
+"الوجه المألوف في كل رحلة مدرسية. وبالنسبة للسائقين يعني مرونة حقيقية: اختر "
+"أيامك، واختر أوقاتك، واحصل على أجرك عن كل رحلة."
+
+#: templates\web\about.html
+msgid "Great service begins with great people and real experience."
+msgstr "الخدمة الرائعة تبدأ بأشخاص رائعين وخبرة حقيقية."
+
+#: templates\web\about.html
+msgid ""
+"That is why we are selective about who drives with us, and why we aim to "
+"exceed expectations on every ride across the Houston area."
+msgstr ""
+"لهذا نحن انتقائيون فيمن يقود معنا، ولهذا نسعى لتجاوز التوقعات في كل رحلة عبر"
+" منطقة هيوستن."
+
+#: templates\web\about.html
+msgid "Ospace driver"
+msgstr "سائقة Ospace"
+
+#: templates\web\about.html
+msgid "What we stand for"
+msgstr "ما نؤمن به"
+
+#: templates\web\about.html
+msgid "Our values"
+msgstr "قيمنا"
+
+#: templates\web\about.html
+msgid "Safety"
+msgstr "السلامة"
+
+#: templates\web\about.html
+msgid ""
+"Screening, hand-over protocols and conduct standards that every driver "
+"signs. No shortcuts."
+msgstr "فحص، وإجراءات تسليم، ومعايير سلوك يوقّعها كل سائق. بلا اختصارات."
+
+#: templates\web\about.html
+msgid "Reliability"
+msgstr "الموثوقية"
+
+#: templates\web\about.html
+msgid ""
+"On time, every school day. Families and schools plan their mornings around "
+"us."
+msgstr "في الموعد، كل يوم دراسي. العائلات والمدارس ترتّب صباحها حولنا."
+
+#: templates\web\about.html
+msgid "Community"
+msgstr "المجتمع"
+
+#: templates\web\about.html
+msgid ""
+"Local drivers, local families, local schools. Built around people's needs, "
+"not the other way around."
+msgstr ""
+"سائقون محليون، عائلات محلية، مدارس محلية. مصمّم حول احتياجات الناس، لا "
+"العكس."
+
+#: templates\web\about.html
+msgid "Drivers feedback"
+msgstr "آراء السائقين"
+
+#: templates\web\about.html
+msgid "The people behind the wheel"
+msgstr "الأشخاص خلف المقود"
+
+#: templates\web\about.html
+msgid "Want to talk to us?"
+msgstr "هل تريد التحدث معنا؟"
+
+#: templates\web\about.html
+msgid "Contact us"
+msgstr "تواصل معنا"
+
+#: templates\web\about.html
+msgid "Drive with us"
+msgstr "قُد معنا"
+
+#: templates\web\app.html
+msgid "Driver App Set-up Guide | Ospace (ADROIT Driver)"
+msgstr "دليل إعداد تطبيق السائق | Ospace (ADROIT Driver)"
+
+#: templates\web\app.html
+msgid ""
+"Step-by-step guide to the ADROIT Driver app: download it, create your "
+"account with your phone number and date of birth, fill in your details, "
+"enter service number 149 and sign in."
+msgstr ""
+"دليل خطوة بخطوة لتطبيق ADROIT Driver: نزّله، وأنشئ حسابك برقم هاتفك وتاريخ "
+"ميلادك، وأكمل بياناتك، وأدخل رقم الخدمة 149، ثم سجّل الدخول."
+
+#: templates\web\app.html
+msgid "Our app"
+msgstr "تطبيقنا"
+
+#: templates\web\app.html
+msgid "Set up the ADROIT Driver app"
+msgstr "إعداد تطبيق ADROIT Driver"
+
+#: templates\web\app.html
+msgid ""
+"Ospace rides are dispatched through the ADROIT Driver app. Follow the four "
+"steps below and you'll be ready to receive rides in a few minutes."
+msgstr ""
+"تُوزَّع رحلات Ospace عبر تطبيق ADROIT Driver. اتبع الخطوات الأربع أدناه "
+"وستكون جاهزًا لاستلام الرحلات خلال دقائق."
+
+#: templates\web\app.html
+msgid "Get it on"
+msgstr "احصل عليه من"
+
+#: templates\web\app.html
+msgid "Download on the"
+msgstr "نزّله من"
+
+#: templates\web\app.html
+msgid "First step"
+msgstr "الخطوة الأولى"
+
+#: templates\web\app.html
+msgid "Download the app"
+msgstr "نزّل التطبيق"
+
+#: templates\web\app.html
+msgid "Grab your phone and follow these steps:"
+msgstr "أمسك هاتفك واتبع هذه الخطوات:"
+
+#: templates\web\app.html
+msgid "Open the App Store (iPhone) or Google Play (Android) on your device."
+msgstr "افتح App Store (آيفون) أو Google Play (أندرويد) على جهازك."
+
+#: templates\web\app.html
+msgid "Download and install the app."
+msgstr "نزّل التطبيق وثبّته."
+
+#: templates\web\app.html
+msgid "Follow the on-screen steps to continue."
+msgstr "اتبع الخطوات على الشاشة للمتابعة."
+
+#: templates\web\app.html
+msgid "Sign in or register"
+msgstr "سجّل الدخول أو أنشئ حسابًا"
+
+#: templates\web\app.html
+msgid "Tap “Let's get started”"
+msgstr "اضغط ”Let's get started“"
+
+#: templates\web\app.html
+msgid "Second step"
+msgstr "الخطوة الثانية"
+
+#: templates\web\app.html
+msgid "Fill in your information"
+msgstr "أكمل بياناتك"
+
+#: templates\web\app.html
+msgid ""
+"The app walks you through onboarding one screen at a time. You'll introduce "
+"yourself, confirm you meet the driver requirements and tell us when you're "
+"available to drive. Welcome to the ADROIT family!"
+msgstr ""
+"يرشدك التطبيق خلال الانضمام شاشةً تلو الأخرى. ستعرّف بنفسك، وتؤكد استيفاءك "
+"لشروط السائق، وتخبرنا متى تستطيع القيادة. مرحبًا بك في عائلة ADROIT!"
+
+#: templates\web\app.html
+msgid "Tell us about yourself"
+msgstr "عرّفنا بنفسك"
+
+#: templates\web\app.html
+msgid "name, email, phone number, date of birth and language"
+msgstr "الاسم والبريد الإلكتروني ورقم الهاتف وتاريخ الميلاد واللغة"
+
+#: templates\web\app.html
+msgid "Confirm the basics"
+msgstr "أكّد الأساسيات"
+
+#: templates\web\app.html
+msgid ""
+"valid driver's license, a four-door vehicle from 2001 or newer, and a clean "
+"background and drug test"
+msgstr ""
+"رخصة قيادة سارية، وسيارة بأربعة أبواب موديل 2001 أو أحدث، وسجل جنائي نظيف "
+"وفحص مخدرات سليم"
+
+#: templates\web\app.html
+msgid "Set your availability"
+msgstr "حدّد أوقات توفرك"
+
+#: templates\web\app.html
+msgid "tick the weekdays and hours you can work (Monday to Friday)"
+msgstr ""
+"حدّد أيام الأسبوع والساعات التي يمكنك العمل فيها (من الاثنين إلى الجمعة)"
+
+#: templates\web\app.html
+msgid "1 of 5 · About you"
+msgstr "1 من 5 · عنك"
+
+#: templates\web\app.html
+msgid "2 of 5 · Requirements"
+msgstr "2 من 5 · الشروط"
+
+#: templates\web\app.html
+msgid "3 of 5 · Availability"
+msgstr "3 من 5 · أوقات التوفر"
+
+#: templates\web\app.html
+msgid "Third step"
+msgstr "الخطوة الثالثة"
+
+#: templates\web\app.html
+msgid "Enter our service number"
+msgstr "أدخل رقم الخدمة الخاص بنا"
+
+#: templates\web\app.html
+msgid "Ospace service number"
+msgstr "رقم خدمة Ospace"
+
+#: templates\web\app.html
+msgid ""
+"The referral code field is optional. Leave it blank unless someone gave you "
+"one."
+msgstr "حقل رمز الإحالة اختياري. اتركه فارغًا ما لم يعطك أحد رمزًا."
+
+#: templates\web\app.html
+msgid "Last step"
+msgstr "الخطوة الأخيرة"
+
+#: templates\web\app.html
+msgid "Confirmation"
+msgstr "التأكيد"
+
+#: templates\web\app.html
+msgid "Check my application status"
+msgstr "تحقق من حالة طلبي"
+
+#: templates\web\app.html
+msgid "5 of 5 · Submit"
+msgstr "5 من 5 · إرسال"
+
+#: templates\web\app.html
+msgid "Sign in with phone + password"
+msgstr "سجّل الدخول بالهاتف + كلمة المرور"
+
+#: templates\web\app.html
+msgid "Need a hand with the app?"
+msgstr "هل تحتاج إلى مساعدة في التطبيق؟"
+
+#: templates\web\app.html
+msgid ""
+"Call us and we'll walk you through it. Not approved yet? Finish your "
+"documents in the driver portal first."
+msgstr ""
+"اتصل بنا وسنرشدك خطوة بخطوة. لم تتم الموافقة عليك بعد؟ أكمل مستنداتك في "
+"بوابة السائق أولًا."
+
+#: templates\web\app.html
+msgid ""
+"Search for <strong>ADROIT Driver</strong> and look for the ADROIT icon."
+msgstr "ابحث عن <strong>ADROIT Driver</strong> وابحث عن أيقونة ADROIT."
+
+#: templates\web\app.html
+msgid ""
+"Open it and choose <strong>Sign in</strong> or <strong>Create an "
+"account</strong>."
+msgstr ""
+"افتحه واختر <strong>Sign in</strong> (تسجيل الدخول) أو <strong>Create an "
+"account</strong> (إنشاء حساب)."
+
+#: templates\web\app.html
+msgid ""
+"Your <strong>username is your phone number</strong> and your "
+"<strong>password is your date of birth</strong>."
+msgstr ""
+"<strong>اسم المستخدم هو رقم هاتفك</strong> و<strong>كلمة المرور هي تاريخ "
+"ميلادك</strong>."
+
+#: templates\web\app.html
+msgid ""
+"On the <strong>Area of Service</strong> screen, where it asks “Where do you "
+"provide your service?”, enter the number below. This links your account to "
+"Ospace so our rides reach you."
+msgstr ""
+"في شاشة <strong>Area of Service</strong>، حيث يُسأل ”Where do you provide "
+"your service?“، أدخل الرقم أدناه. هذا يربط حسابك بـ Ospace لتصلك رحلاتنا."
+
+#: templates\web\app.html
+msgid "4 of 5 · Enter {{ n }}"
+msgstr "4 من 5 · أدخل {{ n }}"
+
+#: templates\web\app.html
+msgid ""
+"Answer the short experience questions and tap <strong>Submit</strong>. "
+"You'll see a confirmation that the first part of onboarding is complete."
+msgstr ""
+"أجب عن أسئلة الخبرة القصيرة واضغط <strong>Submit</strong>. سترى تأكيدًا بأن "
+"الجزء الأول من الانضمام قد اكتمل."
+
+#: templates\web\app.html
+msgid ""
+"Now sign in with your <strong>phone number</strong> and your "
+"<strong>password</strong> (your date of birth). Once your Ospace application"
+" is approved, rides near you start appearing in the app."
+msgstr ""
+"الآن سجّل الدخول بـ <strong>رقم هاتفك</strong> و<strong>كلمة مرورك</strong> "
+"(تاريخ ميلادك). بعد الموافقة على طلبك لدى Ospace، ستبدأ الرحلات القريبة منك "
+"بالظهور في التطبيق."
+
+#: templates\web\contact.html
+msgid "Contact Ospace | Houston Student Transportation"
+msgstr "اتصل بـ Ospace | نقل الطلاب في هيوستن"
+
+#: templates\web\contact.html
+msgid ""
+"Call, email or message Ospace in Houston. Driver applications, ride requests"
+" and partnerships."
+msgstr ""
+"اتصل أو راسل Ospace في هيوستن. طلبات السائقين، وطلبات الرحلات، والشراكات."
+
+#: templates\web\contact.html
+msgid "Talk to our team"
+msgstr "تحدّث مع فريقنا"
+
+#: templates\web\contact.html
+msgid ""
+"Driver questions, rides for your child or school, partnerships: we're happy "
+"to help."
+msgstr "أسئلة السائقين، رحلات لطفلك أو مدرستك، الشراكات: يسعدنا مساعدتك."
+
+#: templates\web\contact.html
+msgid "Talk with one of our expert staff about joining."
+msgstr "تحدّث مع أحد خبرائنا حول الانضمام."
+
+#: templates\web\contact.html
+msgid "Legal & privacy:"
+msgstr "الشؤون القانونية والخصوصية:"
+
+#: templates\web\contact.html
+msgid "Where we are"
+msgstr "أين نحن"
+
+#: templates\web\contact.html
+msgid "Serving Houston and surrounding areas."
+msgstr "نخدم هيوستن والمناطق المحيطة بها."
+
+#: templates\web\contact.html
+msgid "Send message"
+msgstr "إرسال الرسالة"
+
+#: templates\web\drivers.html
+msgid "Become a Driver | Ospace Houston — Earn $150+/day on school runs"
+msgstr ""
+"كن سائقًا | Ospace هيوستن — اكسب أكثر من 150 دولارًا يوميًا في رحلات المدارس"
+
+#: templates\web\drivers.html
+msgid ""
+"Drive your own car, choose your hours and earn a minimum of $50 per two "
+"rides transporting students in Houston. Requirements, pay and a two-minute "
+"application."
+msgstr ""
+"قُد سيارتك، واختر ساعاتك، واكسب 50 دولارًا على الأقل عن كل رحلتين لنقل "
+"الطلاب في هيوستن. الشروط والأجر وطلب يستغرق دقيقتين."
+
+#: templates\web\drivers.html
+msgid "Become a driver with us now"
+msgstr "كن سائقًا معنا الآن"
+
+#: templates\web\drivers.html
+msgid ""
+"Supplemental income on your terms. Transport students to and from school in "
+"your own vehicle and earn a minimum of $50 per two rides, up to $150+ a day."
+msgstr ""
+"دخل إضافي بشروطك. انقل الطلاب من المدرسة وإليها بسيارتك الخاصة واكسب 50 "
+"دولارًا على الأقل عن كل رحلتين، وحتى أكثر من 150 دولارًا يوميًا."
+
+#: templates\web\drivers.html
+msgid "Please review all requirements before applying"
+msgstr "يرجى مراجعة جميع الشروط قبل التقديم"
+
+#: templates\web\drivers.html
+msgid "You meet every requirement."
+msgstr "أنت تستوفي جميع الشروط."
+
+#: templates\web\drivers.html
+msgid "Start your application"
+msgstr "ابدأ طلبك"
+
+#: templates\web\drivers.html
+msgid "Tick each box that applies to you."
+msgstr "حدّد كل خانة تنطبق عليك."
+
+#: templates\web\drivers.html
+msgid ""
+"to go. Not sure about one? Apply anyway and we will talk you through it."
+msgstr "متبقية. غير متأكد من إحداها؟ قدّم على أي حال وسنوضح لك الأمر."
+
+#: templates\web\drivers.html
+msgid "Do I qualify? Quick self-check"
+msgstr "هل أنا مؤهل؟ فحص ذاتي سريع"
+
+#: templates\web\drivers.html
+msgid "Nothing is saved. Just tick what applies to you."
+msgstr "لا يُحفظ شيء. فقط حدّد ما ينطبق عليك."
+
+#: templates\web\drivers.html
+msgid "I'm 21 or older"
+msgstr "عمري 21 سنة أو أكثر"
+
+#: templates\web\drivers.html
+msgid "and hold a valid U.S. driver's license"
+msgstr "وأحمل رخصة قيادة أمريكية سارية"
+
+#: templates\web\drivers.html
+msgid "I have a four-door vehicle"
+msgstr "لديّ سيارة بأربعة أبواب"
+
+#: templates\web\drivers.html
+msgid "model year within the last 15 years"
+msgstr "موديل خلال آخر 15 سنة"
+
+#: templates\web\drivers.html
+msgid "I have current auto insurance"
+msgstr "لديّ تأمين سيارة ساري"
+
+#: templates\web\drivers.html
+msgid "in my own name"
+msgstr "باسمي"
+
+#: templates\web\drivers.html
+msgid "I can pass a background check"
+msgstr "أستطيع اجتياز فحص السجل الجنائي"
+
+#: templates\web\drivers.html
+msgid "plus drug and TB screening"
+msgstr "بالإضافة إلى فحص المخدرات والسل"
+
+#: templates\web\drivers.html
+msgid "I'm available on weekday mornings and/or afternoons"
+msgstr "أنا متاح في أيام الأسبوع صباحًا و/أو بعد الظهر"
+
+#: templates\web\drivers.html
+msgid "school-run hours"
+msgstr "ساعات الرحلات المدرسية"
+
+#: templates\web\drivers.html
+msgid "The process"
+msgstr "آلية العمل"
+
+#: templates\web\drivers.html
+msgid "How onboarding works"
+msgstr "كيف يتم الانضمام"
+
+#: templates\web\drivers.html
+msgid "Apply"
+msgstr "قدّم"
+
+#: templates\web\drivers.html
+msgid ""
+"Tell us a little about you and your car. One of our team will call you back "
+"to walk through the next steps, and you'll get a link to the driver portal "
+"to upload your documents."
+msgstr ""
+"أخبرنا قليلًا عنك وعن سيارتك. سيتصل بك أحد أفراد فريقنا لشرح الخطوات "
+"التالية، وستحصل على رابط لبوابة السائق لرفع مستنداتك."
+
+#: templates\web\drivers.html
+msgid "Already applied?"
+msgstr "قدّمت من قبل؟"
+
+#: templates\web\drivers.html
+msgid "Sign in to the driver portal"
+msgstr "سجّل الدخول إلى بوابة السائق"
+
+#: templates\web\drivers.html
+msgid "Good to know"
+msgstr "من المفيد معرفته"
+
+#: templates\web\families.html
+msgid "Student Rides for Families & Schools | Ospace Houston"
+msgstr "رحلات الطلاب للعائلات والمدارس | Ospace هيوستن"
+
+#: templates\web\families.html
+msgid ""
+"Safe school-run rides in Houston with vetted, background-checked drivers. "
+"Pick-up, drop-off and recurring schedules for families and schools. Request "
+"a ride today."
+msgstr ""
+"رحلات مدرسية آمنة في هيوستن مع سائقين موثوقين تم فحص سجلاتهم. استلام وتوصيل "
+"وجداول متكررة للعائلات والمدارس. اطلب رحلة اليوم."
+
+#: templates\web\families.html
+msgid "Safe rides to school and back, from drivers you can trust"
+msgstr "رحلات آمنة إلى المدرسة والعودة منها، مع سائقين تثق بهم"
+
+#: templates\web\families.html
+msgid ""
+"Ospace connects families, schools and communities with vetted local drivers."
+" Set up a recurring school run or a one-off ride and know exactly who is "
+"behind the wheel."
+msgstr ""
+"تربط Ospace العائلات والمدارس والمجتمعات بسائقين محليين موثوقين. أعدّ رحلة "
+"مدرسية متكررة أو رحلة لمرة واحدة واعرف بالضبط من يجلس خلف المقود."
+
+#: templates\web\families.html
+msgid "Request rides"
+msgstr "اطلب رحلات"
+
+#: templates\web\families.html
+msgid "Student smiling in the back seat of an Ospace ride"
+msgstr "طالبة تبتسم في المقعد الخلفي في رحلة مع Ospace"
+
+#: templates\web\families.html
+msgid "Our services"
+msgstr "خدماتنا"
+
+#: templates\web\families.html
+msgid "What we offer"
+msgstr "ما نقدمه"
+
+#: templates\web\families.html
+msgid "Pick them up to and from school"
+msgstr "نقلهم من المدرسة وإليها"
+
+#: templates\web\families.html
+msgid ""
+"Door-to-school and school-to-door rides on a recurring weekday schedule. "
+"Same driver whenever possible."
+msgstr ""
+"رحلات من المنزل إلى المدرسة ومن المدرسة إلى المنزل وفق جدول متكرر في أيام "
+"الأسبوع. نفس السائق كلما أمكن."
+
+#: templates\web\families.html
+msgid "Morning & afternoon"
+msgstr "صباحًا وبعد الظهر"
+
+#: templates\web\families.html
+msgid "Vetted local drivers"
+msgstr "سائقون محليون موثوقون"
+
+#: templates\web\families.html
+msgid ""
+"Every driver is background-checked, drug and TB screened, insured and "
+"driving a reviewed four-door vehicle."
+msgstr ""
+"كل سائق يخضع لفحص السجل الجنائي وفحص المخدرات والسل، ومؤمَّن، ويقود سيارة "
+"بأربعة أبواب تم فحصها."
+
+#: templates\web\families.html
+msgid "Background-checked"
+msgstr "تم فحص السجل"
+
+#: templates\web\families.html
+msgid "Drop them off to their home or school"
+msgstr "توصيلهم إلى منزلهم أو مدرستهم"
+
+#: templates\web\families.html
+msgid "From $25"
+msgstr "ابتداءً من 25 دولارًا"
+
+#: templates\web\families.html
+msgid "Students walking to school"
+msgstr "طلاب يمشون إلى المدرسة"
+
+#: templates\web\families.html
+msgid "Safety first"
+msgstr "السلامة أولًا"
+
+#: templates\web\families.html
+msgid "How we keep students safe"
+msgstr "كيف نحافظ على سلامة الطلاب"
+
+#: templates\web\families.html
+msgid "Driver screening"
+msgstr "فحص السائق"
+
+#: templates\web\families.html
+msgid "background check, drug & TB tests, license and insurance verified"
+msgstr ""
+"فحص السجل الجنائي، واختبارات المخدرات والسل، والتحقق من الرخصة والتأمين"
+
+#: templates\web\families.html
+msgid "In-person hand-over"
+msgstr "تسليم شخصي"
+
+#: templates\web\families.html
+msgid "students are never left unattended"
+msgstr "لا يُترك الطلاب أبدًا دون مرافقة"
+
+#: templates\web\families.html
+msgid "Know your driver"
+msgstr "اعرف سائقك"
+
+#: templates\web\families.html
+msgid "name, photo and vehicle shared before the ride"
+msgstr "الاسم والصورة والسيارة تُشارك قبل الرحلة"
+
+#: templates\web\families.html
+msgid "Ride tracking"
+msgstr "تتبّع الرحلة"
+
+#: templates\web\families.html
+msgid "driver location is logged from check-in to drop-off"
+msgstr "يُسجَّل موقع السائق من بداية الرحلة حتى التوصيل"
+
+#: templates\web\families.html
+msgid "Conduct policy"
+msgstr "سياسة السلوك"
+
+#: templates\web\families.html
+msgid "every driver signs our student safety standards"
+msgstr "كل سائق يوقّع معايير سلامة الطلاب لدينا"
+
+#: templates\web\families.html
+msgid "Tell us what you need"
+msgstr "أخبرنا بما تحتاجه"
+
+#: templates\web\families.html
+msgid ""
+"Parents, guardians and schools: share the pick-up area, destination and "
+"schedule and we'll confirm availability and pricing, usually within one "
+"business day."
+msgstr ""
+"أيها الأهل وأولياء الأمور والمدارس: شاركونا منطقة الاستلام والوجهة والجدول "
+"وسنؤكد التوفر والسعر، عادةً خلال يوم عمل واحد."
+
+#: templates\web\families.html
+msgid "Prefer to talk?"
+msgstr "تفضّل التحدث؟"
+
+#: templates\web\families.html
+msgid "No commitment. We'll get back to you with options."
+msgstr "بلا التزام. سنعود إليك بالخيارات."
+
+#: templates\web\families.html
+msgid ""
+"One-way rides when you need them. Drop-off from <strong>$25</strong>. Hand-"
+"over to a parent, guardian or teacher every time."
+msgstr ""
+"رحلات باتجاه واحد عند الحاجة. التوصيل ابتداءً من <strong>25 "
+"دولارًا</strong>. التسليم إلى أحد الوالدين أو ولي الأمر أو المعلم في كل "
+"رحلة."
+
+#: templates\web\faq.html
+msgid "FAQ | Ospace Drivers & Families"
+msgstr "الأسئلة الشائعة | سائقو Ospace والعائلات"
+
+#: templates\web\faq.html
+msgid ""
+"Answers about earnings, vehicle requirements, hours, hand-over, approval "
+"times and contractor status for Ospace drivers."
+msgstr ""
+"إجابات عن الأرباح وشروط السيارة والساعات والتسليم ومدة الموافقة ووضع "
+"المتعاقد لسائقي Ospace."
+
+#: templates\web\faq.html
+msgid "Frequently asked questions"
+msgstr "الأسئلة الشائعة"
+
+#: templates\web\faq.html
+msgid "Can't find what you need?"
+msgstr "لم تجد ما تبحث عنه؟"
+
+#: templates\web\faq.html
+msgid "Send us a message"
+msgstr "أرسل لنا رسالة"
+
+#: templates\web\faq.html
+msgid "Where does Ospace operate?"
+msgstr "أين تعمل Ospace؟"
+
+#: templates\web\faq.html
+msgid ""
+"We are headquartered in Houston, Texas and serve Houston and the surrounding"
+" areas. Rides are matched to the driver closest to the student's home."
+msgstr ""
+"مقرنا في هيوستن، تكساس، ونخدم هيوستن والمناطق المحيطة بها. تُسند الرحلات إلى"
+" السائق الأقرب إلى منزل الطالب."
+
+#: templates\web\faq.html
+msgid "How do I upload my documents?"
+msgstr "كيف أرفع مستنداتي؟"
+
+#: templates\web\faq.html
+msgid ""
+"After applying you'll get access to the driver portal. Upload your license, "
+"insurance, registration, photos and test results there, e-sign the driver "
+"agreements and submit for review. You can track the status of every item."
+msgstr ""
+"بعد التقديم ستحصل على دخول إلى بوابة السائق. ارفع هناك رخصتك وتأمينك وتسجيل "
+"السيارة والصور ونتائج الفحوصات، ووقّع اتفاقيات السائق إلكترونيًا، ثم أرسل "
+"الطلب للمراجعة. يمكنك متابعة حالة كل عنصر."
+
+#: templates\web\faq.html
+msgid "Which app do I use?"
+msgstr "أي تطبيق أستخدم؟"
+
+#: templates\web\faq.html
+msgid "See the set-up guide"
+msgstr "اطّلع على دليل الإعداد"
+
+#: templates\web\faq.html
+msgid "I'm a parent. How do I book rides?"
+msgstr "أنا ولي أمر. كيف أحجز الرحلات؟"
+
+#: templates\web\faq.html
+msgid ""
+"Use the ride request form or call us. We'll confirm availability, pricing "
+"and your driver's details before the first ride."
+msgstr ""
+"استخدم نموذج طلب الرحلات أو اتصل بنا. سنؤكد التوفر والسعر وبيانات سائقك قبل "
+"الرحلة الأولى."
+
+#: templates\web\faq.html
+msgid ""
+"Ospace rides are dispatched through the ADROIT Driver app for iPhone and "
+"Android. Enter service number {{ n }} when you set up your account."
+msgstr ""
+"تُوزَّع رحلات Ospace عبر تطبيق ADROIT Driver لأجهزة آيفون وأندرويد. أدخل رقم"
+" الخدمة {{ n }} عند إعداد حسابك."
+
+#: templates\web\home.html
+msgid "Now hiring drivers in Houston"
+msgstr "نوظّف سائقين الآن في هيوستن"
+
+#: templates\web\home.html
+msgid "Drive in the comfort of your own vehicle with Ospace"
+msgstr "قُد براحة سيارتك الخاصة مع Ospace"
+
+#: templates\web\home.html
+msgid ""
+"Earn up to $150+ a day giving safe rides to students, on a schedule you "
+"choose. Join a growing community of local drivers making a flexible "
+"supplemental income."
+msgstr ""
+"اكسب حتى أكثر من 150 دولارًا يوميًا بتوصيل الطلاب بأمان، وفق جدول تختاره "
+"بنفسك. انضم إلى مجتمع متنامٍ من السائقين المحليين الذين يحققون دخلًا إضافيًا"
+" مرنًا."
+
+#: templates\web\home.html
+msgid "I need rides for a student"
+msgstr "أحتاج إلى رحلات لطالب"
+
+#: templates\web\home.html
+msgid "potential daily earnings"
+msgstr "أرباح يومية محتملة"
+
+#: templates\web\home.html
+msgid "minimum per 2 rides"
+msgstr "الحد الأدنى لكل رحلتين"
+
+#: templates\web\home.html
+msgid "Your car"
+msgstr "سيارتك"
+
+#: templates\web\home.html
+msgid "any 4-door, last 15 years"
+msgstr "أي سيارة بأربعة أبواب من آخر 15 سنة"
+
+#: templates\web\home.html
+msgid "Flexible"
+msgstr "مرن"
+
+#: templates\web\home.html
+msgid "morning & afternoon runs"
+msgstr "رحلات صباحية وبعد الظهر"
+
+#: templates\web\home.html
+msgid "Quick apply"
+msgstr "تقديم سريع"
+
+#: templates\web\home.html
+msgid "Two minutes. We'll take it from there."
+msgstr "دقيقتان. ونحن نتولى الباقي."
+
+#: templates\web\home.html
+msgid "Get started"
+msgstr "ابدأ"
+
+#: templates\web\home.html
+msgid "2 min"
+msgstr "دقيقتان"
+
+#: templates\web\home.html
+msgid "to apply online"
+msgstr "للتقديم عبر الإنترنت"
+
+#: templates\web\home.html
+msgid "drivers background-checked"
+msgstr "من السائقين تم فحص سجلاتهم"
+
+#: templates\web\home.html
+msgid "school-run schedules"
+msgstr "جداول الرحلات المدرسية"
+
+#: templates\web\home.html
+msgid "& surrounding areas"
+msgstr "والمناطق المحيطة"
+
+#: templates\web\home.html
+msgid "Simple rides, done safely"
+msgstr "رحلات بسيطة، تُنفَّذ بأمان"
+
+#: templates\web\home.html
+msgid ""
+"Ospace matches students with dependable drivers for the school commute. "
+"Every ride follows the same four steps."
+msgstr ""
+"تربط Ospace الطلاب بسائقين موثوقين لرحلة المدرسة. كل رحلة تتبع الخطوات "
+"الأربع نفسها."
+
+#: templates\web\home.html
+msgid "Pick-up"
+msgstr "الاستلام"
+
+#: templates\web\home.html
+msgid ""
+"Collect students from home. A parent or guardian brings them to the vehicle."
+msgstr ""
+"استلم الطلاب من المنزل. يرافقهم أحد الوالدين أو ولي الأمر إلى السيارة."
+
+#: templates\web\home.html
+msgid "Drive"
+msgstr "القيادة"
+
+#: templates\web\home.html
+msgid ""
+"Use your own vehicle. Any clean four-door car from the last 15 years "
+"qualifies."
+msgstr ""
+"استخدم سيارتك الخاصة. أي سيارة نظيفة بأربعة أبواب من آخر 15 سنة تكون مؤهلة."
+
+#: templates\web\home.html
+msgid "Drop-off"
+msgstr "التوصيل"
+
+#: templates\web\home.html
+msgid ""
+"Deliver students to school and back home, handed to a teacher or parent "
+"every time."
+msgstr ""
+"أوصل الطلاب إلى المدرسة وعودة إلى المنزل، مع التسليم إلى معلم أو أحد "
+"الوالدين في كل مرة."
+
+#: templates\web\home.html
+msgid "Earn money"
+msgstr "اكسب المال"
+
+#: templates\web\home.html
+msgid "A minimum of $50 for every two rides, paid per completed ride."
+msgstr "50 دولارًا على الأقل عن كل رحلتين، تُدفع عن كل رحلة مكتملة."
+
+#: templates\web\home.html
+msgid "ride"
+msgstr "رحلة"
+
+#: templates\web\home.html
+msgid "rides"
+msgstr "رحلات"
+
+#: templates\web\home.html
+msgid "day"
+msgstr "يوم"
+
+#: templates\web\home.html
+msgid "days"
+msgstr "أيام"
+
+#: templates\web\home.html
+msgid "Earnings calculator"
+msgstr "حاسبة الأرباح"
+
+#: templates\web\home.html
+msgid "See what your school runs could pay"
+msgstr "اعرف كم قد تدرّ عليك رحلاتك المدرسية"
+
+#: templates\web\home.html
+msgid ""
+"Most drivers do a morning run and an afternoon run. Slide to match your "
+"availability."
+msgstr ""
+"معظم السائقين يقومون برحلة صباحية وأخرى بعد الظهر. حرّك المؤشر بما يناسب "
+"توفرك."
+
+#: templates\web\home.html
+msgid "Rides per day"
+msgstr "رحلات في اليوم"
+
+#: templates\web\home.html
+msgid "Days per week"
+msgstr "أيام في الأسبوع"
+
+#: templates\web\home.html
+msgid ""
+"Estimate based on $25 per completed ride ($50 minimum per two rides). Actual"
+" earnings depend on the rides you accept."
+msgstr ""
+"تقدير بناءً على 25 دولارًا لكل رحلة مكتملة (50 دولارًا حدًا أدنى لكل "
+"رحلتين). الأرباح الفعلية تعتمد على الرحلات التي تقبلها."
+
+#: templates\web\home.html
+msgid "Estimated weekly earnings"
+msgstr "الأرباح الأسبوعية المقدّرة"
+
+#: templates\web\home.html
+msgid "driving school runs"
+msgstr "من الرحلات المدرسية"
+
+#: templates\web\home.html
+msgid "per day"
+msgstr "في اليوم"
+
+#: templates\web\home.html
+msgid "per month"
+msgstr "في الشهر"
+
+#: templates\web\home.html
+msgid "Hiring now"
+msgstr "نوظّف الآن"
+
+#: templates\web\home.html
+msgid "From application to first ride in four steps"
+msgstr "من التقديم إلى الرحلة الأولى في أربع خطوات"
+
+#: templates\web\home.html
+msgid ""
+"Fast and friendly. Apply, upload your documents in the driver portal, sign "
+"online, and start driving."
+msgstr ""
+"سريع وودود. قدّم، وارفع مستنداتك في بوابة السائق، ووقّع عبر الإنترنت، وابدأ "
+"القيادة."
+
+#: templates\web\home.html
+msgid "Start my application"
+msgstr "ابدأ طلبي"
+
+#: templates\web\home.html
+msgid "How a ride works"
+msgstr "كيف تتم الرحلة"
+
+#: templates\web\home.html
+msgid "Students walking to school with backpacks"
+msgstr "طلاب يمشون إلى المدرسة بحقائب ظهر"
+
+#: templates\web\home.html
+msgid "What you need to drive with us"
+msgstr "ما تحتاجه للقيادة معنا"
+
+#: templates\web\home.html
+msgid "Check if I qualify"
+msgstr "تحقق إن كنت مؤهلًا"
+
+#: templates\web\home.html
+msgid "Real people, real flexibility"
+msgstr "أشخاص حقيقيون، مرونة حقيقية"
+
+#: templates\web\home.html
+msgid "The driver app"
+msgstr "تطبيق السائق"
+
+#: templates\web\home.html
+msgid "Accept rides near you with the ADROIT Driver app"
+msgstr "اقبل الرحلات القريبة منك عبر تطبيق ADROIT Driver"
+
+#: templates\web\home.html
+msgid ""
+"Set your availability, see rides close to home, navigate to each pick-up and"
+" log every hand-over. Available on iPhone and Android."
+msgstr ""
+"حدّد أوقات توفرك، وشاهد الرحلات القريبة من منزلك، وانتقل إلى كل نقطة استلام،"
+" وسجّل كل عملية تسليم. متاح لأجهزة آيفون وأندرويد."
+
+#: templates\web\home.html
+msgid "Driver using the ADROIT Driver app"
+msgstr "سائق يستخدم تطبيق ADROIT Driver"
+
+#: templates\web\home.html
+msgid "Peace of mind for the school run"
+msgstr "راحة بال في رحلة المدرسة"
+
+#: templates\web\home.html
+msgid ""
+"Every Ospace driver passes a background check, drug and TB screening and a "
+"vehicle review. Students are handed over in person at both ends, never left "
+"waiting."
+msgstr ""
+"كل سائق في Ospace يجتاز فحص السجل الجنائي وفحص المخدرات والسل ومعاينة "
+"السيارة. يُسلَّم الطلاب شخصيًا في الطرفين، ولا يُتركون منتظرين أبدًا."
+
+#: templates\web\home.html
+msgid "you see their name, photo and vehicle"
+msgstr "ترى اسمه وصورته وسيارته"
+
+#: templates\web\home.html
+msgid "Nearby matching"
+msgstr "مطابقة قريبة"
+
+#: templates\web\home.html
+msgid "we assign the driver closest to you"
+msgstr "نسند إليك السائق الأقرب"
+
+#: templates\web\home.html
+msgid "Recurring schedules"
+msgstr "جداول متكررة"
+
+#: templates\web\home.html
+msgid "set it once for the whole term"
+msgstr "أعدّها مرة واحدة للفصل الدراسي كله"
+
+#: templates\web\home.html
+msgid "Parent walking students to their Ospace ride"
+msgstr "أم ترافق طلابًا إلى رحلتهم مع Ospace"
+
+#: templates\web\home.html
+msgid "Questions drivers ask us"
+msgstr "أسئلة يطرحها علينا السائقون"
+
+#: templates\web\home.html
+msgid "See all questions"
+msgstr "عرض جميع الأسئلة"
+
+#: templates\web\home.html
+msgid "Ready to make money today?"
+msgstr "مستعد لكسب المال اليوم؟"
+
+#: templates\web\home.html
+msgid ""
+"Call us to talk with one of our expert staff, or apply online in two "
+"minutes."
+msgstr "اتصل بنا للتحدث مع أحد خبرائنا، أو قدّم عبر الإنترنت في دقيقتين."
+
+#: templates\web\home.html
+msgid "Apply online"
+msgstr "قدّم عبر الإنترنت"
+
+#: templates\web\home.html
+msgid "Set-up guide (service number {{ n }})"
+msgstr "دليل الإعداد (رقم الخدمة {{ n }})"
+
+#: templates\web\how_it_works.html
+msgid "In the Ride | How an Ospace Student Ride Works"
+msgstr "أثناء الرحلة | كيف تتم رحلة الطالب مع Ospace"
+
+#: templates\web\how_it_works.html
+msgid ""
+"What happens in an Ospace ride: we give you the ride that is near to you, a "
+"parent or teacher takes the kids from and to the car, and every student "
+"rides buckled up."
+msgstr ""
+"ما يحدث في رحلة Ospace: نمنحك الرحلة الأقرب إليك، ويتولى أحد الوالدين أو "
+"المعلم إيصال الأطفال إلى السيارة واستلامهم منها، ويركب كل طالب بحزام الأمان."
+
+#: templates\web\how_it_works.html
+msgid "We will give you the ride that is near to you!"
+msgstr "سنمنحك الرحلة الأقرب إليك!"
+
+#: templates\web\how_it_works.html
+msgid ""
+"Ospace assigns every ride to the closest available driver. Drivers spend "
+"less time on the road between jobs, and families get a driver from their own"
+" neighbourhood."
+msgstr ""
+"تسند Ospace كل رحلة إلى أقرب سائق متاح. يقضي السائقون وقتًا أقل على الطريق "
+"بين الرحلات، وتحصل العائلات على سائق من حيّهم."
+
+#: templates\web\how_it_works.html
+msgid "Ospace driver waving to a parent as the student gets in"
+msgstr "سائقة Ospace تلوّح لأم أثناء صعود الطالب"
+
+#: templates\web\how_it_works.html
+msgid "Location"
+msgstr "الموقع"
+
+#: templates\web\how_it_works.html
+msgid "The parents or the teacher take the kids from and to the car"
+msgstr "الوالدان أو المعلم يوصلون الأطفال إلى السيارة ويستلمونهم منها"
+
+#: templates\web\how_it_works.html
+msgid ""
+"Drivers never enter a home or a school building. At every pick-up and drop-"
+"off, an adult you know walks the student to or from the vehicle, and the "
+"driver confirms the hand-over in the app."
+msgstr ""
+"لا يدخل السائقون أبدًا إلى منزل أو مبنى مدرسي. في كل استلام وتوصيل، يرافق "
+"شخص بالغ تعرفه الطالب إلى السيارة أو منها، ويؤكد السائق التسليم في التطبيق."
+
+#: templates\web\how_it_works.html
+msgid "the driver waits at the agreed pick-up spot"
+msgstr "ينتظر السائق في نقطة الاستلام المتفق عليها"
+
+#: templates\web\how_it_works.html
+msgid "Hand-over"
+msgstr "التسليم"
+
+#: templates\web\how_it_works.html
+msgid "a parent, guardian or teacher brings the student to the car"
+msgstr "يوصل أحد الوالدين أو ولي الأمر أو المعلم الطالب إلى السيارة"
+
+#: templates\web\how_it_works.html
+msgid "Arrival"
+msgstr "الوصول"
+
+#: templates\web\how_it_works.html
+msgid "the student is released only to the designated adult"
+msgstr "يُسلَّم الطالب فقط إلى الشخص البالغ المعيّن"
+
+#: templates\web\how_it_works.html
+msgid "Seat belts on, every student, every ride"
+msgstr "حزام الأمان مربوط، لكل طالب، في كل رحلة"
+
+#: templates\web\how_it_works.html
+msgid ""
+"Before the car moves, the driver checks that every student is buckled in. No"
+" exceptions, no unscheduled stops, no phone use except hands-free "
+"navigation."
+msgstr ""
+"قبل أن تتحرك السيارة، يتأكد السائق من أن كل طالب ربط حزامه. بلا استثناءات، "
+"ولا توقفات غير مجدولة، ولا استخدام للهاتف باستثناء الملاحة دون استخدام "
+"اليدين."
+
+#: templates\web\how_it_works.html
+msgid "Vetted driver"
+msgstr "سائق موثوق"
+
+#: templates\web\how_it_works.html
+msgid "background check, drug and TB screening, insured four-door vehicle"
+msgstr "فحص السجل الجنائي، وفحص المخدرات والسل، وسيارة مؤمَّنة بأربعة أبواب"
+
+#: templates\web\how_it_works.html
+msgid "Tracked ride"
+msgstr "رحلة متتبَّعة"
+
+#: templates\web\how_it_works.html
+msgid "the driver's location is logged from check-in to drop-off"
+msgstr "يُسجَّل موقع السائق من بداية الرحلة حتى التوصيل"
+
+#: templates\web\how_it_works.html
+msgid "Same friendly face"
+msgstr "نفس الوجه الودود"
+
+#: templates\web\how_it_works.html
+msgid "the same driver whenever possible, morning and afternoon"
+msgstr "نفس السائق كلما أمكن، صباحًا وبعد الظهر"
+
+#: templates\web\how_it_works.html
+msgid "Driver fastening a student’s seat belt"
+msgstr "سائق يربط حزام أمان طالبة"
+
+#: templates\web\how_it_works.html
+msgid "A typical school day"
+msgstr "يوم دراسي اعتيادي"
+
+#: templates\web\how_it_works.html
+msgid "Morning run, afternoon run"
+msgstr "رحلة الصباح، رحلة بعد الظهر"
+
+#: templates\web\how_it_works.html
+msgid "Ride offered in the app"
+msgstr "تُعرض الرحلة في التطبيق"
+
+#: templates\web\how_it_works.html
+msgid ""
+"The driver closest to the student's home sees the ride first, with the pick-"
+"up time, address and school."
+msgstr ""
+"السائق الأقرب إلى منزل الطالب يرى الرحلة أولًا، مع وقت الاستلام والعنوان "
+"والمدرسة."
+
+#: templates\web\how_it_works.html
+msgid "Pick-up at home"
+msgstr "الاستلام من المنزل"
+
+#: templates\web\how_it_works.html
+msgid ""
+"The driver arrives a few minutes early. The parent walks the student to the "
+"car and the driver taps “picked up”."
+msgstr ""
+"يصل السائق قبل الموعد ببضع دقائق. يرافق ولي الأمر الطالب إلى السيارة ويضغط "
+"السائق ”تم الاستلام“."
+
+#: templates\web\how_it_works.html
+msgid "Drop-off at school"
+msgstr "التوصيل إلى المدرسة"
+
+#: templates\web\how_it_works.html
+msgid ""
+"A teacher or school staff member receives the student at the designated "
+"spot. The driver taps “dropped off” and the family is notified."
+msgstr ""
+"يستقبل المعلم أو أحد موظفي المدرسة الطالب في النقطة المحددة. يضغط السائق ”تم"
+" التوصيل“ ويتم إشعار العائلة."
+
+#: templates\web\how_it_works.html
+msgid "Afternoon, in reverse"
+msgstr "بعد الظهر، بالعكس"
+
+#: templates\web\how_it_works.html
+msgid "Same driver where possible, same hand-over at both ends, home safe."
+msgstr ""
+"نفس السائق حيثما أمكن، ونفس التسليم في الطرفين، والعودة إلى المنزل بأمان."
+
+#: templates\web\how_it_works.html
+msgid "For drivers"
+msgstr "للسائقين"
+
+#: templates\web\how_it_works.html
+msgid "Getting started is four steps"
+msgstr "البدء في أربع خطوات"
+
+#: templates\web\how_it_works.html
+msgid "Request rides for a student"
+msgstr "اطلب رحلات لطالب"
+
+#: templates\web\media.html
+msgid "Media | Ospace"
+msgstr "الإعلام | Ospace"
+
+#: templates\web\media.html
+msgid ""
+"Ospace photos, guides and social channels. Join us on Facebook and "
+"Instagram."
+msgstr ""
+"صور Ospace وأدلتها وقنواتها الاجتماعية. انضم إلينا على فيسبوك وإنستغرام."
+
+#: templates\web\media.html
+msgid "Ospace in pictures"
+msgstr "Ospace بالصور"
+
+#: templates\web\media.html
+msgid ""
+"Join Ospace as a driver: flexible hours, good pay, and safe student rides. "
+"Follow us for updates, driver stories and openings."
+msgstr ""
+"انضم إلى Ospace كسائق: ساعات مرنة، وأجر جيد، ورحلات آمنة للطلاب. تابعنا "
+"للتحديثات وقصص السائقين والوظائف المتاحة."
+
+#: templates\web\media.html
+msgid "How to become a driver"
+msgstr "كيف تصبح سائقًا"
+
+#: templates\web\media.html
+msgid ""
+"Drive with Ospace, earn money, and help students get to school safely with "
+"flexible hours."
+msgstr ""
+"قُد مع Ospace، واكسب المال، وساعد الطلاب على الوصول إلى المدرسة بأمان بساعات"
+" مرنة."
+
+#: templates\web\media.html
+msgid "Read the guide"
+msgstr "اقرأ الدليل"
+
+#: templates\web\media.html
+msgid "How to take a ride"
+msgstr "كيف تتم الرحلة"
+
+#: templates\web\media.html
+msgid "What families and schools can expect at every pick-up and drop-off."
+msgstr "ما يمكن للعائلات والمدارس توقعه في كل استلام وتوصيل."
+
+#: templates\web\media.html
+msgid "See how it works"
+msgstr "شاهد كيف يتم ذلك"
+
+#: templates\web\media.html
+msgid "Gallery"
+msgstr "معرض الصور"
+
+#: templates\web\media.html
+msgid "Follow along"
+msgstr "تابعنا"
+
+#: templates\web\media.html
+msgid ""
+"Driver openings, community news and behind-the-scenes from the Houston "
+"school run."
+msgstr "وظائف للسائقين، وأخبار المجتمع، وكواليس الرحلة المدرسية في هيوستن."
+
+#: templates\web\privacy.html
+msgid "Privacy Policy | Ospace"
+msgstr "سياسة الخصوصية | Ospace"
+
+#: templates\web\privacy.html
+msgid ""
+"How Ospace collects, uses and shares personal information for riders, "
+"drivers and website visitors."
+msgstr ""
+"كيف تجمع Ospace المعلومات الشخصية للركاب والسائقين وزوار الموقع وتستخدمها "
+"وتشاركها."
+
+#: templates\web\privacy.html
+msgid "Legal"
+msgstr "قانوني"
+
+#: templates\web\privacy.html
+msgid "Questions about this policy:"
+msgstr "أسئلة حول هذه السياسة:"
+
+#: templates\web\privacy.html
+msgid "The legally binding version of this policy is the English text below."
+msgstr "النسخة الملزمة قانونيًا من هذه السياسة هي النص الإنجليزي أدناه."
+
+#: templates\web\thanks.html
+msgid "Thanks | Ospace"
+msgstr "شكرًا | Ospace"
+
+#: templates\web\thanks.html
+msgid "Thanks for submitting!"
+msgstr "شكرًا على الإرسال!"
+
+#: templates\web\thanks.html
+msgid ""
+"We've received your application. While you wait for our call, create your "
+"driver portal account to upload your documents and sign the driver "
+"agreements. It's the fastest way to get approved."
+msgstr ""
+"استلمنا طلبك. بينما تنتظر اتصالنا، أنشئ حسابك في بوابة السائق لرفع مستنداتك "
+"وتوقيع اتفاقيات السائق. إنها أسرع طريقة للحصول على الموافقة."
+
+#: templates\web\thanks.html
+msgid "Create my portal account"
+msgstr "إنشاء حساب البوابة"
+
+#: templates\web\thanks.html
+msgid "Or call us:"
+msgstr "أو اتصل بنا:"
+
+#: templates\web\thanks.html
+msgid ""
+"We've received your message and will get back to you shortly, usually within"
+" one business day."
+msgstr "استلمنا رسالتك وسنرد عليك قريبًا، عادةً خلال يوم عمل واحد."
+
+#: templates\web\thanks.html
+msgid "Back to home"
+msgstr "العودة إلى الرئيسية"
+
+#: templates\web\_apply_form.html
+msgid "Send my application"
+msgstr "إرسال طلبي"
+
+#: templates\web\_apply_form.html
+msgid ""
+"Takes two minutes. We'll reply by phone or email, usually the same business "
+"day. No obligation."
+msgstr ""
+"يستغرق دقيقتين. سنرد عليك بالهاتف أو البريد الإلكتروني، عادةً في نفس يوم "
+"العمل. بلا التزام."
+
+#: templates\web\_form_field.html
+msgid "optional"
+msgstr "اختياري"
+
+#: apps\portal\forms.py
+msgid "First name"
+msgstr "الاسم الأول"
+
+#: apps\portal\forms.py
+msgid "Last name"
+msgstr "اسم العائلة"
+
+#: apps\portal\forms.py
+msgid "Phone"
+msgstr "الهاتف"
+
+#: apps\portal\forms.py
+msgid ""
+"I agree to the privacy policy and to be contacted about my application."
+msgstr "أوافق على سياسة الخصوصية وعلى التواصل معي بخصوص طلبي."
+
+#: apps\portal\forms.py
+msgid "An account with this email already exists. Try signing in instead."
+msgstr "يوجد حساب بهذا البريد الإلكتروني بالفعل. جرّب تسجيل الدخول."
+
+#: apps\portal\forms.py
+msgid "Vehicles must be from the last 15 years."
+msgstr "يجب أن تكون السيارة من آخر 15 سنة."
+
+#: apps\portal\forms.py
+msgid "Please upload a PDF, JPG, PNG, HEIC or WEBP file."
+msgstr "يرجى رفع ملف PDF أو JPG أو PNG أو HEIC أو WEBP."
+
+#: apps\portal\forms.py
+msgid "Files must be under 10 MB."
+msgstr "يجب أن يكون حجم الملف أقل من 10 ميغابايت."
+
+#: apps\portal\forms.py
+msgid "Type your full legal name"
+msgstr "اكتب اسمك القانوني الكامل"
+
+#: apps\portal\forms.py
+msgid ""
+"I have read this document and agree that my electronic signature is legally "
+"binding."
+msgstr "قرأت هذا المستند وأوافق على أن توقيعي الإلكتروني ملزم قانونيًا."
+
+#: apps\portal\forms.py
+msgid "Please draw your signature in the box."
+msgstr "يرجى رسم توقيعك داخل المربع."
+
+#: apps\portal\forms.py
+msgid "Signature is too large. Please try again."
+msgstr "التوقيع كبير جدًا. يرجى المحاولة مرة أخرى."
+
+#: apps\portal\models.py
+msgid "Getting started"
+msgstr "البداية"
+
+#: apps\portal\models.py
+msgid "Under review"
+msgstr "قيد المراجعة"
+
+#: apps\portal\models.py
+msgid "Changes requested"
+msgstr "مطلوب تعديلات"
+
+#: apps\portal\models.py
+msgid "Approved"
+msgstr "تمت الموافقة"
+
+#: apps\portal\models.py
+msgid "Not approved"
+msgstr "لم تتم الموافقة"
+
+#: apps\portal\models.py
+msgid "Inactive"
+msgstr "غير نشط"
+
+#: apps\portal\models.py
+msgid "Date of birth"
+msgstr "تاريخ الميلاد"
+
+#: apps\portal\models.py
+msgid "Street address"
+msgstr "عنوان الشارع"
+
+#: apps\portal\models.py
+msgid "Apt / unit"
+msgstr "الشقة / الوحدة"
+
+#: apps\portal\models.py
+msgid "City"
+msgstr "المدينة"
+
+#: apps\portal\models.py
+msgid "State"
+msgstr "الولاية"
+
+#: apps\portal\models.py
+msgid "ZIP"
+msgstr "الرمز البريدي"
+
+#: apps\portal\models.py
+msgid "License number"
+msgstr "رقم الرخصة"
+
+#: apps\portal\models.py
+msgid "License state"
+msgstr "ولاية الرخصة"
+
+#: apps\portal\models.py
+msgid "License expiry"
+msgstr "انتهاء الرخصة"
+
+#: apps\portal\models.py
+msgid "Vehicle year"
+msgstr "سنة السيارة"
+
+#: apps\portal\models.py
+msgid "Vehicle make"
+msgstr "ماركة السيارة"
+
+#: apps\portal\models.py
+msgid "Vehicle model"
+msgstr "موديل السيارة"
+
+#: apps\portal\models.py
+msgid "Vehicle color"
+msgstr "لون السيارة"
+
+#: apps\portal\models.py
+msgid "License plate"
+msgstr "لوحة السيارة"
+
+#: apps\portal\models.py
+msgid "Passenger seats"
+msgstr "مقاعد الركاب"
+
+#: apps\portal\models.py
+msgid "Insurance provider"
+msgstr "شركة التأمين"
+
+#: apps\portal\models.py
+msgid "Policy number"
+msgstr "رقم وثيقة التأمين"
+
+#: apps\portal\models.py
+msgid "Insurance expiry"
+msgstr "انتهاء التأمين"
+
+#: apps\portal\models.py
+msgid "Emergency contact name"
+msgstr "اسم جهة اتصال الطوارئ"
+
+#: apps\portal\models.py
+msgid "Emergency contact phone"
+msgstr "هاتف جهة اتصال الطوارئ"
+
+#: apps\portal\models.py
+msgid "Relationship"
+msgstr "صلة القرابة"
+
+#: apps\portal\models.py
+msgid "How did you hear about us?"
+msgstr "كيف سمعت عنا؟"
+
+#: apps\portal\models.py
+msgid "Pending review"
+msgstr "بانتظار المراجعة"
+
+#: apps\portal\models.py
+msgid "Needs re-upload"
+msgstr "يتطلب إعادة الرفع"
+
+#: apps\portal\views.py
+msgid "Welcome! Let's get your profile set up."
+msgstr "مرحبًا! لنبدأ بإعداد ملفك الشخصي."
+
+#: apps\portal\views.py
+msgid "Profile saved."
+msgstr "تم حفظ الملف الشخصي."
+
+#: apps\portal\views.py
+msgid "%(name)s uploaded. We'll review it shortly."
+msgstr "تم رفع %(name)s. سنراجعه قريبًا."
+
+#: apps\portal\views.py
+msgid "Approved documents can't be removed. Contact us if it needs replacing."
+msgstr "لا يمكن إزالة المستندات المعتمدة. تواصل معنا إذا احتجت إلى استبدالها."
+
+#: apps\portal\views.py
+msgid "%(name)s removed."
+msgstr "تمت إزالة %(name)s."
+
+#: apps\portal\views.py
+msgid "%(title)s signed. A PDF copy is saved in your portal."
+msgstr "تم توقيع %(title)s. حُفظت نسخة PDF في بوابتك."
+
+#: apps\portal\views.py
+msgid "Please finish every item on the checklist before submitting."
+msgstr "يرجى إكمال كل عناصر القائمة قبل الإرسال."
+
+#: apps\portal\views.py
+msgid "Application submitted! We'll be in touch within a few business days."
+msgstr "تم إرسال الطلب! سنتواصل معك خلال بضعة أيام عمل."
+
+#: apps\web\forms.py
+msgid "Vehicle type"
+msgstr "نوع السيارة"
+
+#: apps\web\forms.py
+msgid "Sedan (4-door)"
+msgstr "سيدان (4 أبواب)"
+
+#: apps\web\forms.py
+msgid "SUV / crossover"
+msgstr "دفع رباعي / كروس أوفر"
+
+#: apps\web\forms.py
+msgid "Minivan"
+msgstr "ميني فان"
+
+#: apps\web\forms.py
+msgid "Hatchback (4-door)"
+msgstr "هاتشباك (4 أبواب)"
+
+#: apps\web\forms.py
+msgid "Pickup truck (4-door)"
+msgstr "بيك أب (4 أبواب)"
+
+#: apps\web\forms.py
+msgid "Van (8+ seats)"
+msgstr "فان (8 مقاعد أو أكثر)"
+
+#: apps\web\forms.py
+msgid "Other"
+msgstr "أخرى"
+
+#: apps\web\forms.py
+msgid "City / area"
+msgstr "المدينة / المنطقة"
+
+#: apps\web\forms.py
+msgid "I am 21 or older with a valid U.S. driver's license"
+msgstr "عمري 21 سنة أو أكثر وأحمل رخصة قيادة أمريكية سارية"
+
+#: apps\web\forms.py
+msgid "Anything you want us to know"
+msgstr "أي شيء تود إخبارنا به"
+
+#: apps\web\forms.py
+msgid "Parent / guardian or school contact"
+msgstr "ولي الأمر أو جهة اتصال المدرسة"
+
+#: apps\web\forms.py
+msgid "School or organisation"
+msgstr "المدرسة أو المؤسسة"
+
+#: apps\web\forms.py
+msgid "Number of students"
+msgstr "عدد الطلاب"
+
+#: apps\web\forms.py
+msgid "Pick-up area / ZIP"
+msgstr "منطقة الاستلام / الرمز البريدي"
+
+#: apps\web\forms.py
+msgid "School / destination"
+msgstr "المدرسة / الوجهة"
+
+#: apps\web\forms.py
+msgid "Days & times needed"
+msgstr "الأيام والأوقات المطلوبة"
+
+#: apps\web\forms.py
+msgid "Details"
+msgstr "التفاصيل"
+
+#: apps\web\forms.py
+msgid "Name"
+msgstr "الاسم"
+
+#: apps\web\forms.py
+msgid "Topic"
+msgstr "الموضوع"
+
+#: apps\web\forms.py
+msgid "Becoming a driver"
+msgstr "الانضمام كسائق"
+
+#: apps\web\forms.py
+msgid "Rides for my child / school"
+msgstr "رحلات لطفلي / مدرستي"
+
+#: apps\web\forms.py
+msgid "Partnership"
+msgstr "شراكة"
+
+#: apps\web\forms.py
+msgid "Something else"
+msgstr "موضوع آخر"
+
+#: apps\web\forms.py
+msgid "Message"
+msgstr "الرسالة"
+
+#: apps\web\views.py
+msgid "How much can I earn?"
+msgstr "كم يمكنني أن أكسب؟"
+
+#: apps\web\views.py
+msgid ""
+"Drivers earn a minimum of $50 for every two rides, and many earn $150 or "
+"more per day by combining morning and afternoon school runs. You are paid "
+"per completed ride."
+msgstr ""
+"يكسب السائقون 50 دولارًا على الأقل عن كل رحلتين، ويكسب كثيرون 150 دولارًا أو"
+" أكثر يوميًا بالجمع بين الرحلات الصباحية وبعد الظهر. يُدفع الأجر عن كل رحلة "
+"مكتملة."
+
+#: apps\web\views.py
+msgid "Do I need a special vehicle?"
+msgstr "هل أحتاج إلى سيارة خاصة؟"
+
+#: apps\web\views.py
+msgid ""
+"No. Any four-door vehicle manufactured within the last 15 years, clean and "
+"in good working order, qualifies. You drive your own car."
+msgstr ""
+"لا. أي سيارة بأربعة أبواب مصنوعة خلال آخر 15 سنة، نظيفة وبحالة جيدة، تكون "
+"مؤهلة. أنت تقود سيارتك الخاصة."
+
+#: apps\web\views.py
+msgid "What are the hours?"
+msgstr "ما هي ساعات العمل؟"
+
+#: apps\web\views.py
+msgid ""
+"School runs happen on weekday mornings (roughly 6–9 AM) and afternoons "
+"(roughly 2–5 PM). You choose which days and windows you are available inside"
+" the driver app."
+msgstr ""
+"تتم الرحلات المدرسية في أيام الأسبوع صباحًا (حوالي 6–9 صباحًا) وبعد الظهر "
+"(حوالي 2–5 مساءً). أنت تختار الأيام والفترات التي تكون متاحًا فيها داخل "
+"تطبيق السائق."
+
+#: apps\web\views.py
+msgid "Who hands the student over?"
+msgstr "من يسلّم الطالب؟"
+
+#: apps\web\views.py
+msgid ""
+"A parent, guardian or teacher brings the student to and from the vehicle at "
+"each end of the ride. Drivers never enter homes or school buildings."
+msgstr ""
+"يوصل أحد الوالدين أو ولي الأمر أو المعلم الطالب إلى السيارة ويستلمه منها في "
+"طرفي الرحلة. لا يدخل السائقون أبدًا إلى المنازل أو المباني المدرسية."
+
+#: apps\web\views.py
+msgid "How long does approval take?"
+msgstr "كم تستغرق الموافقة؟"
+
+#: apps\web\views.py
+msgid ""
+"Once your documents, background check and drug/TB test results are in, "
+"approval typically takes a few business days. Your portal shows exactly what"
+" is still pending."
+msgstr ""
+"بعد استلام مستنداتك وفحص السجل الجنائي ونتائج فحص المخدرات والسل، تستغرق "
+"الموافقة عادةً بضعة أيام عمل. تعرض بوابتك بالضبط ما لا يزال معلّقًا."
+
+#: apps\web\views.py
+msgid "Am I an employee?"
+msgstr "هل أنا موظف؟"
+
+#: apps\web\views.py
+msgid ""
+"Ospace drivers are independent contractors. You keep full control of your "
+"schedule and drive when it suits you."
+msgstr ""
+"سائقو Ospace متعاقدون مستقلون. تحتفظ بالتحكم الكامل في جدولك وتقود عندما "
+"يناسبك."
+
+#: apps\web\views.py
+msgid "Tell us about yourself and your vehicle. It takes two minutes."
+msgstr "أخبرنا عنك وعن سيارتك. يستغرق الأمر دقيقتين."
+
+#: apps\web\views.py
+msgid ""
+"Driver's license, insurance, registration and test results go into your "
+"secure driver portal."
+msgstr ""
+"رخصة القيادة والتأمين والتسجيل ونتائج الفحوصات تُرفع إلى بوابة السائق "
+"الآمنة."
+
+#: apps\web\views.py
+msgid "Sign & get approved"
+msgstr "وقّع واحصل على الموافقة"
+
+#: apps\web\views.py
+msgid ""
+"E-sign the driver agreements online. We review everything and confirm your "
+"approval."
+msgstr "وقّع اتفاقيات السائق إلكترونيًا. نراجع كل شيء ونؤكد موافقتك."
+
+#: apps\web\views.py
+msgid "Download the app & drive"
+msgstr "نزّل التطبيق وابدأ القيادة"
+
+#: apps\web\views.py
+msgid ""
+"Install the ADROIT Driver app, set your availability and accept rides near "
+"you."
+msgstr ""
+"ثبّت تطبيق ADROIT Driver، وحدّد أوقات توفرك، واقبل الرحلات القريبة منك."
+
+#: apps\web\views.py
+msgid "21+ years old"
+msgstr "21 سنة أو أكثر"
+
+#: apps\web\views.py
+msgid "with a valid U.S. driver's license"
+msgstr "مع رخصة قيادة أمريكية سارية"
+
+#: apps\web\views.py
+msgid "Four-door vehicle"
+msgstr "سيارة بأربعة أبواب"
+
+#: apps\web\views.py
+msgid "Background check"
+msgstr "فحص السجل الجنائي"
+
+#: apps\web\views.py
+msgid "we run it for you once you apply"
+msgstr "نقوم به نيابةً عنك بعد التقديم"
+
+#: apps\web\views.py
+msgid "Drug & TB test"
+msgstr "فحص المخدرات والسل"
+
+#: apps\web\views.py
+msgid "both screenings are required before approval"
+msgstr "كلا الفحصين مطلوبان قبل الموافقة"
+
+#: apps\web\views.py
+msgid "Clean driving record"
+msgstr "سجل قيادة نظيف"
+
+#: apps\web\views.py
+msgid "and current auto insurance in your name"
+msgstr "وتأمين سيارة ساري باسمك"
+
+#: apps\web\views.py
+msgid "Excited to drive with us"
+msgstr "متحمس للقيادة معنا"
+
+#: apps\web\views.py
+msgid "reliable, friendly and great with kids"
+msgstr "موثوق وودود ويحسن التعامل مع الأطفال"
+
+#: apps\web\views.py
+msgid "Driver for 2+ years"
+msgstr "سائقة منذ أكثر من سنتين"
+
+#: apps\web\views.py
+msgid ""
+"Wanting to be her own boss, driving with Ospace gave Ange the confidence to "
+"leave her job, follow her passion and start her own food business. Two years"
+" later, she still loves the flexibility it gives her."
+msgstr ""
+"رغبةً في أن تكون رئيسة نفسها، منحتها القيادة مع Ospace الثقة لترك وظيفتها "
+"واتباع شغفها وافتتاح مشروعها الخاص في الطعام. بعد سنتين، ما زالت تعشق "
+"المرونة التي يوفرها لها."
+
+#: apps\web\views.py
+msgid "The king of flexibility"
+msgstr "ملك المرونة"
+
+#: apps\web\views.py
+msgid ""
+"Elijah dedicates 95% of his time to CrossFit. The rest of the time he enjoys"
+" the freedom to earn extra income driving with Ospace."
+msgstr ""
+"يكرّس إيلايجا 95% من وقته للكروس فيت. وفي بقية الوقت يستمتع بحرية كسب دخل "
+"إضافي من القيادة مع Ospace."
+
+#: apps\web\views.py
+msgid "Driver for 1.5 years"
+msgstr "سائقة منذ سنة ونصف"
+
+#: apps\web\views.py
+msgid ""
+"Mariana has been driving with Ospace for one and a half years. A stay-at-"
+"home mom, she found an easy way to earn supplemental income during her free "
+"time."
+msgstr ""
+"تقود ماريانا مع Ospace منذ سنة ونصف. وبصفتها أمًّا متفرغة في المنزل، وجدت "
+"طريقة سهلة لكسب دخل إضافي في وقت فراغها."

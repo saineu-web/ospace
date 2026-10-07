@@ -2,11 +2,11 @@ import logging
 from pathlib import Path
 
 from django.conf import settings
-from django.contrib import messages
 from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.urls import reverse
+from django.utils.translation import gettext_lazy as _
 from django.views.decorators.http import require_GET
 
 from .forms import ContactForm, DriverApplyForm, RideRequestForm
@@ -15,45 +15,45 @@ from .models import Inquiry
 log = logging.getLogger(__name__)
 
 FAQ = [
-    ("How much can I earn?", "Drivers earn a minimum of $50 for every two rides, and many earn $150 or more per day by combining morning and afternoon school runs. You are paid per completed ride."),
-    ("Do I need a special vehicle?", "No. Any four-door vehicle manufactured within the last 15 years, clean and in good working order, qualifies. You drive your own car."),
-    ("What are the hours?", "School runs happen on weekday mornings (roughly 6–9 AM) and afternoons (roughly 2–5 PM). You choose which days and windows you are available inside the driver app."),
-    ("Who hands the student over?", "A parent, guardian or teacher brings the student to and from the vehicle at each end of the ride. Drivers never enter homes or school buildings."),
-    ("How long does approval take?", "Once your documents, background check and drug/TB test results are in, approval typically takes a few business days. Your portal shows exactly what is still pending."),
-    ("Am I an employee?", "Ospace drivers are independent contractors. You keep full control of your schedule and drive when it suits you."),
+    (_("How much can I earn?"), _("Drivers earn a minimum of $50 for every two rides, and many earn $150 or more per day by combining morning and afternoon school runs. You are paid per completed ride.")),
+    (_("Do I need a special vehicle?"), _("No. Any four-door vehicle manufactured within the last 15 years, clean and in good working order, qualifies. You drive your own car.")),
+    (_("What are the hours?"), _("School runs happen on weekday mornings (roughly 6–9 AM) and afternoons (roughly 2–5 PM). You choose which days and windows you are available inside the driver app.")),
+    (_("Who hands the student over?"), _("A parent, guardian or teacher brings the student to and from the vehicle at each end of the ride. Drivers never enter homes or school buildings.")),
+    (_("How long does approval take?"), _("Once your documents, background check and drug/TB test results are in, approval typically takes a few business days. Your portal shows exactly what is still pending.")),
+    (_("Am I an employee?"), _("Ospace drivers are independent contractors. You keep full control of your schedule and drive when it suits you.")),
 ]
 
 STEPS = [
-    ("Apply online", "Tell us about yourself and your vehicle. It takes two minutes."),
-    ("Upload your documents", "Driver's license, insurance, registration and test results go into your secure driver portal."),
-    ("Sign & get approved", "E-sign the driver agreements online. We review everything and confirm your approval."),
-    ("Download the app & drive", "Install the ADROIT Driver app, set your availability and accept rides near you."),
+    (_("Apply online"), _("Tell us about yourself and your vehicle. It takes two minutes.")),
+    (_("Upload your documents"), _("Driver's license, insurance, registration and test results go into your secure driver portal.")),
+    (_("Sign & get approved"), _("E-sign the driver agreements online. We review everything and confirm your approval.")),
+    (_("Download the app & drive"), _("Install the ADROIT Driver app, set your availability and accept rides near you.")),
 ]
 
 REQUIREMENTS = [
-    ("21+ years old", "with a valid U.S. driver's license"),
-    ("Four-door vehicle", "model year within the last 15 years"),
-    ("Background check", "we run it for you once you apply"),
-    ("Drug & TB test", "both screenings are required before approval"),
-    ("Clean driving record", "and current auto insurance in your name"),
-    ("Excited to drive with us", "reliable, friendly and great with kids"),
+    (_("21+ years old"), _("with a valid U.S. driver's license")),
+    (_("Four-door vehicle"), _("model year within the last 15 years")),
+    (_("Background check"), _("we run it for you once you apply")),
+    (_("Drug & TB test"), _("both screenings are required before approval")),
+    (_("Clean driving record"), _("and current auto insurance in your name")),
+    (_("Excited to drive with us"), _("reliable, friendly and great with kids")),
 ]
 
 TESTIMONIALS = [
     {
         "name": "Ange",
-        "role": "Driver for 2+ years",
-        "quote": "Wanting to be her own boss, driving with Ospace gave Ange the confidence to leave her job, follow her passion and start her own food business. Two years later, she still loves the flexibility it gives her.",
+        "role": _("Driver for 2+ years"),
+        "quote": _("Wanting to be her own boss, driving with Ospace gave Ange the confidence to leave her job, follow her passion and start her own food business. Two years later, she still loves the flexibility it gives her."),
     },
     {
         "name": "Elijah",
-        "role": "The king of flexibility",
-        "quote": "Elijah dedicates 95% of his time to CrossFit. The rest of the time he enjoys the freedom to earn extra income driving with Ospace.",
+        "role": _("The king of flexibility"),
+        "quote": _("Elijah dedicates 95% of his time to CrossFit. The rest of the time he enjoys the freedom to earn extra income driving with Ospace."),
     },
     {
         "name": "Mariana",
-        "role": "Driver for 1.5 years",
-        "quote": "Mariana has been driving with Ospace for one and a half years. A stay-at-home mom, she found an easy way to earn supplemental income during her free time.",
+        "role": _("Driver for 1.5 years"),
+        "quote": _("Mariana has been driving with Ospace for one and a half years. A stay-at-home mom, she found an easy way to earn supplemental income during her free time."),
     },
 ]
 
@@ -88,15 +88,22 @@ def drivers(request):
         d = form.cleaned_data
         inq = Inquiry.objects.create(
             kind="driver",
-            name=d["name"],
+            name=form.full_name,
             email=d["email"],
             phone=d["phone"],
             city=d["city"],
             message=d["message"],
-            extra={"vehicle": d["vehicle"], "vehicle_year": d["vehicle_year"], "over_21": d["over_21"]},
+            extra={
+                "first_name": d["first_name"],
+                "last_name": d["last_name"],
+                "vehicle_type": str(dict(form.fields["vehicle_type"].choices).get(d["vehicle_type"], d["vehicle_type"])),
+                "vehicle_year": d["vehicle_year"],
+                "over_21": d["over_21"],
+                "language": request.LANGUAGE_CODE,
+            },
         )
         _deliver(inq)
-        request.session["applicant"] = {"name": d["name"], "email": d["email"], "phone": d["phone"]}
+        request.session["applicant"] = {"first_name": d["first_name"], "last_name": d["last_name"], "email": d["email"], "phone": d["phone"]}
         return redirect(reverse("web:thanks") + "?next=portal")
     return render(
         request,
@@ -124,7 +131,7 @@ def families(request):
             phone=d["phone"],
             city=d["pickup_area"],
             message=d["message"],
-            extra={"organisation": d["organisation"], "students": d["students"], "school": d["school"], "schedule": d["schedule"]},
+            extra={"organisation": d["organisation"], "students": d["students"], "school": d["school"], "schedule": d["schedule"], "language": request.LANGUAGE_CODE},
         )
         _deliver(inq)
         return redirect("web:thanks")
@@ -143,7 +150,7 @@ def contact(request):
     form = ContactForm(request.POST or None)
     if request.method == "POST" and form.is_valid():
         d = form.cleaned_data
-        inq = Inquiry.objects.create(kind="contact", name=d["name"], email=d["email"], phone=d["phone"], message=d["message"], extra={"topic": d["topic"]})
+        inq = Inquiry.objects.create(kind="contact", name=d["name"], email=d["email"], phone=d["phone"], message=d["message"], extra={"topic": d["topic"], "language": request.LANGUAGE_CODE})
         _deliver(inq)
         return redirect("web:thanks")
     return render(request, "web/contact.html", {"form": form})
@@ -165,7 +172,7 @@ def thanks(request):
 
 @require_GET
 def robots(request):
-    body = f"User-agent: *\nDisallow: /portal/\nDisallow: /staff/\nDisallow: /admin/\nSitemap: {settings.SITE_URL}/sitemap.xml\n"
+    body = f"User-agent: *\nDisallow: /portal/\nDisallow: /*/portal/\nDisallow: /staff/\nDisallow: /admin/\nSitemap: {settings.SITE_URL}/sitemap.xml\n"
     return HttpResponse(body, content_type="text/plain")
 
 

@@ -1,0 +1,2622 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ospace\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates\base.html
+msgid "Ospace | Student Transportation & Driver Jobs in Houston, TX"
+msgstr ""
+"Ospace | Transporte estudiantil y empleo para conductores en Houston, TX"
+
+#: templates\base.html
+msgid ""
+"Ospace connects Houston families and schools with vetted drivers for safe "
+"student rides. Drive your own car, set your hours and earn $150+ a day."
+msgstr ""
+"Ospace conecta a familias y escuelas de Houston con conductores verificados "
+"para viajes escolares seguros. Maneja tu propio auto, elige tu horario y "
+"gana $150+ al día."
+
+#: templates\base.html
+msgid "Ospace — Safe student rides, flexible driver income"
+msgstr ""
+"Ospace — Viajes escolares seguros, ingresos flexibles para conductores"
+
+#: templates\base.html
+msgid ""
+"Houston's student transportation service. Vetted drivers, your own vehicle, "
+"flexible hours."
+msgstr ""
+"El servicio de transporte estudiantil de Houston. Conductores verificados, "
+"tu propio vehículo, horarios flexibles."
+
+#: templates\base.html
+msgid "Become a driver"
+msgstr "Ser conductor"
+
+#: templates\base.html
+msgid "In the ride"
+msgstr "En el viaje"
+
+#: templates\base.html
+msgid "Families & schools"
+msgstr "Familias y escuelas"
+
+#: templates\base.html
+msgid "Driver app"
+msgstr "App del conductor"
+
+#: templates\base.html
+msgid "About"
+msgstr "Nosotros"
+
+#: templates\base.html
+msgid "FAQ"
+msgstr "Preguntas"
+
+#: templates\base.html
+msgid "Contact"
+msgstr "Contacto"
+
+#: templates\base.html
+msgid "Driver portal"
+msgstr "Portal del conductor"
+
+#: templates\base.html
+msgid "Apply now"
+msgstr "Aplica ahora"
+
+#: templates\base.html
+msgid ""
+"Safe, reliable student transportation in Houston, Texas, driven by vetted "
+"local drivers in their own vehicles."
+msgstr ""
+"Transporte estudiantil seguro y confiable en Houston, Texas, a cargo de "
+"conductores locales verificados en sus propios vehículos."
+
+#: templates\base.html
+msgid "Drivers"
+msgstr "Conductores"
+
+#: templates\base.html
+msgid "Requirements"
+msgstr "Requisitos"
+
+#: templates\base.html
+msgid "Company"
+msgstr "Empresa"
+
+#: templates\base.html
+msgid "About Ospace"
+msgstr "Sobre Ospace"
+
+#: templates\base.html
+msgid "Media"
+msgstr "Medios"
+
+#: templates\base.html
+msgid "Send a message"
+msgstr "Envíanos un mensaje"
+
+#: templates\base.html
+msgid "Houston, Texas"
+msgstr "Houston, Texas"
+
+#: templates\base.html
+msgid "All rights reserved."
+msgstr "Todos los derechos reservados."
+
+#: templates\base.html
+msgid "Privacy policy"
+msgstr "Política de privacidad"
+
+#: templates\base.html
+msgid "Call us"
+msgstr "Llámanos"
+
+#: templates\base.html
+msgid "Apply to drive"
+msgstr "Aplica para manejar"
+
+#: templates\portal\agreements.html
+msgid "Agreements"
+msgstr "Acuerdos"
+
+#: templates\portal\agreements.html
+msgid ""
+"Read and e-sign each document. You'll get a PDF copy of everything you sign."
+msgstr ""
+"Lee y firma electrónicamente cada documento. Recibirás una copia en PDF de "
+"todo lo que firmes."
+
+#: templates\portal\agreements.html
+msgid "Optional"
+msgstr "Opcional"
+
+#: templates\portal\agreements.html
+msgid "Signed"
+msgstr "Firmado"
+
+#: templates\portal\agreements.html
+msgid "Updated — please re-sign"
+msgstr "Actualizado — vuelve a firmar"
+
+#: templates\portal\agreements.html
+msgid "Not signed"
+msgstr "Sin firmar"
+
+#: templates\portal\agreements.html
+msgid "Download PDF"
+msgstr "Descargar PDF"
+
+#: templates\portal\agreements.html
+msgid "View"
+msgstr "Ver"
+
+#: templates\portal\agreements.html
+msgid "Read & sign"
+msgstr "Leer y firmar"
+
+#: templates\portal\agreements.html
+msgid "No agreements have been configured yet."
+msgstr "Todavía no se han configurado acuerdos."
+
+#: templates\portal\agreements.html
+msgid "Agreements are legal documents and are presented in English."
+msgstr "Los acuerdos son documentos legales y se presentan en inglés."
+
+#: templates\portal\agreements.html
+msgid "Signed by {{ name }} on {{ date }} · Ref {{ ref }}"
+msgstr "Firmado por {{ name }} el {{ date }} · Ref {{ ref }}"
+
+#: templates\portal\agreement_view.html
+msgid "Signed copy"
+msgstr "Copia firmada"
+
+#: templates\portal\agreement_view.html
+msgid "Signature record"
+msgstr "Registro de firma"
+
+#: templates\portal\agreement_view.html
+msgid "Signed by"
+msgstr "Firmado por"
+
+#: templates\portal\agreement_view.html
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: templates\portal\agreement_view.html
+msgid "Date & time"
+msgstr "Fecha y hora"
+
+#: templates\portal\agreement_view.html
+msgid "IP address"
+msgstr "Dirección IP"
+
+#: templates\portal\agreement_view.html
+msgid "Document version"
+msgstr "Versión del documento"
+
+#: templates\portal\base_auth.html
+msgid "Sign in"
+msgstr "Iniciar sesión"
+
+#: templates\portal\base_auth.html
+msgid "Ospace driver portal"
+msgstr "Portal del conductor de Ospace"
+
+#: templates\portal\base_portal.html
+msgid "Driver portal | Ospace"
+msgstr "Portal del conductor | Ospace"
+
+#: templates\portal\base_portal.html
+msgid "Signed in as"
+msgstr "Sesión iniciada como"
+
+#: templates\portal\base_portal.html
+msgid "Staff desk"
+msgstr "Mesa de personal"
+
+#: templates\portal\base_portal.html
+msgid "Sign out"
+msgstr "Cerrar sesión"
+
+#: templates\portal\base_portal.html
+msgid "Overview"
+msgstr "Resumen"
+
+#: templates\portal\base_portal.html
+msgid "My profile"
+msgstr "Mi perfil"
+
+#: templates\portal\base_portal.html
+msgid "Documents"
+msgstr "Documentos"
+
+#: templates\portal\base_portal.html
+msgid "Driver app guide"
+msgstr "Guía de la app"
+
+#: templates\portal\base_portal.html
+msgid "Help"
+msgstr "Ayuda"
+
+#: templates\portal\dashboard.html
+msgid "Your application status:"
+msgstr "Estado de tu solicitud:"
+
+#: templates\portal\dashboard.html
+msgid "Set up the driver app"
+msgstr "Configurar la app del conductor"
+
+#: templates\portal\dashboard.html
+msgid "Message from Ospace:"
+msgstr "Mensaje de Ospace:"
+
+#: templates\portal\dashboard.html
+msgid "We're reviewing your application."
+msgstr "Estamos revisando tu solicitud."
+
+#: templates\portal\dashboard.html
+msgid ""
+"You'll get an email as soon as there's news, usually within a few business "
+"days. You can still update your documents if something changes."
+msgstr ""
+"Te enviaremos un correo en cuanto haya novedades, normalmente en unos días "
+"hábiles. Mientras tanto puedes actualizar tus documentos si algo cambia."
+
+#: templates\portal\dashboard.html
+msgid "You're approved!"
+msgstr "¡Estás aprobado!"
+
+#: templates\portal\dashboard.html
+msgid "Onboarding progress"
+msgstr "Progreso de incorporación"
+
+#: templates\portal\dashboard.html
+msgid "Complete your profile"
+msgstr "Completa tu perfil"
+
+#: templates\portal\dashboard.html
+msgid "All personal, license, vehicle and insurance details are in."
+msgstr ""
+"Todos los datos personales, de licencia, vehículo y seguro están completos."
+
+#: templates\portal\dashboard.html
+msgid "Edit"
+msgstr "Editar"
+
+#: templates\portal\dashboard.html
+msgid "Continue"
+msgstr "Continuar"
+
+#: templates\portal\dashboard.html
+msgid "Upload your documents"
+msgstr "Sube tus documentos"
+
+#: templates\portal\dashboard.html
+msgid "approved"
+msgstr "aprobados"
+
+#: templates\portal\dashboard.html
+msgid "need re-upload"
+msgstr "necesitan volver a subirse"
+
+#: templates\portal\dashboard.html
+msgid "Review"
+msgstr "Revisar"
+
+#: templates\portal\dashboard.html
+msgid "Upload"
+msgstr "Subir"
+
+#: templates\portal\dashboard.html
+msgid "Sign the driver agreements"
+msgstr "Firma los acuerdos del conductor"
+
+#: templates\portal\dashboard.html
+msgid "Sign"
+msgstr "Firmar"
+
+#: templates\portal\dashboard.html
+msgid "Submit for review"
+msgstr "Enviar a revisión"
+
+#: templates\portal\dashboard.html
+msgid "Everything's in. Send your application to our team."
+msgstr "Todo está listo. Envía tu solicitud a nuestro equipo."
+
+#: templates\portal\dashboard.html
+msgid "Unlocks once the three steps above are complete."
+msgstr "Se desbloquea cuando completes los tres pasos anteriores."
+
+#: templates\portal\dashboard.html
+msgid "Submit application"
+msgstr "Enviar solicitud"
+
+#: templates\portal\dashboard.html
+msgid "Recent activity"
+msgstr "Actividad reciente"
+
+#: templates\portal\dashboard.html
+msgid "Nothing yet."
+msgstr "Nada todavía."
+
+#: templates\portal\dashboard.html
+msgid "Need a hand?"
+msgstr "¿Necesitas ayuda?"
+
+#: templates\portal\dashboard.html
+msgid "Our team is happy to walk you through any step."
+msgstr "Nuestro equipo te acompaña con gusto en cualquier paso."
+
+#: templates\portal\dashboard.html
+msgid "Call"
+msgstr "Llamar"
+
+#: templates\portal\dashboard.html
+msgid "Email us"
+msgstr "Escríbenos"
+
+#: templates\portal\dashboard.html
+msgid "Welcome, {{ name }}"
+msgstr "Bienvenido, {{ name }}"
+
+#: templates\portal\dashboard.html
+msgid ""
+"Install the ADROIT Driver app, enter service number {{ n }}, and start "
+"accepting rides near you. Welcome to the team."
+msgstr ""
+"Instala la app ADROIT Driver, ingresa el número de servicio {{ n }} y "
+"empieza a aceptar viajes cerca de ti. Bienvenido al equipo."
+
+#: templates\portal\dashboard.html
+msgid "{{ pct }}% complete · {{ n }} field(s) still needed."
+msgstr "{{ pct }}% completo · faltan {{ n }} campo(s)."
+
+#: templates\portal\dashboard.html
+msgid "{{ u }} of {{ r }} required documents uploaded"
+msgstr "{{ u }} de {{ r }} documentos obligatorios subidos"
+
+#: templates\portal\dashboard.html
+msgid "{{ s }} of {{ r }} required agreements signed."
+msgstr "{{ s }} de {{ r }} acuerdos obligatorios firmados."
+
+#: templates\portal\dashboard.html
+msgid "Submitted {{ d }}. We're on it."
+msgstr "Enviada el {{ d }}. Estamos en ello."
+
+#: templates\portal\documents.html
+msgid ""
+"Upload a clear photo or PDF of each item. PDF, JPG, PNG, HEIC or WEBP, up to"
+" 10 MB."
+msgstr ""
+"Sube una foto clara o un PDF de cada documento. PDF, JPG, PNG, HEIC o WEBP, "
+"hasta 10 MB."
+
+#: templates\portal\documents.html
+msgid "Not uploaded"
+msgstr "Sin subir"
+
+#: templates\portal\documents.html
+msgid "uploaded"
+msgstr "subido el"
+
+#: templates\portal\documents.html
+msgid "expires"
+msgstr "vence el"
+
+#: templates\portal\documents.html
+msgid "expired"
+msgstr "vencido"
+
+#: templates\portal\documents.html
+msgid "Note from Ospace:"
+msgstr "Nota de Ospace:"
+
+#: templates\portal\documents.html
+msgid "Expiry date"
+msgstr "Fecha de vencimiento"
+
+#: templates\portal\documents.html
+msgid "Replace file"
+msgstr "Reemplazar archivo"
+
+#: templates\portal\documents.html
+msgid "Choose file"
+msgstr "Elegir archivo"
+
+#: templates\portal\documents.html
+msgid "Remove this file?"
+msgstr "¿Eliminar este archivo?"
+
+#: templates\portal\documents.html
+msgid "Remove"
+msgstr "Eliminar"
+
+#: templates\portal\documents.html
+msgid "Approved · contact us to replace"
+msgstr "Aprobado · contáctanos para reemplazarlo"
+
+#: templates\portal\documents.html
+msgid "No document requirements have been configured yet."
+msgstr "Todavía no se han configurado requisitos de documentos."
+
+#: templates\portal\documents.html
+msgid ""
+"Your files are stored privately and only visible to you and the Ospace "
+"onboarding team."
+msgstr ""
+"Tus archivos se guardan de forma privada y solo los ves tú y el equipo de "
+"incorporación de Ospace."
+
+#: templates\portal\login.html
+msgid "Welcome back"
+msgstr "Bienvenido de nuevo"
+
+#: templates\portal\login.html
+msgid ""
+"Sign in to upload documents, sign agreements and track your application."
+msgstr ""
+"Inicia sesión para subir documentos, firmar acuerdos y seguir tu solicitud."
+
+#: templates\portal\login.html
+msgid "Email or password is incorrect."
+msgstr "El correo o la contraseña son incorrectos."
+
+#: templates\portal\login.html
+msgid "Password"
+msgstr "Contraseña"
+
+#: templates\portal\login.html
+msgid "Forgot your password?"
+msgstr "¿Olvidaste tu contraseña?"
+
+#: templates\portal\login.html
+msgid "New driver?"
+msgstr "¿Eres nuevo?"
+
+#: templates\portal\login.html
+msgid "Create your account"
+msgstr "Crea tu cuenta"
+
+#: templates\portal\password_reset.html
+msgid "Reset password"
+msgstr "Restablecer contraseña"
+
+#: templates\portal\password_reset.html
+msgid "Reset your password"
+msgstr "Restablece tu contraseña"
+
+#: templates\portal\password_reset.html
+msgid "Enter the email you registered with and we'll send you a reset link."
+msgstr ""
+"Escribe el correo con el que te registraste y te enviaremos un enlace para "
+"restablecerla."
+
+#: templates\portal\password_reset.html
+msgid "Send reset link"
+msgstr "Enviar enlace"
+
+#: templates\portal\password_reset.html
+msgid "Back to sign in"
+msgstr "Volver a iniciar sesión"
+
+#: templates\portal\password_reset_complete.html
+msgid "Password saved"
+msgstr "Contraseña guardada"
+
+#: templates\portal\password_reset_complete.html
+msgid "You can now sign in with your new password."
+msgstr "Ya puedes iniciar sesión con tu nueva contraseña."
+
+#: templates\portal\password_reset_confirm.html
+msgid "Choose a new password"
+msgstr "Elige una nueva contraseña"
+
+#: templates\portal\password_reset_confirm.html
+msgid "Save password"
+msgstr "Guardar contraseña"
+
+#: templates\portal\password_reset_confirm.html
+msgid "This reset link is invalid or has expired."
+msgstr "Este enlace no es válido o ha caducado."
+
+#: templates\portal\password_reset_confirm.html
+msgid "Request a new link"
+msgstr "Solicitar un nuevo enlace"
+
+#: templates\portal\password_reset_done.html
+msgid "Check your email"
+msgstr "Revisa tu correo"
+
+#: templates\portal\password_reset_done.html
+msgid ""
+"If an account exists for that address, a reset link is on its way. It "
+"expires in a few hours."
+msgstr ""
+"Si existe una cuenta con esa dirección, el enlace ya está en camino. Caduca "
+"en unas horas."
+
+#: templates\portal\profile.html
+msgid ""
+"Details we need to verify you and your vehicle. Everything is kept private."
+msgstr ""
+"Datos que necesitamos para verificarte a ti y a tu vehículo. Todo se "
+"mantiene privado."
+
+#: templates\portal\profile.html
+msgid "complete"
+msgstr "completo"
+
+#: templates\portal\profile.html
+msgid "Please fix the highlighted fields."
+msgstr "Corrige los campos marcados."
+
+#: templates\portal\profile.html
+msgid "Personal"
+msgstr "Datos personales"
+
+#: templates\portal\profile.html
+msgid "Driver's license"
+msgstr "Licencia de conducir"
+
+#: templates\portal\profile.html
+msgid "Vehicle"
+msgstr "Vehículo"
+
+#: templates\portal\profile.html
+msgid "Four-door, model year within the last 15 years."
+msgstr "Cuatro puertas, modelo de los últimos 15 años."
+
+#: templates\portal\profile.html
+msgid "Auto insurance"
+msgstr "Seguro del auto"
+
+#: templates\portal\profile.html
+msgid "Emergency contact"
+msgstr "Contacto de emergencia"
+
+#: templates\portal\profile.html
+msgid "Availability"
+msgstr "Disponibilidad"
+
+#: templates\portal\profile.html
+msgid ""
+"School runs are weekday mornings (about 6–9 AM) and afternoons (about 2–5 "
+"PM). Tick every window you can drive."
+msgstr ""
+"Los viajes escolares son entre semana por la mañana (aprox. 6–9 AM) y por la"
+" tarde (aprox. 2–5 PM). Marca todos los horarios en los que puedes manejar."
+
+#: templates\portal\profile.html
+msgid "Morning"
+msgstr "Mañana"
+
+#: templates\portal\profile.html
+msgid "Afternoon"
+msgstr "Tarde"
+
+#: templates\portal\profile.html
+msgid "Save profile"
+msgstr "Guardar perfil"
+
+#: templates\portal\profile.html
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: templates\portal\register.html
+msgid "Create account"
+msgstr "Crear cuenta"
+
+#: templates\portal\register.html
+msgid "Create your driver account"
+msgstr "Crea tu cuenta de conductor"
+
+#: templates\portal\register.html
+msgid ""
+"Your secure space to complete your profile, upload documents and e-sign the "
+"driver agreements."
+msgstr ""
+"Tu espacio seguro para completar tu perfil, subir documentos y firmar "
+"electrónicamente los acuerdos del conductor."
+
+#: templates\portal\register.html
+msgid "Already have an account?"
+msgstr "¿Ya tienes cuenta?"
+
+#: templates\portal\sign.html
+msgid "Scroll to the end of the document to enable signing."
+msgstr "Desplázate hasta el final del documento para habilitar la firma."
+
+#: templates\portal\sign.html
+msgid "Please draw your signature."
+msgstr "Por favor dibuja tu firma."
+
+#: templates\portal\sign.html
+msgid "Draw your signature"
+msgstr "Dibuja tu firma"
+
+#: templates\portal\sign.html
+msgid "Clear"
+msgstr "Borrar"
+
+#: templates\portal\sign.html
+msgid "Sign here with your finger or mouse"
+msgstr "Firma aquí con el dedo o el mouse"
+
+#: templates\portal\sign.html
+msgid ""
+"By clicking “Sign document” you agree that your typed name and drawn "
+"signature are your legal electronic signature, with the same effect as "
+"signing on paper. We record the date, time and IP address of your signature."
+msgstr ""
+"Al hacer clic en “Firmar documento” aceptas que tu nombre escrito y tu firma"
+" dibujada constituyen tu firma electrónica legal, con el mismo efecto que "
+"firmar en papel. Registramos la fecha, la hora y la dirección IP de tu "
+"firma."
+
+#: templates\portal\sign.html
+msgid "Sign document"
+msgstr "Firmar documento"
+
+#: templates\portal\sign.html
+msgid "Version {{ v }} · Please read the whole document, then sign below."
+msgstr "Versión {{ v }} · Lee el documento completo y luego firma abajo."
+
+#: templates\web\about.html
+msgid "About Ospace | Student Transportation in Houston, Texas"
+msgstr "Sobre Ospace | Transporte estudiantil en Houston, Texas"
+
+#: templates\web\about.html
+msgid ""
+"Ospace is a Houston-based student transportation service that believes rides"
+" should be safe, reliable and built around people's needs."
+msgstr ""
+"Ospace es un servicio de transporte estudiantil con sede en Houston que cree"
+" que los viajes deben ser seguros, confiables y pensados para las personas."
+
+#: templates\web\about.html
+msgid "All about us"
+msgstr "Todo sobre nosotros"
+
+#: templates\web\about.html
+msgid ""
+"We're Ospace, a company that believes transportation should be safe, "
+"reliable, and built around people's needs."
+msgstr ""
+"Somos Ospace, una empresa que cree que el transporte debe ser seguro, "
+"confiable y pensado para las necesidades de las personas."
+
+#: templates\web\about.html
+msgid ""
+"Connecting families, schools and communities with drivers they can trust"
+msgstr ""
+"Conectamos a familias, escuelas y comunidades con conductores de confianza"
+
+#: templates\web\about.html
+msgid ""
+"Ospace is a student transportation service headquartered in Houston, Texas. "
+"We match students with dependable local drivers for the school commute, and "
+"give independent drivers a flexible way to earn using their own vehicle."
+msgstr ""
+"Ospace es un servicio de transporte estudiantil con sede en Houston, Texas. "
+"Conectamos a los estudiantes con conductores locales confiables para el "
+"trayecto escolar y damos a los conductores independientes una forma flexible"
+" de ganar dinero con su propio vehículo."
+
+#: templates\web\about.html
+msgid ""
+"For parents, that means peace of mind: a vetted driver, an in-person hand-"
+"over at both ends, and the same familiar face on the school run. For "
+"drivers, it means real flexibility: choose your days, choose your windows, "
+"and get paid per ride."
+msgstr ""
+"Para los padres significa tranquilidad: un conductor verificado, una entrega"
+" en persona en ambos extremos y la misma cara conocida en cada viaje "
+"escolar. Para los conductores significa flexibilidad real: elige tus días, "
+"elige tus horarios y cobra por viaje."
+
+#: templates\web\about.html
+msgid "Great service begins with great people and real experience."
+msgstr "Un gran servicio empieza con grandes personas y experiencia real."
+
+#: templates\web\about.html
+msgid ""
+"That is why we are selective about who drives with us, and why we aim to "
+"exceed expectations on every ride across the Houston area."
+msgstr ""
+"Por eso somos selectivos con quienes manejan con nosotros y por eso buscamos"
+" superar las expectativas en cada viaje por el área de Houston."
+
+#: templates\web\about.html
+msgid "Ospace driver"
+msgstr "Conductora de Ospace"
+
+#: templates\web\about.html
+msgid "What we stand for"
+msgstr "Lo que nos define"
+
+#: templates\web\about.html
+msgid "Our values"
+msgstr "Nuestros valores"
+
+#: templates\web\about.html
+msgid "Safety"
+msgstr "Seguridad"
+
+#: templates\web\about.html
+msgid ""
+"Screening, hand-over protocols and conduct standards that every driver "
+"signs. No shortcuts."
+msgstr ""
+"Verificación, protocolos de entrega y normas de conducta que cada conductor "
+"firma. Sin atajos."
+
+#: templates\web\about.html
+msgid "Reliability"
+msgstr "Confiabilidad"
+
+#: templates\web\about.html
+msgid ""
+"On time, every school day. Families and schools plan their mornings around "
+"us."
+msgstr ""
+"A tiempo, cada día de clases. Las familias y las escuelas organizan sus "
+"mañanas con nosotros."
+
+#: templates\web\about.html
+msgid "Community"
+msgstr "Comunidad"
+
+#: templates\web\about.html
+msgid ""
+"Local drivers, local families, local schools. Built around people's needs, "
+"not the other way around."
+msgstr ""
+"Conductores locales, familias locales, escuelas locales. Pensado para las "
+"personas, no al revés."
+
+#: templates\web\about.html
+msgid "Drivers feedback"
+msgstr "Opiniones de conductores"
+
+#: templates\web\about.html
+msgid "The people behind the wheel"
+msgstr "Las personas al volante"
+
+#: templates\web\about.html
+msgid "Want to talk to us?"
+msgstr "¿Quieres hablar con nosotros?"
+
+#: templates\web\about.html
+msgid "Contact us"
+msgstr "Contáctanos"
+
+#: templates\web\about.html
+msgid "Drive with us"
+msgstr "Maneja con nosotros"
+
+#: templates\web\app.html
+msgid "Driver App Set-up Guide | Ospace (ADROIT Driver)"
+msgstr "Guía de configuración de la app | Ospace (ADROIT Driver)"
+
+#: templates\web\app.html
+msgid ""
+"Step-by-step guide to the ADROIT Driver app: download it, create your "
+"account with your phone number and date of birth, fill in your details, "
+"enter service number 149 and sign in."
+msgstr ""
+"Guía paso a paso de la app ADROIT Driver: descárgala, crea tu cuenta con tu "
+"número de teléfono y tu fecha de nacimiento, completa tus datos, ingresa el "
+"número de servicio 149 e inicia sesión."
+
+#: templates\web\app.html
+msgid "Our app"
+msgstr "Nuestra app"
+
+#: templates\web\app.html
+msgid "Set up the ADROIT Driver app"
+msgstr "Configura la app ADROIT Driver"
+
+#: templates\web\app.html
+msgid ""
+"Ospace rides are dispatched through the ADROIT Driver app. Follow the four "
+"steps below and you'll be ready to receive rides in a few minutes."
+msgstr ""
+"Los viajes de Ospace se asignan a través de la app ADROIT Driver. Sigue "
+"estos cuatro pasos y en pocos minutos estarás listo para recibir viajes."
+
+#: templates\web\app.html
+msgid "Get it on"
+msgstr "Disponible en"
+
+#: templates\web\app.html
+msgid "Download on the"
+msgstr "Descárgala en"
+
+#: templates\web\app.html
+msgid "First step"
+msgstr "Primer paso"
+
+#: templates\web\app.html
+msgid "Download the app"
+msgstr "Descarga la app"
+
+#: templates\web\app.html
+msgid "Grab your phone and follow these steps:"
+msgstr "Toma tu teléfono y sigue estos pasos:"
+
+#: templates\web\app.html
+msgid "Open the App Store (iPhone) or Google Play (Android) on your device."
+msgstr "Abre la App Store (iPhone) o Google Play (Android) en tu dispositivo."
+
+#: templates\web\app.html
+msgid "Download and install the app."
+msgstr "Descarga e instala la app."
+
+#: templates\web\app.html
+msgid "Follow the on-screen steps to continue."
+msgstr "Sigue los pasos en pantalla para continuar."
+
+#: templates\web\app.html
+msgid "Sign in or register"
+msgstr "Inicia sesión o regístrate"
+
+#: templates\web\app.html
+msgid "Tap “Let's get started”"
+msgstr "Toca “Let's get started”"
+
+#: templates\web\app.html
+msgid "Second step"
+msgstr "Segundo paso"
+
+#: templates\web\app.html
+msgid "Fill in your information"
+msgstr "Completa tu información"
+
+#: templates\web\app.html
+msgid ""
+"The app walks you through onboarding one screen at a time. You'll introduce "
+"yourself, confirm you meet the driver requirements and tell us when you're "
+"available to drive. Welcome to the ADROIT family!"
+msgstr ""
+"La app te guía por la incorporación pantalla por pantalla. Te presentarás, "
+"confirmarás que cumples los requisitos del conductor y nos dirás cuándo "
+"puedes manejar. ¡Bienvenido a la familia ADROIT!"
+
+#: templates\web\app.html
+msgid "Tell us about yourself"
+msgstr "Cuéntanos sobre ti"
+
+#: templates\web\app.html
+msgid "name, email, phone number, date of birth and language"
+msgstr "nombre, correo, número de teléfono, fecha de nacimiento e idioma"
+
+#: templates\web\app.html
+msgid "Confirm the basics"
+msgstr "Confirma lo básico"
+
+#: templates\web\app.html
+msgid ""
+"valid driver's license, a four-door vehicle from 2001 or newer, and a clean "
+"background and drug test"
+msgstr ""
+"licencia de conducir vigente, un vehículo de cuatro puertas de 2001 o más "
+"reciente, y antecedentes y prueba de drogas limpios"
+
+#: templates\web\app.html
+msgid "Set your availability"
+msgstr "Define tu disponibilidad"
+
+#: templates\web\app.html
+msgid "tick the weekdays and hours you can work (Monday to Friday)"
+msgstr "marca los días y horas en que puedes trabajar (de lunes a viernes)"
+
+#: templates\web\app.html
+msgid "1 of 5 · About you"
+msgstr "1 de 5 · Sobre ti"
+
+#: templates\web\app.html
+msgid "2 of 5 · Requirements"
+msgstr "2 de 5 · Requisitos"
+
+#: templates\web\app.html
+msgid "3 of 5 · Availability"
+msgstr "3 de 5 · Disponibilidad"
+
+#: templates\web\app.html
+msgid "Third step"
+msgstr "Tercer paso"
+
+#: templates\web\app.html
+msgid "Enter our service number"
+msgstr "Ingresa nuestro número de servicio"
+
+#: templates\web\app.html
+msgid "Ospace service number"
+msgstr "Número de servicio de Ospace"
+
+#: templates\web\app.html
+msgid ""
+"The referral code field is optional. Leave it blank unless someone gave you "
+"one."
+msgstr ""
+"El campo de código de referido es opcional. Déjalo en blanco salvo que "
+"alguien te haya dado uno."
+
+#: templates\web\app.html
+msgid "Last step"
+msgstr "Último paso"
+
+#: templates\web\app.html
+msgid "Confirmation"
+msgstr "Confirmación"
+
+#: templates\web\app.html
+msgid "Check my application status"
+msgstr "Ver el estado de mi solicitud"
+
+#: templates\web\app.html
+msgid "5 of 5 · Submit"
+msgstr "5 de 5 · Enviar"
+
+#: templates\web\app.html
+msgid "Sign in with phone + password"
+msgstr "Inicia sesión con teléfono + contraseña"
+
+#: templates\web\app.html
+msgid "Need a hand with the app?"
+msgstr "¿Necesitas ayuda con la app?"
+
+#: templates\web\app.html
+msgid ""
+"Call us and we'll walk you through it. Not approved yet? Finish your "
+"documents in the driver portal first."
+msgstr ""
+"Llámanos y te guiamos paso a paso. ¿Aún no estás aprobado? Primero termina "
+"tus documentos en el portal del conductor."
+
+#: templates\web\app.html
+msgid ""
+"Search for <strong>ADROIT Driver</strong> and look for the ADROIT icon."
+msgstr "Busca <strong>ADROIT Driver</strong> y localiza el ícono de ADROIT."
+
+#: templates\web\app.html
+msgid ""
+"Open it and choose <strong>Sign in</strong> or <strong>Create an "
+"account</strong>."
+msgstr ""
+"Ábrela y elige <strong>Sign in</strong> (iniciar sesión) o <strong>Create an"
+" account</strong> (crear cuenta)."
+
+#: templates\web\app.html
+msgid ""
+"Your <strong>username is your phone number</strong> and your "
+"<strong>password is your date of birth</strong>."
+msgstr ""
+"Tu <strong>usuario es tu número de teléfono</strong> y tu <strong>contraseña"
+" es tu fecha de nacimiento</strong>."
+
+#: templates\web\app.html
+msgid ""
+"On the <strong>Area of Service</strong> screen, where it asks “Where do you "
+"provide your service?”, enter the number below. This links your account to "
+"Ospace so our rides reach you."
+msgstr ""
+"En la pantalla <strong>Area of Service</strong>, donde pregunta “Where do "
+"you provide your service?”, ingresa el número de abajo. Esto vincula tu "
+"cuenta con Ospace para que nuestros viajes te lleguen."
+
+#: templates\web\app.html
+msgid "4 of 5 · Enter {{ n }}"
+msgstr "4 de 5 · Ingresa {{ n }}"
+
+#: templates\web\app.html
+msgid ""
+"Answer the short experience questions and tap <strong>Submit</strong>. "
+"You'll see a confirmation that the first part of onboarding is complete."
+msgstr ""
+"Responde las breves preguntas de experiencia y toca <strong>Submit</strong>."
+" Verás una confirmación de que la primera parte de la incorporación está "
+"completa."
+
+#: templates\web\app.html
+msgid ""
+"Now sign in with your <strong>phone number</strong> and your "
+"<strong>password</strong> (your date of birth). Once your Ospace application"
+" is approved, rides near you start appearing in the app."
+msgstr ""
+"Ahora inicia sesión con tu <strong>número de teléfono</strong> y tu "
+"<strong>contraseña</strong> (tu fecha de nacimiento). Cuando tu solicitud "
+"con Ospace sea aprobada, los viajes cercanos empezarán a aparecer en la app."
+
+#: templates\web\contact.html
+msgid "Contact Ospace | Houston Student Transportation"
+msgstr "Contacta a Ospace | Transporte estudiantil en Houston"
+
+#: templates\web\contact.html
+msgid ""
+"Call, email or message Ospace in Houston. Driver applications, ride requests"
+" and partnerships."
+msgstr ""
+"Llama, escribe o envía un mensaje a Ospace en Houston. Solicitudes de "
+"conductores, pedidos de viajes y alianzas."
+
+#: templates\web\contact.html
+msgid "Talk to our team"
+msgstr "Habla con nuestro equipo"
+
+#: templates\web\contact.html
+msgid ""
+"Driver questions, rides for your child or school, partnerships: we're happy "
+"to help."
+msgstr ""
+"Dudas de conductores, viajes para tu hijo o tu escuela, alianzas: con gusto "
+"te ayudamos."
+
+#: templates\web\contact.html
+msgid "Talk with one of our expert staff about joining."
+msgstr "Habla con uno de nuestros expertos sobre cómo unirte."
+
+#: templates\web\contact.html
+msgid "Legal & privacy:"
+msgstr "Legal y privacidad:"
+
+#: templates\web\contact.html
+msgid "Where we are"
+msgstr "Dónde estamos"
+
+#: templates\web\contact.html
+msgid "Serving Houston and surrounding areas."
+msgstr "Atendemos Houston y sus alrededores."
+
+#: templates\web\contact.html
+msgid "Send message"
+msgstr "Enviar mensaje"
+
+#: templates\web\drivers.html
+msgid "Become a Driver | Ospace Houston — Earn $150+/day on school runs"
+msgstr "Ser conductor | Ospace Houston — Gana $150+/día en viajes escolares"
+
+#: templates\web\drivers.html
+msgid ""
+"Drive your own car, choose your hours and earn a minimum of $50 per two "
+"rides transporting students in Houston. Requirements, pay and a two-minute "
+"application."
+msgstr ""
+"Maneja tu propio auto, elige tus horarios y gana un mínimo de $50 por cada "
+"dos viajes transportando estudiantes en Houston. Requisitos, pago y una "
+"solicitud de dos minutos."
+
+#: templates\web\drivers.html
+msgid "Become a driver with us now"
+msgstr "Conviértete en conductor con nosotros hoy"
+
+#: templates\web\drivers.html
+msgid ""
+"Supplemental income on your terms. Transport students to and from school in "
+"your own vehicle and earn a minimum of $50 per two rides, up to $150+ a day."
+msgstr ""
+"Ingresos adicionales en tus términos. Transporta estudiantes de ida y vuelta"
+" a la escuela en tu propio vehículo y gana un mínimo de $50 por cada dos "
+"viajes, hasta $150+ al día."
+
+#: templates\web\drivers.html
+msgid "Please review all requirements before applying"
+msgstr "Revisa todos los requisitos antes de aplicar"
+
+#: templates\web\drivers.html
+msgid "You meet every requirement."
+msgstr "Cumples todos los requisitos."
+
+#: templates\web\drivers.html
+msgid "Start your application"
+msgstr "Empieza tu solicitud"
+
+#: templates\web\drivers.html
+msgid "Tick each box that applies to you."
+msgstr "Marca cada casilla que aplique a ti."
+
+#: templates\web\drivers.html
+msgid ""
+"to go. Not sure about one? Apply anyway and we will talk you through it."
+msgstr ""
+"por marcar. ¿Dudas con alguna? Aplica de todos modos y lo vemos contigo."
+
+#: templates\web\drivers.html
+msgid "Do I qualify? Quick self-check"
+msgstr "¿Califico? Autoevaluación rápida"
+
+#: templates\web\drivers.html
+msgid "Nothing is saved. Just tick what applies to you."
+msgstr "No se guarda nada. Solo marca lo que aplique a ti."
+
+#: templates\web\drivers.html
+msgid "I'm 21 or older"
+msgstr "Tengo 21 años o más"
+
+#: templates\web\drivers.html
+msgid "and hold a valid U.S. driver's license"
+msgstr "y una licencia de conducir vigente de EE. UU."
+
+#: templates\web\drivers.html
+msgid "I have a four-door vehicle"
+msgstr "Tengo un vehículo de cuatro puertas"
+
+#: templates\web\drivers.html
+msgid "model year within the last 15 years"
+msgstr "modelo de los últimos 15 años"
+
+#: templates\web\drivers.html
+msgid "I have current auto insurance"
+msgstr "Tengo seguro de auto vigente"
+
+#: templates\web\drivers.html
+msgid "in my own name"
+msgstr "a mi nombre"
+
+#: templates\web\drivers.html
+msgid "I can pass a background check"
+msgstr "Puedo pasar una verificación de antecedentes"
+
+#: templates\web\drivers.html
+msgid "plus drug and TB screening"
+msgstr "además de pruebas de drogas y tuberculosis"
+
+#: templates\web\drivers.html
+msgid "I'm available on weekday mornings and/or afternoons"
+msgstr "Estoy disponible entre semana por la mañana y/o por la tarde"
+
+#: templates\web\drivers.html
+msgid "school-run hours"
+msgstr "horario escolar"
+
+#: templates\web\drivers.html
+msgid "The process"
+msgstr "El proceso"
+
+#: templates\web\drivers.html
+msgid "How onboarding works"
+msgstr "Cómo funciona la incorporación"
+
+#: templates\web\drivers.html
+msgid "Apply"
+msgstr "Aplicar"
+
+#: templates\web\drivers.html
+msgid ""
+"Tell us a little about you and your car. One of our team will call you back "
+"to walk through the next steps, and you'll get a link to the driver portal "
+"to upload your documents."
+msgstr ""
+"Cuéntanos un poco sobre ti y tu auto. Alguien de nuestro equipo te llamará "
+"para explicarte los siguientes pasos y recibirás un enlace al portal del "
+"conductor para subir tus documentos."
+
+#: templates\web\drivers.html
+msgid "Already applied?"
+msgstr "¿Ya aplicaste?"
+
+#: templates\web\drivers.html
+msgid "Sign in to the driver portal"
+msgstr "Inicia sesión en el portal del conductor"
+
+#: templates\web\drivers.html
+msgid "Good to know"
+msgstr "Bueno saberlo"
+
+#: templates\web\families.html
+msgid "Student Rides for Families & Schools | Ospace Houston"
+msgstr "Viajes escolares para familias y escuelas | Ospace Houston"
+
+#: templates\web\families.html
+msgid ""
+"Safe school-run rides in Houston with vetted, background-checked drivers. "
+"Pick-up, drop-off and recurring schedules for families and schools. Request "
+"a ride today."
+msgstr ""
+"Viajes escolares seguros en Houston con conductores verificados. Recogida, "
+"entrega y horarios recurrentes para familias y escuelas. Solicita un viaje "
+"hoy."
+
+#: templates\web\families.html
+msgid "Safe rides to school and back, from drivers you can trust"
+msgstr ""
+"Viajes seguros a la escuela y de regreso, con conductores de confianza"
+
+#: templates\web\families.html
+msgid ""
+"Ospace connects families, schools and communities with vetted local drivers."
+" Set up a recurring school run or a one-off ride and know exactly who is "
+"behind the wheel."
+msgstr ""
+"Ospace conecta a familias, escuelas y comunidades con conductores locales "
+"verificados. Programa un viaje escolar recurrente o un viaje puntual y sabe "
+"exactamente quién va al volante."
+
+#: templates\web\families.html
+msgid "Request rides"
+msgstr "Solicitar viajes"
+
+#: templates\web\families.html
+msgid "Student smiling in the back seat of an Ospace ride"
+msgstr "Estudiante sonriendo en el asiento trasero de un viaje de Ospace"
+
+#: templates\web\families.html
+msgid "Our services"
+msgstr "Nuestros servicios"
+
+#: templates\web\families.html
+msgid "What we offer"
+msgstr "Lo que ofrecemos"
+
+#: templates\web\families.html
+msgid "Pick them up to and from school"
+msgstr "Los recogemos y los llevamos a la escuela"
+
+#: templates\web\families.html
+msgid ""
+"Door-to-school and school-to-door rides on a recurring weekday schedule. "
+"Same driver whenever possible."
+msgstr ""
+"Viajes de casa a la escuela y de la escuela a casa en un horario recurrente "
+"entre semana. El mismo conductor siempre que sea posible."
+
+#: templates\web\families.html
+msgid "Morning & afternoon"
+msgstr "Mañana y tarde"
+
+#: templates\web\families.html
+msgid "Vetted local drivers"
+msgstr "Conductores locales verificados"
+
+#: templates\web\families.html
+msgid ""
+"Every driver is background-checked, drug and TB screened, insured and "
+"driving a reviewed four-door vehicle."
+msgstr ""
+"Cada conductor pasa una verificación de antecedentes, pruebas de drogas y "
+"tuberculosis, tiene seguro y maneja un vehículo de cuatro puertas revisado."
+
+#: templates\web\families.html
+msgid "Background-checked"
+msgstr "Antecedentes verificados"
+
+#: templates\web\families.html
+msgid "Drop them off to their home or school"
+msgstr "Los dejamos en su casa o en su escuela"
+
+#: templates\web\families.html
+msgid "From $25"
+msgstr "Desde $25"
+
+#: templates\web\families.html
+msgid "Students walking to school"
+msgstr "Estudiantes caminando a la escuela"
+
+#: templates\web\families.html
+msgid "Safety first"
+msgstr "La seguridad primero"
+
+#: templates\web\families.html
+msgid "How we keep students safe"
+msgstr "Cómo cuidamos a los estudiantes"
+
+#: templates\web\families.html
+msgid "Driver screening"
+msgstr "Verificación del conductor"
+
+#: templates\web\families.html
+msgid "background check, drug & TB tests, license and insurance verified"
+msgstr ""
+"antecedentes, pruebas de drogas y tuberculosis, licencia y seguro "
+"verificados"
+
+#: templates\web\families.html
+msgid "In-person hand-over"
+msgstr "Entrega en persona"
+
+#: templates\web\families.html
+msgid "students are never left unattended"
+msgstr "los estudiantes nunca se quedan sin supervisión"
+
+#: templates\web\families.html
+msgid "Know your driver"
+msgstr "Conoce a tu conductor"
+
+#: templates\web\families.html
+msgid "name, photo and vehicle shared before the ride"
+msgstr "nombre, foto y vehículo compartidos antes del viaje"
+
+#: templates\web\families.html
+msgid "Ride tracking"
+msgstr "Seguimiento del viaje"
+
+#: templates\web\families.html
+msgid "driver location is logged from check-in to drop-off"
+msgstr ""
+"la ubicación del conductor se registra desde el inicio hasta la entrega"
+
+#: templates\web\families.html
+msgid "Conduct policy"
+msgstr "Normas de conducta"
+
+#: templates\web\families.html
+msgid "every driver signs our student safety standards"
+msgstr "cada conductor firma nuestras normas de seguridad estudiantil"
+
+#: templates\web\families.html
+msgid "Tell us what you need"
+msgstr "Cuéntanos qué necesitas"
+
+#: templates\web\families.html
+msgid ""
+"Parents, guardians and schools: share the pick-up area, destination and "
+"schedule and we'll confirm availability and pricing, usually within one "
+"business day."
+msgstr ""
+"Padres, tutores y escuelas: compártannos la zona de recogida, el destino y "
+"el horario, y confirmaremos disponibilidad y precio, normalmente en un día "
+"hábil."
+
+#: templates\web\families.html
+msgid "Prefer to talk?"
+msgstr "¿Prefieres hablar?"
+
+#: templates\web\families.html
+msgid "No commitment. We'll get back to you with options."
+msgstr "Sin compromiso. Te responderemos con opciones."
+
+#: templates\web\families.html
+msgid ""
+"One-way rides when you need them. Drop-off from <strong>$25</strong>. Hand-"
+"over to a parent, guardian or teacher every time."
+msgstr ""
+"Viajes de ida cuando los necesites. Entrega desde <strong>$25</strong>. "
+"Entrega a un padre, tutor o maestro en cada viaje."
+
+#: templates\web\faq.html
+msgid "FAQ | Ospace Drivers & Families"
+msgstr "Preguntas frecuentes | Conductores y familias de Ospace"
+
+#: templates\web\faq.html
+msgid ""
+"Answers about earnings, vehicle requirements, hours, hand-over, approval "
+"times and contractor status for Ospace drivers."
+msgstr ""
+"Respuestas sobre ganancias, requisitos del vehículo, horarios, entrega, "
+"tiempos de aprobación y condición de contratista para los conductores de "
+"Ospace."
+
+#: templates\web\faq.html
+msgid "Frequently asked questions"
+msgstr "Preguntas frecuentes"
+
+#: templates\web\faq.html
+msgid "Can't find what you need?"
+msgstr "¿No encuentras lo que buscas?"
+
+#: templates\web\faq.html
+msgid "Send us a message"
+msgstr "Envíanos un mensaje"
+
+#: templates\web\faq.html
+msgid "Where does Ospace operate?"
+msgstr "¿Dónde opera Ospace?"
+
+#: templates\web\faq.html
+msgid ""
+"We are headquartered in Houston, Texas and serve Houston and the surrounding"
+" areas. Rides are matched to the driver closest to the student's home."
+msgstr ""
+"Nuestra sede está en Houston, Texas, y atendemos Houston y sus alrededores. "
+"Los viajes se asignan al conductor más cercano a la casa del estudiante."
+
+#: templates\web\faq.html
+msgid "How do I upload my documents?"
+msgstr "¿Cómo subo mis documentos?"
+
+#: templates\web\faq.html
+msgid ""
+"After applying you'll get access to the driver portal. Upload your license, "
+"insurance, registration, photos and test results there, e-sign the driver "
+"agreements and submit for review. You can track the status of every item."
+msgstr ""
+"Después de aplicar tendrás acceso al portal del conductor. Sube allí tu "
+"licencia, seguro, registro, fotos y resultados de pruebas, firma "
+"electrónicamente los acuerdos y envía todo a revisión. Puedes seguir el "
+"estado de cada elemento."
+
+#: templates\web\faq.html
+msgid "Which app do I use?"
+msgstr "¿Qué app uso?"
+
+#: templates\web\faq.html
+msgid "See the set-up guide"
+msgstr "Ver la guía de configuración"
+
+#: templates\web\faq.html
+msgid "I'm a parent. How do I book rides?"
+msgstr "Soy padre o madre. ¿Cómo reservo viajes?"
+
+#: templates\web\faq.html
+msgid ""
+"Use the ride request form or call us. We'll confirm availability, pricing "
+"and your driver's details before the first ride."
+msgstr ""
+"Usa el formulario de solicitud de viajes o llámanos. Confirmaremos "
+"disponibilidad, precio y los datos de tu conductor antes del primer viaje."
+
+#: templates\web\faq.html
+msgid ""
+"Ospace rides are dispatched through the ADROIT Driver app for iPhone and "
+"Android. Enter service number {{ n }} when you set up your account."
+msgstr ""
+"Los viajes de Ospace se asignan a través de la app ADROIT Driver para iPhone"
+" y Android. Ingresa el número de servicio {{ n }} al configurar tu cuenta."
+
+#: templates\web\home.html
+msgid "Now hiring drivers in Houston"
+msgstr "Estamos contratando conductores en Houston"
+
+#: templates\web\home.html
+msgid "Drive in the comfort of your own vehicle with Ospace"
+msgstr "Maneja con la comodidad de tu propio vehículo con Ospace"
+
+#: templates\web\home.html
+msgid ""
+"Earn up to $150+ a day giving safe rides to students, on a schedule you "
+"choose. Join a growing community of local drivers making a flexible "
+"supplemental income."
+msgstr ""
+"Gana hasta $150+ al día llevando estudiantes de forma segura, en el horario "
+"que tú elijas. Únete a una comunidad creciente de conductores locales con un"
+" ingreso adicional flexible."
+
+#: templates\web\home.html
+msgid "I need rides for a student"
+msgstr "Necesito viajes para un estudiante"
+
+#: templates\web\home.html
+msgid "potential daily earnings"
+msgstr "ganancia diaria potencial"
+
+#: templates\web\home.html
+msgid "minimum per 2 rides"
+msgstr "mínimo por 2 viajes"
+
+#: templates\web\home.html
+msgid "Your car"
+msgstr "Tu auto"
+
+#: templates\web\home.html
+msgid "any 4-door, last 15 years"
+msgstr "cualquier 4 puertas de los últimos 15 años"
+
+#: templates\web\home.html
+msgid "Flexible"
+msgstr "Flexible"
+
+#: templates\web\home.html
+msgid "morning & afternoon runs"
+msgstr "viajes de mañana y tarde"
+
+#: templates\web\home.html
+msgid "Quick apply"
+msgstr "Solicitud rápida"
+
+#: templates\web\home.html
+msgid "Two minutes. We'll take it from there."
+msgstr "Dos minutos. Nosotros nos encargamos del resto."
+
+#: templates\web\home.html
+msgid "Get started"
+msgstr "Empezar"
+
+#: templates\web\home.html
+msgid "2 min"
+msgstr "2 min"
+
+#: templates\web\home.html
+msgid "to apply online"
+msgstr "para aplicar en línea"
+
+#: templates\web\home.html
+msgid "drivers background-checked"
+msgstr "conductores con antecedentes verificados"
+
+#: templates\web\home.html
+msgid "school-run schedules"
+msgstr "horarios escolares"
+
+#: templates\web\home.html
+msgid "& surrounding areas"
+msgstr "y alrededores"
+
+#: templates\web\home.html
+msgid "Simple rides, done safely"
+msgstr "Viajes simples, hechos con seguridad"
+
+#: templates\web\home.html
+msgid ""
+"Ospace matches students with dependable drivers for the school commute. "
+"Every ride follows the same four steps."
+msgstr ""
+"Ospace conecta a los estudiantes con conductores confiables para el trayecto"
+" escolar. Cada viaje sigue los mismos cuatro pasos."
+
+#: templates\web\home.html
+msgid "Pick-up"
+msgstr "Recogida"
+
+#: templates\web\home.html
+msgid ""
+"Collect students from home. A parent or guardian brings them to the vehicle."
+msgstr ""
+"Recoge a los estudiantes en casa. Un padre o tutor los acompaña hasta el "
+"vehículo."
+
+#: templates\web\home.html
+msgid "Drive"
+msgstr "Maneja"
+
+#: templates\web\home.html
+msgid ""
+"Use your own vehicle. Any clean four-door car from the last 15 years "
+"qualifies."
+msgstr ""
+"Usa tu propio vehículo. Cualquier auto limpio de cuatro puertas de los "
+"últimos 15 años califica."
+
+#: templates\web\home.html
+msgid "Drop-off"
+msgstr "Entrega"
+
+#: templates\web\home.html
+msgid ""
+"Deliver students to school and back home, handed to a teacher or parent "
+"every time."
+msgstr ""
+"Lleva a los estudiantes a la escuela y de regreso a casa, entregándolos "
+"siempre a un maestro o a un padre."
+
+#: templates\web\home.html
+msgid "Earn money"
+msgstr "Gana dinero"
+
+#: templates\web\home.html
+msgid "A minimum of $50 for every two rides, paid per completed ride."
+msgstr "Un mínimo de $50 por cada dos viajes, pagado por viaje completado."
+
+#: templates\web\home.html
+msgid "ride"
+msgstr "viaje"
+
+#: templates\web\home.html
+msgid "rides"
+msgstr "viajes"
+
+#: templates\web\home.html
+msgid "day"
+msgstr "día"
+
+#: templates\web\home.html
+msgid "days"
+msgstr "días"
+
+#: templates\web\home.html
+msgid "Earnings calculator"
+msgstr "Calculadora de ganancias"
+
+#: templates\web\home.html
+msgid "See what your school runs could pay"
+msgstr "Mira cuánto podrían pagarte tus viajes escolares"
+
+#: templates\web\home.html
+msgid ""
+"Most drivers do a morning run and an afternoon run. Slide to match your "
+"availability."
+msgstr ""
+"La mayoría de los conductores hacen un viaje por la mañana y otro por la "
+"tarde. Ajusta según tu disponibilidad."
+
+#: templates\web\home.html
+msgid "Rides per day"
+msgstr "Viajes por día"
+
+#: templates\web\home.html
+msgid "Days per week"
+msgstr "Días por semana"
+
+#: templates\web\home.html
+msgid ""
+"Estimate based on $25 per completed ride ($50 minimum per two rides). Actual"
+" earnings depend on the rides you accept."
+msgstr ""
+"Estimación basada en $25 por viaje completado ($50 mínimo por cada dos "
+"viajes). Las ganancias reales dependen de los viajes que aceptes."
+
+#: templates\web\home.html
+msgid "Estimated weekly earnings"
+msgstr "Ganancia semanal estimada"
+
+#: templates\web\home.html
+msgid "driving school runs"
+msgstr "haciendo viajes escolares"
+
+#: templates\web\home.html
+msgid "per day"
+msgstr "por día"
+
+#: templates\web\home.html
+msgid "per month"
+msgstr "por mes"
+
+#: templates\web\home.html
+msgid "Hiring now"
+msgstr "Estamos contratando"
+
+#: templates\web\home.html
+msgid "From application to first ride in four steps"
+msgstr "De la solicitud al primer viaje en cuatro pasos"
+
+#: templates\web\home.html
+msgid ""
+"Fast and friendly. Apply, upload your documents in the driver portal, sign "
+"online, and start driving."
+msgstr ""
+"Rápido y amable. Aplica, sube tus documentos en el portal del conductor, "
+"firma en línea y empieza a manejar."
+
+#: templates\web\home.html
+msgid "Start my application"
+msgstr "Empezar mi solicitud"
+
+#: templates\web\home.html
+msgid "How a ride works"
+msgstr "Cómo funciona un viaje"
+
+#: templates\web\home.html
+msgid "Students walking to school with backpacks"
+msgstr "Estudiantes caminando a la escuela con mochilas"
+
+#: templates\web\home.html
+msgid "What you need to drive with us"
+msgstr "Lo que necesitas para manejar con nosotros"
+
+#: templates\web\home.html
+msgid "Check if I qualify"
+msgstr "Ver si califico"
+
+#: templates\web\home.html
+msgid "Real people, real flexibility"
+msgstr "Personas reales, flexibilidad real"
+
+#: templates\web\home.html
+msgid "The driver app"
+msgstr "La app del conductor"
+
+#: templates\web\home.html
+msgid "Accept rides near you with the ADROIT Driver app"
+msgstr "Acepta viajes cerca de ti con la app ADROIT Driver"
+
+#: templates\web\home.html
+msgid ""
+"Set your availability, see rides close to home, navigate to each pick-up and"
+" log every hand-over. Available on iPhone and Android."
+msgstr ""
+"Define tu disponibilidad, mira viajes cerca de casa, navega a cada recogida "
+"y registra cada entrega. Disponible para iPhone y Android."
+
+#: templates\web\home.html
+msgid "Driver using the ADROIT Driver app"
+msgstr "Conductor usando la app ADROIT Driver"
+
+#: templates\web\home.html
+msgid "Peace of mind for the school run"
+msgstr "Tranquilidad en el viaje escolar"
+
+#: templates\web\home.html
+msgid ""
+"Every Ospace driver passes a background check, drug and TB screening and a "
+"vehicle review. Students are handed over in person at both ends, never left "
+"waiting."
+msgstr ""
+"Cada conductor de Ospace pasa una verificación de antecedentes, pruebas de "
+"drogas y tuberculosis y una revisión del vehículo. Los estudiantes se "
+"entregan en persona en ambos extremos, nunca se quedan esperando."
+
+#: templates\web\home.html
+msgid "you see their name, photo and vehicle"
+msgstr "ves su nombre, foto y vehículo"
+
+#: templates\web\home.html
+msgid "Nearby matching"
+msgstr "Asignación cercana"
+
+#: templates\web\home.html
+msgid "we assign the driver closest to you"
+msgstr "te asignamos el conductor más cercano a ti"
+
+#: templates\web\home.html
+msgid "Recurring schedules"
+msgstr "Horarios recurrentes"
+
+#: templates\web\home.html
+msgid "set it once for the whole term"
+msgstr "configúralo una vez para todo el periodo"
+
+#: templates\web\home.html
+msgid "Parent walking students to their Ospace ride"
+msgstr "Madre acompañando a estudiantes a su viaje de Ospace"
+
+#: templates\web\home.html
+msgid "Questions drivers ask us"
+msgstr "Preguntas que nos hacen los conductores"
+
+#: templates\web\home.html
+msgid "See all questions"
+msgstr "Ver todas las preguntas"
+
+#: templates\web\home.html
+msgid "Ready to make money today?"
+msgstr "¿Listo para ganar dinero hoy?"
+
+#: templates\web\home.html
+msgid ""
+"Call us to talk with one of our expert staff, or apply online in two "
+"minutes."
+msgstr ""
+"Llámanos para hablar con uno de nuestros expertos, o aplica en línea en dos "
+"minutos."
+
+#: templates\web\home.html
+msgid "Apply online"
+msgstr "Aplicar en línea"
+
+#: templates\web\home.html
+msgid "Set-up guide (service number {{ n }})"
+msgstr "Guía de configuración (número de servicio {{ n }})"
+
+#: templates\web\how_it_works.html
+msgid "In the Ride | How an Ospace Student Ride Works"
+msgstr "En el viaje | Cómo funciona un viaje escolar de Ospace"
+
+#: templates\web\how_it_works.html
+msgid ""
+"What happens in an Ospace ride: we give you the ride that is near to you, a "
+"parent or teacher takes the kids from and to the car, and every student "
+"rides buckled up."
+msgstr ""
+"Qué pasa en un viaje de Ospace: te damos el viaje más cercano a ti, un padre"
+" o maestro lleva y recoge a los niños en el auto, y cada estudiante viaja "
+"con el cinturón puesto."
+
+#: templates\web\how_it_works.html
+msgid "We will give you the ride that is near to you!"
+msgstr "¡Te damos el viaje que está cerca de ti!"
+
+#: templates\web\how_it_works.html
+msgid ""
+"Ospace assigns every ride to the closest available driver. Drivers spend "
+"less time on the road between jobs, and families get a driver from their own"
+" neighbourhood."
+msgstr ""
+"Ospace asigna cada viaje al conductor disponible más cercano. Los "
+"conductores pasan menos tiempo en la carretera entre viajes y las familias "
+"reciben un conductor de su propio vecindario."
+
+#: templates\web\how_it_works.html
+msgid "Ospace driver waving to a parent as the student gets in"
+msgstr ""
+"Conductora de Ospace saludando a una madre mientras el estudiante sube"
+
+#: templates\web\how_it_works.html
+msgid "Location"
+msgstr "Ubicación"
+
+#: templates\web\how_it_works.html
+msgid "The parents or the teacher take the kids from and to the car"
+msgstr "Los padres o el maestro llevan y recogen a los niños en el auto"
+
+#: templates\web\how_it_works.html
+msgid ""
+"Drivers never enter a home or a school building. At every pick-up and drop-"
+"off, an adult you know walks the student to or from the vehicle, and the "
+"driver confirms the hand-over in the app."
+msgstr ""
+"Los conductores nunca entran a una casa ni a un edificio escolar. En cada "
+"recogida y entrega, un adulto conocido acompaña al estudiante hasta o desde "
+"el vehículo, y el conductor confirma la entrega en la app."
+
+#: templates\web\how_it_works.html
+msgid "the driver waits at the agreed pick-up spot"
+msgstr "el conductor espera en el punto de recogida acordado"
+
+#: templates\web\how_it_works.html
+msgid "Hand-over"
+msgstr "Entrega"
+
+#: templates\web\how_it_works.html
+msgid "a parent, guardian or teacher brings the student to the car"
+msgstr "un padre, tutor o maestro lleva al estudiante hasta el auto"
+
+#: templates\web\how_it_works.html
+msgid "Arrival"
+msgstr "Llegada"
+
+#: templates\web\how_it_works.html
+msgid "the student is released only to the designated adult"
+msgstr "el estudiante solo se entrega al adulto designado"
+
+#: templates\web\how_it_works.html
+msgid "Seat belts on, every student, every ride"
+msgstr "Cinturón puesto, cada estudiante, cada viaje"
+
+#: templates\web\how_it_works.html
+msgid ""
+"Before the car moves, the driver checks that every student is buckled in. No"
+" exceptions, no unscheduled stops, no phone use except hands-free "
+"navigation."
+msgstr ""
+"Antes de arrancar, el conductor revisa que cada estudiante tenga el cinturón"
+" abrochado. Sin excepciones, sin paradas no programadas y sin usar el "
+"teléfono salvo la navegación manos libres."
+
+#: templates\web\how_it_works.html
+msgid "Vetted driver"
+msgstr "Conductor verificado"
+
+#: templates\web\how_it_works.html
+msgid "background check, drug and TB screening, insured four-door vehicle"
+msgstr ""
+"antecedentes, pruebas de drogas y tuberculosis, vehículo de cuatro puertas "
+"asegurado"
+
+#: templates\web\how_it_works.html
+msgid "Tracked ride"
+msgstr "Viaje con seguimiento"
+
+#: templates\web\how_it_works.html
+msgid "the driver's location is logged from check-in to drop-off"
+msgstr ""
+"la ubicación del conductor se registra desde el inicio hasta la entrega"
+
+#: templates\web\how_it_works.html
+msgid "Same friendly face"
+msgstr "La misma cara amable"
+
+#: templates\web\how_it_works.html
+msgid "the same driver whenever possible, morning and afternoon"
+msgstr "el mismo conductor siempre que sea posible, mañana y tarde"
+
+#: templates\web\how_it_works.html
+msgid "Driver fastening a student’s seat belt"
+msgstr "Conductor abrochando el cinturón de un estudiante"
+
+#: templates\web\how_it_works.html
+msgid "A typical school day"
+msgstr "Un día de clases típico"
+
+#: templates\web\how_it_works.html
+msgid "Morning run, afternoon run"
+msgstr "Viaje de mañana, viaje de tarde"
+
+#: templates\web\how_it_works.html
+msgid "Ride offered in the app"
+msgstr "Viaje ofrecido en la app"
+
+#: templates\web\how_it_works.html
+msgid ""
+"The driver closest to the student's home sees the ride first, with the pick-"
+"up time, address and school."
+msgstr ""
+"El conductor más cercano a la casa del estudiante ve el viaje primero, con "
+"la hora de recogida, la dirección y la escuela."
+
+#: templates\web\how_it_works.html
+msgid "Pick-up at home"
+msgstr "Recogida en casa"
+
+#: templates\web\how_it_works.html
+msgid ""
+"The driver arrives a few minutes early. The parent walks the student to the "
+"car and the driver taps “picked up”."
+msgstr ""
+"El conductor llega unos minutos antes. El padre acompaña al estudiante hasta"
+" el auto y el conductor marca “recogido”."
+
+#: templates\web\how_it_works.html
+msgid "Drop-off at school"
+msgstr "Entrega en la escuela"
+
+#: templates\web\how_it_works.html
+msgid ""
+"A teacher or school staff member receives the student at the designated "
+"spot. The driver taps “dropped off” and the family is notified."
+msgstr ""
+"Un maestro o miembro del personal recibe al estudiante en el punto "
+"designado. El conductor marca “entregado” y se avisa a la familia."
+
+#: templates\web\how_it_works.html
+msgid "Afternoon, in reverse"
+msgstr "Por la tarde, a la inversa"
+
+#: templates\web\how_it_works.html
+msgid "Same driver where possible, same hand-over at both ends, home safe."
+msgstr ""
+"El mismo conductor cuando es posible, la misma entrega en ambos extremos, y "
+"a casa seguro."
+
+#: templates\web\how_it_works.html
+msgid "For drivers"
+msgstr "Para conductores"
+
+#: templates\web\how_it_works.html
+msgid "Getting started is four steps"
+msgstr "Empezar son cuatro pasos"
+
+#: templates\web\how_it_works.html
+msgid "Request rides for a student"
+msgstr "Solicitar viajes para un estudiante"
+
+#: templates\web\media.html
+msgid "Media | Ospace"
+msgstr "Medios | Ospace"
+
+#: templates\web\media.html
+msgid ""
+"Ospace photos, guides and social channels. Join us on Facebook and "
+"Instagram."
+msgstr ""
+"Fotos, guías y redes sociales de Ospace. Síguenos en Facebook e Instagram."
+
+#: templates\web\media.html
+msgid "Ospace in pictures"
+msgstr "Ospace en imágenes"
+
+#: templates\web\media.html
+msgid ""
+"Join Ospace as a driver: flexible hours, good pay, and safe student rides. "
+"Follow us for updates, driver stories and openings."
+msgstr ""
+"Únete a Ospace como conductor: horarios flexibles, buena paga y viajes "
+"escolares seguros. Síguenos para novedades, historias de conductores y "
+"vacantes."
+
+#: templates\web\media.html
+msgid "How to become a driver"
+msgstr "Cómo ser conductor"
+
+#: templates\web\media.html
+msgid ""
+"Drive with Ospace, earn money, and help students get to school safely with "
+"flexible hours."
+msgstr ""
+"Maneja con Ospace, gana dinero y ayuda a los estudiantes a llegar seguros a "
+"la escuela con horarios flexibles."
+
+#: templates\web\media.html
+msgid "Read the guide"
+msgstr "Leer la guía"
+
+#: templates\web\media.html
+msgid "How to take a ride"
+msgstr "Cómo funciona un viaje"
+
+#: templates\web\media.html
+msgid "What families and schools can expect at every pick-up and drop-off."
+msgstr ""
+"Qué pueden esperar las familias y las escuelas en cada recogida y entrega."
+
+#: templates\web\media.html
+msgid "See how it works"
+msgstr "Ver cómo funciona"
+
+#: templates\web\media.html
+msgid "Gallery"
+msgstr "Galería"
+
+#: templates\web\media.html
+msgid "Follow along"
+msgstr "Síguenos"
+
+#: templates\web\media.html
+msgid ""
+"Driver openings, community news and behind-the-scenes from the Houston "
+"school run."
+msgstr ""
+"Vacantes para conductores, noticias de la comunidad y el detrás de cámaras "
+"del viaje escolar en Houston."
+
+#: templates\web\privacy.html
+msgid "Privacy Policy | Ospace"
+msgstr "Política de privacidad | Ospace"
+
+#: templates\web\privacy.html
+msgid ""
+"How Ospace collects, uses and shares personal information for riders, "
+"drivers and website visitors."
+msgstr ""
+"Cómo Ospace recopila, usa y comparte la información personal de pasajeros, "
+"conductores y visitantes del sitio."
+
+#: templates\web\privacy.html
+msgid "Legal"
+msgstr "Legal"
+
+#: templates\web\privacy.html
+msgid "Questions about this policy:"
+msgstr "Preguntas sobre esta política:"
+
+#: templates\web\privacy.html
+msgid "The legally binding version of this policy is the English text below."
+msgstr ""
+"La versión legalmente vinculante de esta política es el texto en inglés que "
+"aparece abajo."
+
+#: templates\web\thanks.html
+msgid "Thanks | Ospace"
+msgstr "Gracias | Ospace"
+
+#: templates\web\thanks.html
+msgid "Thanks for submitting!"
+msgstr "¡Gracias por enviarlo!"
+
+#: templates\web\thanks.html
+msgid ""
+"We've received your application. While you wait for our call, create your "
+"driver portal account to upload your documents and sign the driver "
+"agreements. It's the fastest way to get approved."
+msgstr ""
+"Recibimos tu solicitud. Mientras esperas nuestra llamada, crea tu cuenta en "
+"el portal del conductor para subir tus documentos y firmar los acuerdos. Es "
+"la forma más rápida de ser aprobado."
+
+#: templates\web\thanks.html
+msgid "Create my portal account"
+msgstr "Crear mi cuenta del portal"
+
+#: templates\web\thanks.html
+msgid "Or call us:"
+msgstr "O llámanos:"
+
+#: templates\web\thanks.html
+msgid ""
+"We've received your message and will get back to you shortly, usually within"
+" one business day."
+msgstr ""
+"Recibimos tu mensaje y te responderemos pronto, normalmente en un día hábil."
+
+#: templates\web\thanks.html
+msgid "Back to home"
+msgstr "Volver al inicio"
+
+#: templates\web\_apply_form.html
+msgid "Send my application"
+msgstr "Enviar mi solicitud"
+
+#: templates\web\_apply_form.html
+msgid ""
+"Takes two minutes. We'll reply by phone or email, usually the same business "
+"day. No obligation."
+msgstr ""
+"Toma dos minutos. Te responderemos por teléfono o correo, normalmente el "
+"mismo día hábil. Sin compromiso."
+
+#: templates\web\_form_field.html
+msgid "optional"
+msgstr "opcional"
+
+#: apps\portal\forms.py
+msgid "First name"
+msgstr "Nombre"
+
+#: apps\portal\forms.py
+msgid "Last name"
+msgstr "Apellido"
+
+#: apps\portal\forms.py
+msgid "Phone"
+msgstr "Teléfono"
+
+#: apps\portal\forms.py
+msgid ""
+"I agree to the privacy policy and to be contacted about my application."
+msgstr ""
+"Acepto la política de privacidad y que me contacten sobre mi solicitud."
+
+#: apps\portal\forms.py
+msgid "An account with this email already exists. Try signing in instead."
+msgstr "Ya existe una cuenta con este correo. Intenta iniciar sesión."
+
+#: apps\portal\forms.py
+msgid "Vehicles must be from the last 15 years."
+msgstr "El vehículo debe ser de los últimos 15 años."
+
+#: apps\portal\forms.py
+msgid "Please upload a PDF, JPG, PNG, HEIC or WEBP file."
+msgstr "Sube un archivo PDF, JPG, PNG, HEIC o WEBP."
+
+#: apps\portal\forms.py
+msgid "Files must be under 10 MB."
+msgstr "Los archivos deben pesar menos de 10 MB."
+
+#: apps\portal\forms.py
+msgid "Type your full legal name"
+msgstr "Escribe tu nombre legal completo"
+
+#: apps\portal\forms.py
+msgid ""
+"I have read this document and agree that my electronic signature is legally "
+"binding."
+msgstr ""
+"He leído este documento y acepto que mi firma electrónica es legalmente "
+"vinculante."
+
+#: apps\portal\forms.py
+msgid "Please draw your signature in the box."
+msgstr "Por favor dibuja tu firma en el recuadro."
+
+#: apps\portal\forms.py
+msgid "Signature is too large. Please try again."
+msgstr "La firma es demasiado grande. Inténtalo de nuevo."
+
+#: apps\portal\models.py
+msgid "Getting started"
+msgstr "Empezando"
+
+#: apps\portal\models.py
+msgid "Under review"
+msgstr "En revisión"
+
+#: apps\portal\models.py
+msgid "Changes requested"
+msgstr "Cambios solicitados"
+
+#: apps\portal\models.py
+msgid "Approved"
+msgstr "Aprobado"
+
+#: apps\portal\models.py
+msgid "Not approved"
+msgstr "No aprobado"
+
+#: apps\portal\models.py
+msgid "Inactive"
+msgstr "Inactivo"
+
+#: apps\portal\models.py
+msgid "Date of birth"
+msgstr "Fecha de nacimiento"
+
+#: apps\portal\models.py
+msgid "Street address"
+msgstr "Dirección"
+
+#: apps\portal\models.py
+msgid "Apt / unit"
+msgstr "Apto. / unidad"
+
+#: apps\portal\models.py
+msgid "City"
+msgstr "Ciudad"
+
+#: apps\portal\models.py
+msgid "State"
+msgstr "Estado"
+
+#: apps\portal\models.py
+msgid "ZIP"
+msgstr "Código postal"
+
+#: apps\portal\models.py
+msgid "License number"
+msgstr "Número de licencia"
+
+#: apps\portal\models.py
+msgid "License state"
+msgstr "Estado de la licencia"
+
+#: apps\portal\models.py
+msgid "License expiry"
+msgstr "Vencimiento de la licencia"
+
+#: apps\portal\models.py
+msgid "Vehicle year"
+msgstr "Año del vehículo"
+
+#: apps\portal\models.py
+msgid "Vehicle make"
+msgstr "Marca del vehículo"
+
+#: apps\portal\models.py
+msgid "Vehicle model"
+msgstr "Modelo del vehículo"
+
+#: apps\portal\models.py
+msgid "Vehicle color"
+msgstr "Color del vehículo"
+
+#: apps\portal\models.py
+msgid "License plate"
+msgstr "Placa"
+
+#: apps\portal\models.py
+msgid "Passenger seats"
+msgstr "Asientos para pasajeros"
+
+#: apps\portal\models.py
+msgid "Insurance provider"
+msgstr "Aseguradora"
+
+#: apps\portal\models.py
+msgid "Policy number"
+msgstr "Número de póliza"
+
+#: apps\portal\models.py
+msgid "Insurance expiry"
+msgstr "Vencimiento del seguro"
+
+#: apps\portal\models.py
+msgid "Emergency contact name"
+msgstr "Nombre del contacto de emergencia"
+
+#: apps\portal\models.py
+msgid "Emergency contact phone"
+msgstr "Teléfono del contacto de emergencia"
+
+#: apps\portal\models.py
+msgid "Relationship"
+msgstr "Parentesco"
+
+#: apps\portal\models.py
+msgid "How did you hear about us?"
+msgstr "¿Cómo supiste de nosotros?"
+
+#: apps\portal\models.py
+msgid "Pending review"
+msgstr "Pendiente de revisión"
+
+#: apps\portal\models.py
+msgid "Needs re-upload"
+msgstr "Debe volver a subirse"
+
+#: apps\portal\views.py
+msgid "Welcome! Let's get your profile set up."
+msgstr "¡Bienvenido! Vamos a configurar tu perfil."
+
+#: apps\portal\views.py
+msgid "Profile saved."
+msgstr "Perfil guardado."
+
+#: apps\portal\views.py
+msgid "%(name)s uploaded. We'll review it shortly."
+msgstr "%(name)s subido. Lo revisaremos pronto."
+
+#: apps\portal\views.py
+msgid "Approved documents can't be removed. Contact us if it needs replacing."
+msgstr ""
+"Los documentos aprobados no se pueden eliminar. Contáctanos si necesitas "
+"reemplazarlo."
+
+#: apps\portal\views.py
+msgid "%(name)s removed."
+msgstr "%(name)s eliminado."
+
+#: apps\portal\views.py
+msgid "%(title)s signed. A PDF copy is saved in your portal."
+msgstr "%(title)s firmado. Se guardó una copia en PDF en tu portal."
+
+#: apps\portal\views.py
+msgid "Please finish every item on the checklist before submitting."
+msgstr "Completa todos los elementos de la lista antes de enviar."
+
+#: apps\portal\views.py
+msgid "Application submitted! We'll be in touch within a few business days."
+msgstr "¡Solicitud enviada! Nos pondremos en contacto en unos días hábiles."
+
+#: apps\web\forms.py
+msgid "Vehicle type"
+msgstr "Tipo de vehículo"
+
+#: apps\web\forms.py
+msgid "Sedan (4-door)"
+msgstr "Sedán (4 puertas)"
+
+#: apps\web\forms.py
+msgid "SUV / crossover"
+msgstr "SUV / crossover"
+
+#: apps\web\forms.py
+msgid "Minivan"
+msgstr "Minivan"
+
+#: apps\web\forms.py
+msgid "Hatchback (4-door)"
+msgstr "Hatchback (4 puertas)"
+
+#: apps\web\forms.py
+msgid "Pickup truck (4-door)"
+msgstr "Camioneta pickup (4 puertas)"
+
+#: apps\web\forms.py
+msgid "Van (8+ seats)"
+msgstr "Van (8+ asientos)"
+
+#: apps\web\forms.py
+msgid "Other"
+msgstr "Otro"
+
+#: apps\web\forms.py
+msgid "City / area"
+msgstr "Ciudad / zona"
+
+#: apps\web\forms.py
+msgid "I am 21 or older with a valid U.S. driver's license"
+msgstr "Tengo 21 años o más y una licencia de conducir vigente de EE. UU."
+
+#: apps\web\forms.py
+msgid "Anything you want us to know"
+msgstr "Algo que quieras contarnos"
+
+#: apps\web\forms.py
+msgid "Parent / guardian or school contact"
+msgstr "Padre / tutor o contacto de la escuela"
+
+#: apps\web\forms.py
+msgid "School or organisation"
+msgstr "Escuela u organización"
+
+#: apps\web\forms.py
+msgid "Number of students"
+msgstr "Número de estudiantes"
+
+#: apps\web\forms.py
+msgid "Pick-up area / ZIP"
+msgstr "Zona de recogida / código postal"
+
+#: apps\web\forms.py
+msgid "School / destination"
+msgstr "Escuela / destino"
+
+#: apps\web\forms.py
+msgid "Days & times needed"
+msgstr "Días y horarios necesarios"
+
+#: apps\web\forms.py
+msgid "Details"
+msgstr "Detalles"
+
+#: apps\web\forms.py
+msgid "Name"
+msgstr "Nombre"
+
+#: apps\web\forms.py
+msgid "Topic"
+msgstr "Tema"
+
+#: apps\web\forms.py
+msgid "Becoming a driver"
+msgstr "Ser conductor"
+
+#: apps\web\forms.py
+msgid "Rides for my child / school"
+msgstr "Viajes para mi hijo / escuela"
+
+#: apps\web\forms.py
+msgid "Partnership"
+msgstr "Alianza"
+
+#: apps\web\forms.py
+msgid "Something else"
+msgstr "Otro asunto"
+
+#: apps\web\forms.py
+msgid "Message"
+msgstr "Mensaje"
+
+#: apps\web\views.py
+msgid "How much can I earn?"
+msgstr "¿Cuánto puedo ganar?"
+
+#: apps\web\views.py
+msgid ""
+"Drivers earn a minimum of $50 for every two rides, and many earn $150 or "
+"more per day by combining morning and afternoon school runs. You are paid "
+"per completed ride."
+msgstr ""
+"Los conductores ganan un mínimo de $50 por cada dos viajes, y muchos ganan "
+"$150 o más al día combinando viajes escolares de mañana y tarde. Se paga por"
+" viaje completado."
+
+#: apps\web\views.py
+msgid "Do I need a special vehicle?"
+msgstr "¿Necesito un vehículo especial?"
+
+#: apps\web\views.py
+msgid ""
+"No. Any four-door vehicle manufactured within the last 15 years, clean and "
+"in good working order, qualifies. You drive your own car."
+msgstr ""
+"No. Cualquier vehículo de cuatro puertas fabricado en los últimos 15 años, "
+"limpio y en buen estado, califica. Manejas tu propio auto."
+
+#: apps\web\views.py
+msgid "What are the hours?"
+msgstr "¿Cuáles son los horarios?"
+
+#: apps\web\views.py
+msgid ""
+"School runs happen on weekday mornings (roughly 6–9 AM) and afternoons "
+"(roughly 2–5 PM). You choose which days and windows you are available inside"
+" the driver app."
+msgstr ""
+"Los viajes escolares son entre semana por la mañana (aprox. 6–9 AM) y por la"
+" tarde (aprox. 2–5 PM). Tú eliges los días y horarios en que estás "
+"disponible dentro de la app del conductor."
+
+#: apps\web\views.py
+msgid "Who hands the student over?"
+msgstr "¿Quién entrega al estudiante?"
+
+#: apps\web\views.py
+msgid ""
+"A parent, guardian or teacher brings the student to and from the vehicle at "
+"each end of the ride. Drivers never enter homes or school buildings."
+msgstr ""
+"Un padre, tutor o maestro lleva y recoge al estudiante en el vehículo en "
+"cada extremo del viaje. Los conductores nunca entran a casas ni a edificios "
+"escolares."
+
+#: apps\web\views.py
+msgid "How long does approval take?"
+msgstr "¿Cuánto tarda la aprobación?"
+
+#: apps\web\views.py
+msgid ""
+"Once your documents, background check and drug/TB test results are in, "
+"approval typically takes a few business days. Your portal shows exactly what"
+" is still pending."
+msgstr ""
+"Una vez que tengamos tus documentos, la verificación de antecedentes y los "
+"resultados de las pruebas de drogas y tuberculosis, la aprobación suele "
+"tardar unos días hábiles. Tu portal muestra exactamente qué sigue pendiente."
+
+#: apps\web\views.py
+msgid "Am I an employee?"
+msgstr "¿Soy empleado?"
+
+#: apps\web\views.py
+msgid ""
+"Ospace drivers are independent contractors. You keep full control of your "
+"schedule and drive when it suits you."
+msgstr ""
+"Los conductores de Ospace son contratistas independientes. Tú mantienes el "
+"control total de tu horario y manejas cuando te conviene."
+
+#: apps\web\views.py
+msgid "Tell us about yourself and your vehicle. It takes two minutes."
+msgstr "Cuéntanos sobre ti y tu vehículo. Toma dos minutos."
+
+#: apps\web\views.py
+msgid ""
+"Driver's license, insurance, registration and test results go into your "
+"secure driver portal."
+msgstr ""
+"Licencia de conducir, seguro, registro y resultados de pruebas van a tu "
+"portal seguro del conductor."
+
+#: apps\web\views.py
+msgid "Sign & get approved"
+msgstr "Firma y aprobación"
+
+#: apps\web\views.py
+msgid ""
+"E-sign the driver agreements online. We review everything and confirm your "
+"approval."
+msgstr ""
+"Firma electrónicamente los acuerdos del conductor. Revisamos todo y "
+"confirmamos tu aprobación."
+
+#: apps\web\views.py
+msgid "Download the app & drive"
+msgstr "Descarga la app y maneja"
+
+#: apps\web\views.py
+msgid ""
+"Install the ADROIT Driver app, set your availability and accept rides near "
+"you."
+msgstr ""
+"Instala la app ADROIT Driver, define tu disponibilidad y acepta viajes cerca"
+" de ti."
+
+#: apps\web\views.py
+msgid "21+ years old"
+msgstr "21 años o más"
+
+#: apps\web\views.py
+msgid "with a valid U.S. driver's license"
+msgstr "con licencia de conducir vigente de EE. UU."
+
+#: apps\web\views.py
+msgid "Four-door vehicle"
+msgstr "Vehículo de cuatro puertas"
+
+#: apps\web\views.py
+msgid "Background check"
+msgstr "Verificación de antecedentes"
+
+#: apps\web\views.py
+msgid "we run it for you once you apply"
+msgstr "nosotros la hacemos por ti cuando aplicas"
+
+#: apps\web\views.py
+msgid "Drug & TB test"
+msgstr "Prueba de drogas y tuberculosis"
+
+#: apps\web\views.py
+msgid "both screenings are required before approval"
+msgstr "ambas pruebas son obligatorias antes de la aprobación"
+
+#: apps\web\views.py
+msgid "Clean driving record"
+msgstr "Historial de manejo limpio"
+
+#: apps\web\views.py
+msgid "and current auto insurance in your name"
+msgstr "y seguro de auto vigente a tu nombre"
+
+#: apps\web\views.py
+msgid "Excited to drive with us"
+msgstr "Ganas de manejar con nosotros"
+
+#: apps\web\views.py
+msgid "reliable, friendly and great with kids"
+msgstr "responsable, amable y bueno con los niños"
+
+#: apps\web\views.py
+msgid "Driver for 2+ years"
+msgstr "Conductora desde hace más de 2 años"
+
+#: apps\web\views.py
+msgid ""
+"Wanting to be her own boss, driving with Ospace gave Ange the confidence to "
+"leave her job, follow her passion and start her own food business. Two years"
+" later, she still loves the flexibility it gives her."
+msgstr ""
+"Con ganas de ser su propia jefa, manejar con Ospace le dio a Ange la "
+"confianza para dejar su trabajo, seguir su pasión y abrir su propio negocio "
+"de comida. Dos años después, sigue encantada con la flexibilidad que le da."
+
+#: apps\web\views.py
+msgid "The king of flexibility"
+msgstr "El rey de la flexibilidad"
+
+#: apps\web\views.py
+msgid ""
+"Elijah dedicates 95% of his time to CrossFit. The rest of the time he enjoys"
+" the freedom to earn extra income driving with Ospace."
+msgstr ""
+"Elijah dedica el 95% de su tiempo al CrossFit. El resto del tiempo disfruta "
+"la libertad de ganar un ingreso extra manejando con Ospace."
+
+#: apps\web\views.py
+msgid "Driver for 1.5 years"
+msgstr "Conductora desde hace año y medio"
+
+#: apps\web\views.py
+msgid ""
+"Mariana has been driving with Ospace for one and a half years. A stay-at-"
+"home mom, she found an easy way to earn supplemental income during her free "
+"time."
+msgstr ""
+"Mariana lleva un año y medio manejando con Ospace. Como mamá que se queda en"
+" casa, encontró una forma fácil de ganar un ingreso adicional en su tiempo "
+"libre."

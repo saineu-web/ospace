@@ -24,8 +24,8 @@
     var fmt = function (n) { return '$' + Math.round(n).toLocaleString('en-US'); };
     var update = function () {
       var r = +rides.value, d = +days.value;
-      calc.querySelector('[data-out=rides]').textContent = r + (r === 1 ? ' ride' : ' rides');
-      calc.querySelector('[data-out=days]').textContent = d + (d === 1 ? ' day' : ' days');
+      calc.querySelector('[data-out=rides]').textContent = r + ' ' + (r === 1 ? (calc.dataset.ride || 'ride') : (calc.dataset.rides || 'rides'));
+      calc.querySelector('[data-out=days]').textContent = d + ' ' + (d === 1 ? (calc.dataset.day || 'day') : (calc.dataset.days || 'days'));
       var daily = r * PER_RIDE;
       calc.querySelector('[data-out=daily]').textContent = fmt(daily);
       calc.querySelector('[data-out=weekly]').textContent = fmt(daily * d);
@@ -47,13 +47,13 @@
       boxes.forEach(function (b) { b.closest('.check-item').classList.toggle('on', b.checked); if (b.checked) n++; });
       if (n === total) {
         verdict.className = 'check-verdict ok';
-        verdict.innerHTML = 'You meet every requirement. <a href="' + check.dataset.applyUrl + '">Start your application &rarr;</a>';
+        verdict.innerHTML = (check.dataset.msgOk || 'You meet every requirement.') + ' <a href="' + check.dataset.applyUrl + '">' + (check.dataset.msgStart || 'Start your application') + ' &rarr;</a>';
       } else if (n === 0) {
         verdict.className = 'check-verdict';
-        verdict.textContent = 'Tick each box that applies to you.';
+        verdict.textContent = check.dataset.msgNone || 'Tick each box that applies to you.';
       } else {
         verdict.className = 'check-verdict';
-        verdict.textContent = (total - n) + ' to go. Not sure about one? Apply anyway and we will talk you through it.';
+        verdict.textContent = (total - n) + ' ' + (check.dataset.msgSome || 'to go. Not sure about one? Apply anyway and we will talk you through it.');
       }
     };
     boxes.forEach(function (b) { b.addEventListener('change', refresh); });
