@@ -47,23 +47,38 @@ def agreement_pdf_path(instance, filename):
 
 
 class DriverProfile(models.Model):
-    STATUS_DRAFT = "draft"
+    """Lifecycle: interested (applied on the website, no password yet) -> staff activates ->
+    in_progress (uploads + signs) -> submitted -> approved / rejected. Staff can also delete an
+    interested profile outright."""
+
+    STATUS_INTERESTED = "interested"
+    STATUS_IN_PROGRESS = "in_progress"
     STATUS_SUBMITTED = "submitted"
     STATUS_CHANGES = "changes_requested"
     STATUS_APPROVED = "approved"
     STATUS_REJECTED = "rejected"
     STATUS_INACTIVE = "inactive"
     STATUS_CHOICES = [
-        (STATUS_DRAFT, _("Getting started")),
+        (STATUS_INTERESTED, _("Interested")),
+        (STATUS_IN_PROGRESS, _("In progress")),
         (STATUS_SUBMITTED, _("Under review")),
         (STATUS_CHANGES, _("Changes requested")),
         (STATUS_APPROVED, _("Approved")),
         (STATUS_REJECTED, _("Not approved")),
         (STATUS_INACTIVE, _("Inactive")),
     ]
+    # Statuses in which the driver may work on documents / agreements / submission.
+    WORKING_STATUSES = (STATUS_IN_PROGRESS, STATUS_CHANGES, STATUS_SUBMITTED, STATUS_APPROVED)
 
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="driver")
-    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default=STATUS_DRAFT, db_index=True)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default=STATUS_INTERESTED, db_index=True)
+
+    # From the website apply form
+    vehicle_type = models.CharField(_("Vehicle type"), max_length=40, blank=True)
+    applicant_message = models.TextField(_("Message from applicant"), blank=True)
+    language = models.CharField(_("Preferred language"), max_length=5, default="en", blank=True)
+    activated_at = models.DateTimeField(null=True, blank=True)
+    activated_by = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL, related_name="+")
 
     # Personal
     phone = models.CharField(_("Phone"), max_length=40)
@@ -126,6 +141,25 @@ class DriverProfile(models.Model):
     def email(self):
         return self.user.email
 
+    @property
+    def is_interested(self):
+        return self.status == self.STATUS_INTERESTED
+
+    @property
+    def can_work(self):
+        """May the driver upload, sign and submit? Only after staff activation."""
+        return self.status in self.WORKING_STATUSES
+
+    def delete_with_files(self):
+        """Hard delete: uploaded files, signatures, PDFs, then the login itself (cascades the rest)."""
+        for doc in self.documents.all():
+            doc.file.delete(save=False)
+        for s in self.agreements.all():
+            s.signature_image.delete(save=False)
+            if s.pdf:
+                s.pdf.delete(save=False)
+        self.user.delete()
+
     PROFILE_REQUIRED = [
         "phone", "date_of_birth", "address1", "city", "state", "zip_code",
         "license_number", "license_state", "license_expiry",
@@ -177,7 +211,7 @@ class DriverProfile(models.Model):
         d = self.documents_summary()
         a = self.agreements_summary()
         return (
-            self.status in (self.STATUS_DRAFT, self.STATUS_CHANGES)
+            self.status in (self.STATUS_IN_PROGRESS, self.STATUS_CHANGES)
             and not self.profile_missing()
             and d["uploaded"] == d["required"]
             and d["rejected"] == 0

@@ -2,40 +2,11 @@ import os
 
 from django import forms
 from django.conf import settings
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
 
 from .models import WEEKDAYS, DriverDocument, DriverProfile
 
 DATE = forms.DateInput(attrs={"type": "date"}, format="%Y-%m-%d")
-
-
-class RegisterForm(UserCreationForm):
-    first_name = forms.CharField(max_length=60, label=_("First name"))
-    last_name = forms.CharField(max_length=60, label=_("Last name"))
-    email = forms.EmailField(label=_("Email"))
-    phone = forms.CharField(max_length=40, label=_("Phone"))
-    agree = forms.BooleanField(label=_("I agree to the privacy policy and to be contacted about my application."))
-
-    class Meta:
-        model = User
-        fields = ("first_name", "last_name", "email", "phone", "password1", "password2")
-
-    def clean_email(self):
-        email = self.cleaned_data["email"].strip().lower()
-        if User.objects.filter(username=email).exists() or User.objects.filter(email__iexact=email).exists():
-            raise forms.ValidationError(_("An account with this email already exists. Try signing in instead."))
-        return email
-
-    def save(self, commit=True):
-        user = super().save(commit=False)
-        user.username = self.cleaned_data["email"]
-        user.email = self.cleaned_data["email"]
-        if commit:
-            user.save()
-            DriverProfile.objects.create(user=user, phone=self.cleaned_data["phone"])
-        return user
 
 
 class ProfileForm(forms.ModelForm):

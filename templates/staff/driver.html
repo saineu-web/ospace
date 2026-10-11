@@ -3,9 +3,25 @@
 {% block content %}
 <div class="container" style="padding:28px 20px 64px;display:grid;gap:22px">
   <div class="portal-head">
-    <div><p class="breadcrumb"><a href="{% url 'staff:index' %}">Staff desk</a> / Driver</p><h1>{{ driver.full_name|default:driver.email }}</h1><p><a href="mailto:{{ driver.email }}">{{ driver.email }}</a> · <a href="tel:{{ driver.phone }}">{{ driver.phone }}</a> · account created {{ driver.created_at|date:"M j, Y" }}{% if driver.submitted_at %} · submitted {{ driver.submitted_at|date:"M j, Y" }}{% endif %}</p></div>
-    <span class="pill {% if driver.status == 'approved' %}pill-ok{% elif driver.status == 'submitted' %}pill-purple{% elif driver.status == 'changes_requested' or driver.status == 'rejected' %}pill-bad{% else %}pill-grey{% endif %}" style="font-size:.9rem">{{ driver.get_status_display }}</span>
+    <div><p class="breadcrumb"><a href="{% url 'staff:index' %}">Staff desk</a> / Driver</p><h1>{{ driver.full_name|default:driver.email }}</h1><p><a href="mailto:{{ driver.email }}">{{ driver.email }}</a> · <a href="tel:{{ driver.phone }}">{{ driver.phone }}</a> · applied {{ driver.created_at|date:"M j, Y" }} in {{ driver.language|upper }}{% if driver.activated_at %} · activated {{ driver.activated_at|date:"M j, Y" }}{% endif %}{% if driver.submitted_at %} · submitted {{ driver.submitted_at|date:"M j, Y" }}{% endif %}</p></div>
+    <span class="pill {% if driver.status == 'approved' %}pill-ok{% elif driver.status == 'submitted' %}pill-purple{% elif driver.status == 'interested' %}pill-warn{% elif driver.status == 'changes_requested' or driver.status == 'rejected' %}pill-bad{% else %}pill-grey{% endif %}" style="font-size:.9rem">{{ driver.get_status_display }}</span>
   </div>
+
+  {% if driver.status == 'interested' %}
+  <div class="card" style="border-color:var(--warn)">
+    <h3>New application — activate or delete</h3>
+    <dl class="kv" style="margin-bottom:16px">
+      <dt>City / area</dt><dd>{{ driver.city|default:"—" }}</dd>
+      <dt>Vehicle</dt><dd>{{ driver.vehicle_type|default:"—" }} {{ driver.vehicle_year|default:"" }}</dd>
+      <dt>Message</dt><dd>{{ driver.applicant_message|default:"—"|linebreaksbr }}</dd>
+    </dl>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+      <form method="post" action="{% url 'staff:activate_driver' driver.pk %}">{% csrf_token %}<button class="btn btn-success" type="submit">Activate &amp; request documents</button></form>
+      <form method="post" action="{% url 'staff:delete_driver' driver.pk %}" onsubmit="return confirm('Permanently delete {{ driver.full_name|escapejs }}? This cannot be undone.')">{% csrf_token %}<button class="btn btn-danger" type="submit">Delete permanently</button></form>
+      <span class="small muted">Activating sets the status to In progress and emails the driver a personal link (valid 7 days) to set a password and upload documents.</span>
+    </div>
+  </div>
+  {% endif %}
 
   <div class="grid grid-2" style="align-items:start">
     <div class="card">
@@ -18,6 +34,9 @@
         <button class="btn btn-primary" type="submit">Save decision</button>
         <p class="form-note">Changing the status emails the driver with your message. Internal notes are never shown to them.</p>
       </form>
+      {% if driver.status != 'interested' %}
+      <form method="post" action="{% url 'staff:delete_driver' driver.pk %}" style="margin-top:14px" onsubmit="return confirm('Permanently delete {{ driver.full_name|escapejs }}, including all uploaded files and signed agreements? This cannot be undone.')">{% csrf_token %}<button class="btn btn-danger btn-sm" type="submit">Delete profile permanently</button></form>
+      {% endif %}
     </div>
     <div class="card">
       <h3>Profile <span class="pill {% if driver.profile_pct == 100 %}pill-ok{% else %}pill-warn{% endif %}">{{ driver.profile_pct }}%</span></h3>

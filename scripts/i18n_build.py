@@ -43,7 +43,7 @@ def extract():
             ids[msgid] = where
 
     for d in TEMPLATE_DIRS:
-        for f in d.rglob("*.html"):
+        for f in list(d.rglob("*.html")) + list(d.rglob("*.txt")):
             text = f.read_text(encoding="utf-8")
             rel = str(f.relative_to(ROOT))
             for m in RE_TRANS.finditer(text):

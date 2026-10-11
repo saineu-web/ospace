@@ -1,0 +1,18 @@
+{% load i18n %}{% blocktranslate with name=driver.user.first_name %}Hi {{ name }},{% endblocktranslate %}
+
+{% translate "Good news: we've reviewed your interest in driving with Ospace and opened your onboarding. The next step is to upload your documents and sign the driver agreements in your driver portal." %}
+
+{% translate "Set your password and get started here:" %}
+{{ link }}
+
+{% blocktranslate %}This link works for {{ days }} days. If it expires, use "Forgot your password?" on the portal sign-in page with this email address.{% endblocktranslate %}
+
+{% translate "What you'll need:" %}
+{% translate "- Driver's license (front and back)" %}
+{% translate "- Proof of auto insurance and vehicle registration" %}
+{% translate "- A profile photo and a photo of your vehicle" %}
+{% translate "- Drug test and TB test results" %}
+
+{% translate "Questions? Call us at" %} {{ SITE.phone }}
+
+{% translate "The Ospace team" %}

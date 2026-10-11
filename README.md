@@ -6,10 +6,15 @@ Django app:
 - **Marketing site** at `/` — every page and fact from the old Wix site, reorganised, plus new tools
   (earnings calculator, requirements self-check, quick-apply, ride-request and contact forms, FAQ,
   SEO/sitemap/JSON-LD, old Wix URLs redirected).
-- **Driver portal** at `/portal/` — drivers register, complete a profile, upload documents, e-sign
-  agreements (drawn signature + typed name, PDF copy with SHA-256 hash), and submit for review.
-- **Staff desk** at `/staff/` — review documents, approve/reject drivers, message them. Full Django
-  admin at `/admin/` for editing document requirements, agreement templates and website inquiries.
+- **Driver onboarding flow** — the website apply form creates a driver profile with status
+  **Interested** (no password yet) and emails `ONBOARDING_INBOX`. Staff **Activate** it from the
+  staff desk (status → **In progress**; the driver gets a personal 7-day link to set a password and
+  upload documents) or **Delete** it permanently. Then: profile → uploads → e-signed agreements
+  (drawn signature + typed name, PDF copy with SHA-256 hash) → submit → Approved / Not approved.
+  Self-registration is closed; `/portal/register/` redirects to the apply form.
+- **Staff desk** at `/staff/` — activate/delete applicants, review documents, approve/reject drivers,
+  message them. Full Django admin at `/admin/` for document requirements, agreement templates and
+  website inquiries (ride requests, contact messages).
 
 ## Run locally
 
@@ -72,7 +77,7 @@ One-time server setup is documented inside the script. Alternatively the `Procfi
 Railway/Render with `DATABASE_URL` + a persistent volume mounted at `PRIVATE_ROOT`.
 
 Required env in production: `SECRET_KEY`, `DEBUG=0`, `ALLOWED_HOSTS`, `SITE_URL`, `EMAIL_*`,
-`CONTACT_INBOX`, `SQLITE_PATH` (outside the app dir), and `PRIVATE_ROOT`/`MEDIA_ROOT` on
+`CONTACT_INBOX`, `ONBOARDING_INBOX` (default onboarding@ospacegroup.com), `SQLITE_PATH` (outside the app dir), and `PRIVATE_ROOT`/`MEDIA_ROOT` on
 persistent disk.
 
 ## Still outstanding (needs Ospace's input)

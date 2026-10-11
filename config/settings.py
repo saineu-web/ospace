@@ -131,6 +131,10 @@ else:
 DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL", "Ospace <info@ospacegroup.com>")
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
 CONTACT_INBOX = os.environ.get("CONTACT_INBOX", "info@ospacegroup.com")
+# Driver applications ("interested" sign-ups) and review notices go here.
+ONBOARDING_INBOX = os.environ.get("ONBOARDING_INBOX", "onboarding@ospacegroup.com")
+# Activation emails carry a set-password link; give drivers a week to use it.
+PASSWORD_RESET_TIMEOUT = 7 * 24 * 3600
 
 # Business facts shown across the site (single source of truth)
 SITE = {

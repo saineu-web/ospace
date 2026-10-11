@@ -1,0 +1,14 @@
+New driver interested — {{ driver.full_name }}
+
+Email:    {{ driver.email }}
+Phone:    {{ driver.phone }}
+City:     {{ driver.city|default:"-" }}
+Vehicle:  {{ driver.vehicle_type|default:"-" }} {{ driver.vehicle_year|default:"" }}
+Language: {{ driver.language }}
+{% if driver.applicant_message %}
+Message:
+{{ driver.applicant_message }}
+{% endif %}
+Activate or delete this profile: {{ url }}
+
+Activating emails the driver a link to set a password and upload their documents.

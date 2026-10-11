@@ -1,10 +1,10 @@
-Hi {{ driver.user.first_name }},
+{% load i18n %}{% blocktranslate with name=driver.user.first_name %}Hi {{ name }},{% endblocktranslate %}
 
-We looked at your {{ document.doc_type.name }} and need you to upload it again.
+{% blocktranslate with doc=document.doc_type.name %}We looked at your {{ doc }} and need you to upload it again.{% endblocktranslate %}
 {% if document.review_note %}
-Reason: {{ document.review_note }}
+{% translate "Reason:" %} {{ document.review_note }}
 {% endif %}
-Upload here: {{ url }}
+{% translate "Upload here:" %} {{ url }}
 
-The Ospace team
+{% translate "The Ospace team" %}
 {{ SITE.phone }}

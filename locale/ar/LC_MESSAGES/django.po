@@ -252,6 +252,19 @@ msgid "Message from Ospace:"
 msgstr "رسالة من Ospace:"
 
 #: templates\portal\dashboard.html
+msgid "Thanks for your interest!"
+msgstr "شكرًا على اهتمامك!"
+
+#: templates\portal\dashboard.html
+msgid ""
+"Our onboarding team is reviewing your application. As soon as it's activated"
+" you'll get an email, and the documents and agreements steps below will open"
+" up."
+msgstr ""
+"يراجع فريق الانضمام طلبك الآن. بمجرد تفعيله ستصلك رسالة بالبريد الإلكتروني، "
+"وستُفتح خطوتا المستندات والاتفاقيات أدناه."
+
+#: templates\portal\dashboard.html
 msgid "We're reviewing your application."
 msgstr "نحن نراجع طلبك."
 
@@ -306,6 +319,10 @@ msgstr "مراجعة"
 #: templates\portal\dashboard.html
 msgid "Upload"
 msgstr "رفع"
+
+#: templates\portal\dashboard.html
+msgid "Locked until activation"
+msgstr "مقفل حتى التفعيل"
 
 #: templates\portal\dashboard.html
 msgid "Sign the driver agreements"
@@ -471,8 +488,12 @@ msgid "New driver?"
 msgstr "سائق جديد؟"
 
 #: templates\portal\login.html
-msgid "Create your account"
-msgstr "أنشئ حسابك"
+msgid "Apply on the website"
+msgstr "قدّم عبر الموقع"
+
+#: templates\portal\login.html
+msgid "— we'll email you a link to set your password once you're activated."
+msgstr "— سنرسل لك بالبريد الإلكتروني رابطًا لتعيين كلمة مرورك بمجرد تفعيلك."
 
 #: templates\portal\password_reset.html
 msgid "Reset password"
@@ -594,26 +615,6 @@ msgstr "حفظ الملف الشخصي"
 #: templates\portal\profile.html
 msgid "Cancel"
 msgstr "إلغاء"
-
-#: templates\portal\register.html
-msgid "Create account"
-msgstr "إنشاء حساب"
-
-#: templates\portal\register.html
-msgid "Create your driver account"
-msgstr "أنشئ حساب السائق الخاص بك"
-
-#: templates\portal\register.html
-msgid ""
-"Your secure space to complete your profile, upload documents and e-sign the "
-"driver agreements."
-msgstr ""
-"مساحتك الآمنة لإكمال ملفك الشخصي ورفع المستندات وتوقيع اتفاقيات السائق "
-"إلكترونيًا."
-
-#: templates\portal\register.html
-msgid "Already have an account?"
-msgstr "لديك حساب بالفعل؟"
 
 #: templates\portal\sign.html
 msgid "Scroll to the end of the document to enable signing."
@@ -2011,16 +2012,21 @@ msgstr "شكرًا على الإرسال!"
 
 #: templates\web\thanks.html
 msgid ""
-"We've received your application. While you wait for our call, create your "
-"driver portal account to upload your documents and sign the driver "
-"agreements. It's the fastest way to get approved."
+"We've received your application and our onboarding team has been notified. "
+"We'll review it and email you a personal link to upload your documents and "
+"sign the driver agreements, usually within one business day."
 msgstr ""
-"استلمنا طلبك. بينما تنتظر اتصالنا، أنشئ حسابك في بوابة السائق لرفع مستنداتك "
-"وتوقيع اتفاقيات السائق. إنها أسرع طريقة للحصول على الموافقة."
+"استلمنا طلبك وتم إشعار فريق الانضمام لدينا. سنراجعه ونرسل لك بالبريد "
+"الإلكتروني رابطًا شخصيًا لرفع مستنداتك وتوقيع اتفاقيات السائق، عادةً خلال "
+"يوم عمل واحد."
 
 #: templates\web\thanks.html
-msgid "Create my portal account"
-msgstr "إنشاء حساب البوابة"
+msgid "Keep an eye on your inbox (and your spam folder)."
+msgstr "راقب بريدك الوارد (ومجلد الرسائل غير المرغوب فيها)."
+
+#: templates\web\thanks.html
+msgid "Meanwhile, see the driver app guide"
+msgstr "في هذه الأثناء، اطّلع على دليل تطبيق السائق"
 
 #: templates\web\thanks.html
 msgid "Or call us:"
@@ -2052,6 +2058,116 @@ msgstr ""
 msgid "optional"
 msgstr "اختياري"
 
+#: templates\emails\activated.txt
+msgid ""
+"Good news: we've reviewed your interest in driving with Ospace and opened "
+"your onboarding. The next step is to upload your documents and sign the "
+"driver agreements in your driver portal."
+msgstr ""
+"خبر سار: راجعنا اهتمامك بالقيادة مع Ospace وفتحنا عملية انضمامك. الخطوة "
+"التالية هي رفع مستنداتك وتوقيع اتفاقيات السائق في بوابة السائق الخاصة بك."
+
+#: templates\emails\activated.txt
+msgid "Set your password and get started here:"
+msgstr "عيّن كلمة مرورك وابدأ من هنا:"
+
+#: templates\emails\activated.txt
+msgid "What you'll need:"
+msgstr "ما ستحتاج إليه:"
+
+#: templates\emails\activated.txt
+msgid "- Driver's license (front and back)"
+msgstr "- رخصة القيادة (الوجه والظهر)"
+
+#: templates\emails\activated.txt
+msgid "- Proof of auto insurance and vehicle registration"
+msgstr "- إثبات تأمين السيارة وتسجيل المركبة"
+
+#: templates\emails\activated.txt
+msgid "- A profile photo and a photo of your vehicle"
+msgstr "- صورة شخصية وصورة لسيارتك"
+
+#: templates\emails\activated.txt
+msgid "- Drug test and TB test results"
+msgstr "- نتائج فحص المخدرات وفحص السل"
+
+#: templates\emails\activated.txt
+msgid "Questions? Call us at"
+msgstr "هل لديك أسئلة؟ اتصل بنا على"
+
+#: templates\emails\activated.txt
+msgid "The Ospace team"
+msgstr "فريق Ospace"
+
+#: templates\emails\activated.txt
+msgid "Hi {{ name }},"
+msgstr "مرحبًا {{ name }}،"
+
+#: templates\emails\activated.txt
+msgid ""
+"This link works for {{ days }} days. If it expires, use \"Forgot your "
+"password?\" on the portal sign-in page with this email address."
+msgstr ""
+"يعمل هذا الرابط لمدة {{ days }} أيام. إذا انتهت صلاحيته، استخدم \"هل نسيت "
+"كلمة المرور؟\" في صفحة تسجيل الدخول إلى البوابة بهذا البريد الإلكتروني."
+
+#: templates\emails\document_rejected.txt
+msgid "Reason:"
+msgstr "السبب:"
+
+#: templates\emails\document_rejected.txt
+msgid "Upload here:"
+msgstr "ارفعه هنا:"
+
+#: templates\emails\document_rejected.txt
+msgid "We looked at your {{ doc }} and need you to upload it again."
+msgstr "راجعنا {{ doc }} الخاص بك ونحتاج إلى أن ترفعه مرة أخرى."
+
+#: templates\emails\status.txt
+msgid "Your Ospace driver application status is now:"
+msgstr "حالة طلبك كسائق في Ospace الآن هي:"
+
+#: templates\emails\status.txt
+msgid "Message from our team:"
+msgstr "رسالة من فريقنا:"
+
+#: templates\emails\status.txt
+msgid "Open your portal:"
+msgstr "افتح بوابتك:"
+
+#: templates\emails\submitted.txt
+msgid ""
+"Thanks - we have received your driver application and everything you "
+"uploaded. Our team will review it and get back to you within a few business "
+"days."
+msgstr ""
+"شكرًا، استلمنا طلبك كسائق وكل ما رفعته. سيراجعه فريقنا ويرد عليك خلال بضعة "
+"أيام عمل."
+
+#: templates\emails\submitted.txt
+msgid ""
+"You will get an email as soon as there is news. You can check your status "
+"any time in your driver portal:"
+msgstr ""
+"ستصلك رسالة بالبريد الإلكتروني فور وجود أي جديد. يمكنك التحقق من حالتك في أي"
+" وقت من بوابة السائق:"
+
+#: apps\portal\emails.py
+msgid "Your Ospace onboarding is open — upload your documents"
+msgstr "انضمامك إلى Ospace مفتوح — ارفع مستنداتك"
+
+#: apps\portal\emails.py
+msgid "We received your application"
+msgstr "استلمنا طلبك"
+
+#: apps\portal\emails.py
+msgid "Your Ospace application: %(status)s"
+msgstr "طلبك في Ospace: %(status)s"
+
+#: apps\portal\emails.py
+msgid "Please re-upload your %(name)s"
+msgstr "يرجى إعادة رفع %(name)s"
+
 #: apps\portal\forms.py
 msgid "First name"
 msgstr "الاسم الأول"
@@ -2059,19 +2175,6 @@ msgstr "الاسم الأول"
 #: apps\portal\forms.py
 msgid "Last name"
 msgstr "اسم العائلة"
-
-#: apps\portal\forms.py
-msgid "Phone"
-msgstr "الهاتف"
-
-#: apps\portal\forms.py
-msgid ""
-"I agree to the privacy policy and to be contacted about my application."
-msgstr "أوافق على سياسة الخصوصية وعلى التواصل معي بخصوص طلبي."
-
-#: apps\portal\forms.py
-msgid "An account with this email already exists. Try signing in instead."
-msgstr "يوجد حساب بهذا البريد الإلكتروني بالفعل. جرّب تسجيل الدخول."
 
 #: apps\portal\forms.py
 msgid "Vehicles must be from the last 15 years."
@@ -2104,8 +2207,12 @@ msgid "Signature is too large. Please try again."
 msgstr "التوقيع كبير جدًا. يرجى المحاولة مرة أخرى."
 
 #: apps\portal\models.py
-msgid "Getting started"
-msgstr "البداية"
+msgid "Interested"
+msgstr "مهتم"
+
+#: apps\portal\models.py
+msgid "In progress"
+msgstr "قيد التنفيذ"
 
 #: apps\portal\models.py
 msgid "Under review"
@@ -2126,6 +2233,22 @@ msgstr "لم تتم الموافقة"
 #: apps\portal\models.py
 msgid "Inactive"
 msgstr "غير نشط"
+
+#: apps\portal\models.py
+msgid "Vehicle type"
+msgstr "نوع السيارة"
+
+#: apps\portal\models.py
+msgid "Message from applicant"
+msgstr "رسالة من مقدم الطلب"
+
+#: apps\portal\models.py
+msgid "Preferred language"
+msgstr "اللغة المفضلة"
+
+#: apps\portal\models.py
+msgid "Phone"
+msgstr "الهاتف"
 
 #: apps\portal\models.py
 msgid "Date of birth"
@@ -2224,8 +2347,12 @@ msgid "Needs re-upload"
 msgstr "يتطلب إعادة الرفع"
 
 #: apps\portal\views.py
-msgid "Welcome! Let's get your profile set up."
-msgstr "مرحبًا! لنبدأ بإعداد ملفك الشخصي."
+msgid ""
+"Your application is waiting for activation by our team. We'll email you as "
+"soon as you can upload your documents."
+msgstr ""
+"طلبك بانتظار التفعيل من فريقنا. سنرسل لك بريدًا إلكترونيًا بمجرد أن يصبح "
+"بإمكانك رفع مستنداتك."
 
 #: apps\portal\views.py
 msgid "Profile saved."
@@ -2254,10 +2381,6 @@ msgstr "يرجى إكمال كل عناصر القائمة قبل الإرسال
 #: apps\portal\views.py
 msgid "Application submitted! We'll be in touch within a few business days."
 msgstr "تم إرسال الطلب! سنتواصل معك خلال بضعة أيام عمل."
-
-#: apps\web\forms.py
-msgid "Vehicle type"
-msgstr "نوع السيارة"
 
 #: apps\web\forms.py
 msgid "Sedan (4-door)"
@@ -2547,3 +2670,11 @@ msgid ""
 msgstr ""
 "تقود ماريانا مع Ospace منذ سنة ونصف. وبصفتها أمًّا متفرغة في المنزل، وجدت "
 "طريقة سهلة لكسب دخل إضافي في وقت فراغها."
+
+#: apps\web\views.py
+msgid ""
+"We already have an application with this email. Sign in to the driver "
+"portal, or call us if you need help."
+msgstr ""
+"لدينا بالفعل طلب بهذا البريد الإلكتروني. سجّل الدخول إلى بوابة السائق، أو "
+"اتصل بنا إذا احتجت إلى مساعدة."

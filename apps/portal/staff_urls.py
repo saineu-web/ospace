@@ -8,5 +8,7 @@ urlpatterns = [
     path("", staff_views.index, name="index"),
     path("drivers/<int:pk>/", staff_views.driver, name="driver"),
     path("drivers/<int:pk>/review/", staff_views.review_driver, name="review_driver"),
+    path("drivers/<int:pk>/activate/", staff_views.activate_driver, name="activate_driver"),
+    path("drivers/<int:pk>/delete/", staff_views.delete_driver, name="delete_driver"),
     path("documents/<int:pk>/review/", staff_views.review_document, name="review_document"),
 ]

@@ -13,7 +13,9 @@
 <div class="banner {% if driver.status == 'approved' %}ok{% elif driver.status == 'rejected' %}bad{% else %}warn{% endif %}"><div><strong>{% translate "Message from Ospace:" %}</strong> {{ driver.review_message|linebreaksbr }}</div></div>
 {% endif %}
 
-{% if driver.status == 'submitted' %}
+{% if driver.status == 'interested' %}
+<div class="banner warn"><div><strong>{% translate "Thanks for your interest!" %}</strong> {% translate "Our onboarding team is reviewing your application. As soon as it's activated you'll get an email, and the documents and agreements steps below will open up." %}</div></div>
+{% elif driver.status == 'submitted' %}
 <div class="banner info"><div><strong>{% translate "We're reviewing your application." %}</strong> {% translate "You'll get an email as soon as there's news, usually within a few business days. You can still update your documents if something changes." %}</div></div>
 {% elif driver.status == 'approved' %}
 <div class="banner ok"><div><strong>{% translate "You're approved!" %}</strong> {% blocktranslate with n=SITE.service_number %}Install the ADROIT Driver app, enter service number {{ n }}, and start accepting rides near you. Welcome to the team.{% endblocktranslate %}</div></div>
@@ -33,17 +35,17 @@
   <div class="check-row">
     <div class="ico {% if docs.required and docs.uploaded == docs.required and docs.rejected == 0 %}done{% elif docs.uploaded %}partial{% endif %}"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6M7 3h7l5 5v13H7V3zm7 0v5h5"/></svg></div>
     <div><h3>{% translate "Upload your documents" %}</h3><p>{% blocktranslate with u=docs.uploaded r=docs.required %}{{ u }} of {{ r }} required documents uploaded{% endblocktranslate %}{% if docs.approved %} · {{ docs.approved }} {% translate "approved" %}{% endif %}{% if docs.rejected %} · <strong style="color:var(--bad)">{{ docs.rejected }} {% translate "need re-upload" %}</strong>{% endif %}.</p></div>
-    <a class="btn btn-secondary btn-sm" href="{% url 'portal:documents' %}">{% if docs.uploaded == docs.required %}{% translate "Review" %}{% else %}{% translate "Upload" %}{% endif %}</a>
+    {% if driver.can_work %}<a class="btn btn-secondary btn-sm" href="{% url 'portal:documents' %}">{% if docs.uploaded == docs.required %}{% translate "Review" %}{% else %}{% translate "Upload" %}{% endif %}</a>{% else %}<span class="pill pill-grey">{% translate "Locked until activation" %}</span>{% endif %}
   </div>
   <div class="check-row">
     <div class="ico {% if agreements.required and agreements.signed == agreements.required %}done{% elif agreements.signed %}partial{% endif %}"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.2 4.8l4 4L8 20H4v-4L15.2 4.8zM3 21h18"/></svg></div>
     <div><h3>{% translate "Sign the driver agreements" %}</h3><p>{% blocktranslate with s=agreements.signed r=agreements.required %}{{ s }} of {{ r }} required agreements signed.{% endblocktranslate %}</p></div>
-    <a class="btn btn-secondary btn-sm" href="{% url 'portal:agreements' %}">{% if agreements.signed == agreements.required %}{% translate "View" %}{% else %}{% translate "Sign" %}{% endif %}</a>
+    {% if driver.can_work %}<a class="btn btn-secondary btn-sm" href="{% url 'portal:agreements' %}">{% if agreements.signed == agreements.required %}{% translate "View" %}{% else %}{% translate "Sign" %}{% endif %}</a>{% else %}<span class="pill pill-grey">{% translate "Locked until activation" %}</span>{% endif %}
   </div>
   <div class="check-row">
     <div class="ico {% if driver.status == 'approved' %}done{% elif driver.status == 'submitted' %}partial{% endif %}"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
-    <div><h3>{% translate "Submit for review" %}</h3><p>{% if driver.status == 'draft' or driver.status == 'changes_requested' %}{% if driver.can_submit %}{% translate "Everything's in. Send your application to our team." %}{% else %}{% translate "Unlocks once the three steps above are complete." %}{% endif %}{% elif driver.status == 'submitted' %}{% blocktranslate with d=driver.submitted_at|date:"M j, Y" %}Submitted {{ d }}. We're on it.{% endblocktranslate %}{% else %}{{ driver.get_status_display }}{% if driver.reviewed_at %} · {{ driver.reviewed_at|date:"M j, Y" }}{% endif %}{% endif %}</p></div>
-    {% if driver.status == 'draft' or driver.status == 'changes_requested' %}
+    <div><h3>{% translate "Submit for review" %}</h3><p>{% if driver.status == 'in_progress' or driver.status == 'changes_requested' %}{% if driver.can_submit %}{% translate "Everything's in. Send your application to our team." %}{% else %}{% translate "Unlocks once the three steps above are complete." %}{% endif %}{% elif driver.status == 'submitted' %}{% blocktranslate with d=driver.submitted_at|date:"M j, Y" %}Submitted {{ d }}. We're on it.{% endblocktranslate %}{% else %}{{ driver.get_status_display }}{% if driver.reviewed_at %} · {{ driver.reviewed_at|date:"M j, Y" }}{% endif %}{% endif %}</p></div>
+    {% if driver.status == 'in_progress' or driver.status == 'changes_requested' %}
     <form method="post" action="{% url 'portal:submit' %}" style="margin:0">{% csrf_token %}<button class="btn btn-primary btn-sm" type="submit" {% if not driver.can_submit %}disabled{% endif %}>{% translate "Submit application" %}</button></form>
     {% endif %}
   </div>

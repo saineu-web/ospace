@@ -14,5 +14,5 @@
   <p class="form-note center"><a href="{% url 'portal:password_reset' %}">{% translate "Forgot your password?" %}</a></p>
 </form>
 <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
-<p class="center small">{% translate "New driver?" %} <a href="{% url 'portal:register' %}"><strong>{% translate "Create your account" %}</strong></a></p>
+<p class="center small">{% translate "New driver?" %} <a href="{% url 'web:drivers' %}#apply"><strong>{% translate "Apply on the website" %}</strong></a> {% translate "— we'll email you a link to set your password once you're activated." %}</p>
 {% endblock %}

@@ -2,18 +2,18 @@ import base64
 import mimetypes
 
 from django.contrib import messages
-from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView
 from django.core.files.base import ContentFile
 from django.http import FileResponse, Http404
 from django.shortcuts import get_object_or_404, redirect, render
+from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import gettext as _
 from django.views.decorators.http import require_POST
 
 from . import emails
-from .forms import DocumentUploadForm, ProfileForm, RegisterForm, SignForm
+from .forms import DocumentUploadForm, ProfileForm, SignForm
 from .models import WEEKDAY_LABELS, WEEKDAYS, AgreementTemplate, DriverDocument, DriverProfile, SignedAgreement
 from .pdf import build_agreement_pdf
 
@@ -34,18 +34,19 @@ def _client_ip(request):
 # ---------------------------------------------------------------- auth
 
 def register(request):
+    """Self-registration is closed: every driver starts from the website apply form as 'Interested'
+    and receives their portal access once staff activates them."""
     if request.user.is_authenticated:
         return redirect("portal:dashboard")
-    initial = request.session.pop("applicant", None) or {}
-    form = RegisterForm(request.POST or None, initial=initial)
-    if request.method == "POST" and form.is_valid():
-        user = form.save()
-        user.driver.log("Account created")
-        emails.welcome(user.driver)
-        login(request, user)
-        messages.success(request, _("Welcome! Let's get your profile set up."))
+    return redirect(reverse("web:drivers") + "#apply")
+
+
+def _working_or_redirect(request, d: DriverProfile):
+    """Documents, agreements and submission are locked until staff activates the profile."""
+    if not d.can_work:
+        messages.info(request, _("Your application is waiting for activation by our team. We'll email you as soon as you can upload your documents."))
         return redirect("portal:dashboard")
-    return render(request, "portal/register.html", {"form": form})
+    return None
 
 
 class PortalLoginView(LoginView):
@@ -97,6 +98,8 @@ def profile(request):
 @login_required
 def documents(request):
     d = _driver(request)
+    if (r := _working_or_redirect(request, d)):
+        return r
     rows = d.document_rows()
     return render(request, "portal/documents.html", {"driver": d, "rows": rows, "form": DocumentUploadForm()})
 
@@ -105,6 +108,8 @@ def documents(request):
 @require_POST
 def upload_document(request, type_id):
     d = _driver(request)
+    if (r := _working_or_redirect(request, d)):
+        return r
     from .models import DocumentType
 
     dt = get_object_or_404(DocumentType, pk=type_id, active=True)
@@ -163,12 +168,16 @@ def document_file(request, pk):
 @login_required
 def agreements(request):
     d = _driver(request)
+    if (r := _working_or_redirect(request, d)):
+        return r
     return render(request, "portal/agreements.html", {"driver": d, "rows": d.agreement_rows()})
 
 
 @login_required
 def sign(request, slug):
     d = _driver(request)
+    if (r := _working_or_redirect(request, d)):
+        return r
     t = get_object_or_404(AgreementTemplate, slug=slug, active=True)
     existing = d.agreements.filter(template=t, template_version=t.version).first()
     if existing:

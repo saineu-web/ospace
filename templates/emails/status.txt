@@ -1,11 +1,11 @@
-Hi {{ driver.user.first_name }},
+{% load i18n %}{% blocktranslate with name=driver.user.first_name %}Hi {{ name }},{% endblocktranslate %}
 
-Your Ospace driver application status is now: {{ driver.get_status_display }}
+{% translate "Your Ospace driver application status is now:" %} {{ driver.get_status_display }}
 {% if driver.review_message %}
-Message from our team:
+{% translate "Message from our team:" %}
 {{ driver.review_message }}
 {% endif %}
-Open your portal: {{ url }}
+{% translate "Open your portal:" %} {{ url }}
 
-The Ospace team
+{% translate "The Ospace team" %}
 {{ SITE.phone }}

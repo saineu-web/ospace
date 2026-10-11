@@ -1,8 +1,8 @@
-Hi {{ driver.user.first_name }},
+{% load i18n %}{% blocktranslate with name=driver.user.first_name %}Hi {{ name }},{% endblocktranslate %}
 
-Thanks - we have received your driver application and everything you uploaded. Our team will review it and get back to you within a few business days.
+{% translate "Thanks - we have received your driver application and everything you uploaded. Our team will review it and get back to you within a few business days." %}
 
-You will get an email as soon as there is news. You can check your status any time at {{ SITE_URL }}/portal/
+{% translate "You will get an email as soon as there is news. You can check your status any time in your driver portal:" %} {{ SITE_URL }}/portal/
 
-The Ospace team
+{% translate "The Ospace team" %}
 {{ SITE.phone }}

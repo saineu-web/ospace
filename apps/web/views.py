@@ -9,6 +9,11 @@ from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from django.views.decorators.http import require_GET
 
+from django.contrib.auth.models import User
+
+from apps.portal import emails as portal_emails
+from apps.portal.models import DriverProfile
+
 from .forms import ContactForm, DriverApplyForm, RideRequestForm
 from .models import Inquiry
 
@@ -86,25 +91,28 @@ def drivers(request):
     form = DriverApplyForm(request.POST or None)
     if request.method == "POST" and form.is_valid():
         d = form.cleaned_data
-        inq = Inquiry.objects.create(
-            kind="driver",
-            name=form.full_name,
-            email=d["email"],
-            phone=d["phone"],
-            city=d["city"],
-            message=d["message"],
-            extra={
-                "first_name": d["first_name"],
-                "last_name": d["last_name"],
-                "vehicle_type": str(dict(form.fields["vehicle_type"].choices).get(d["vehicle_type"], d["vehicle_type"])),
-                "vehicle_year": d["vehicle_year"],
-                "over_21": d["over_21"],
-                "language": request.LANGUAGE_CODE,
-            },
-        )
-        _deliver(inq)
-        request.session["applicant"] = {"first_name": d["first_name"], "last_name": d["last_name"], "email": d["email"], "phone": d["phone"]}
-        return redirect(reverse("web:thanks") + "?next=portal")
+        email = d["email"].strip().lower()
+        if User.objects.filter(username=email).exists() or User.objects.filter(email__iexact=email).exists():
+            form.add_error("email", _("We already have an application with this email. Sign in to the driver portal, or call us if you need help."))
+        else:
+            # An "interested" driver: a login without a password until staff activates them.
+            user = User.objects.create_user(username=email, email=email, first_name=d["first_name"].strip(), last_name=d["last_name"].strip())
+            user.set_unusable_password()
+            user.save()
+            vehicle_label = str(dict(form.fields["vehicle_type"].choices).get(d["vehicle_type"], d["vehicle_type"]))
+            driver = DriverProfile.objects.create(
+                user=user,
+                status=DriverProfile.STATUS_INTERESTED,
+                phone=d["phone"],
+                city=d["city"],
+                vehicle_type=vehicle_label if d["vehicle_type"] else "",
+                vehicle_year=int(d["vehicle_year"]) if d["vehicle_year"] else None,
+                applicant_message=d["message"],
+                language=request.LANGUAGE_CODE[:2],
+            )
+            driver.log("Applied on the website", detail=f"{request.LANGUAGE_CODE} · {vehicle_label} {d['vehicle_year']}".strip())
+            portal_emails.interested(driver)
+            return redirect(reverse("web:thanks") + "?next=portal")
     return render(
         request,
         "web/drivers.html",

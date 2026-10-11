@@ -10,6 +10,14 @@ from . import emails
 from .forms import ReviewDocumentForm, ReviewDriverForm
 from .models import DriverDocument, DriverProfile
 
+# What needs a human first: fresh applications, then submissions waiting for a decision.
+ORDER = {
+    DriverProfile.STATUS_INTERESTED: 0,
+    DriverProfile.STATUS_SUBMITTED: 1,
+    DriverProfile.STATUS_CHANGES: 2,
+    DriverProfile.STATUS_IN_PROGRESS: 3,
+}
+
 
 @staff_member_required
 def index(request):
@@ -24,9 +32,7 @@ def index(request):
         qs = qs.filter(status=status)
     if q:
         qs = qs.filter(Q(user__first_name__icontains=q) | Q(user__last_name__icontains=q) | Q(user__email__icontains=q) | Q(phone__icontains=q))
-    # Under review first, then newest
-    order = {DriverProfile.STATUS_SUBMITTED: 0, DriverProfile.STATUS_CHANGES: 1, DriverProfile.STATUS_DRAFT: 2}
-    drivers = sorted(qs, key=lambda d: (order.get(d.status, 3), -d.created_at.timestamp()))
+    drivers = sorted(qs, key=lambda d: (ORDER.get(d.status, 9), -d.created_at.timestamp()))
     counts = dict(DriverProfile.objects.values_list("status").annotate(c=Count("id")))
     tiles = [(code, label, counts.get(code, 0)) for code, label in DriverProfile.STATUS_CHOICES]
     return render(request, "staff/index.html", {"drivers": drivers, "tiles": tiles, "status": status, "q": q, "total": sum(counts.values())})
@@ -48,6 +54,35 @@ def driver(request, pk):
             "doc_statuses": DriverDocument.STATUS_CHOICES,
         },
     )
+
+
+@staff_member_required
+@require_POST
+def activate_driver(request, pk):
+    """Interested -> In progress. Emails the driver a set-password link that lands on their documents."""
+    d = get_object_or_404(DriverProfile, pk=pk)
+    if d.status != DriverProfile.STATUS_INTERESTED:
+        messages.error(request, "Only an Interested profile can be activated.")
+        return redirect("staff:driver", pk=pk)
+    d.status = DriverProfile.STATUS_IN_PROGRESS
+    d.activated_at = timezone.now()
+    d.activated_by = request.user
+    d.save(update_fields=["status", "activated_at", "activated_by", "updated_at"])
+    d.log("Activated — documents requested", actor=request.user)
+    emails.activated(d)
+    messages.success(request, f"{d} activated. They've been emailed a link to set a password and upload documents.")
+    return redirect("staff:driver", pk=pk)
+
+
+@staff_member_required
+@require_POST
+def delete_driver(request, pk):
+    """Permanent delete: profile, login, uploads, signatures and PDFs. No undo."""
+    d = get_object_or_404(DriverProfile, pk=pk)
+    name = str(d)
+    d.delete_with_files()
+    messages.success(request, f"{name} deleted permanently.")
+    return redirect("staff:index")
 
 
 @staff_member_required
@@ -75,7 +110,11 @@ def review_driver(request, pk):
     form = ReviewDriverForm(request.POST)
     if form.is_valid():
         old = d.status
-        d.status = form.cleaned_data["status"]
+        new = form.cleaned_data["status"]
+        if old == DriverProfile.STATUS_INTERESTED and new != old:
+            messages.error(request, "Use the Activate button for an Interested profile, so the driver gets their access link.")
+            return redirect("staff:driver", pk=pk)
+        d.status = new
         d.review_message = form.cleaned_data["review_message"]
         d.internal_notes = form.cleaned_data["internal_notes"]
         if d.status != old:
