@@ -31,11 +31,11 @@ class DriverApplyForm(HoneypotMixin):
     last_name = forms.CharField(max_length=60, label=_("Last name"))
     email = forms.EmailField(label=_("Email"))
     phone = forms.CharField(max_length=40, label=_("Phone"))
-    city = forms.CharField(max_length=80, label=_("City / area"), required=False)
-    vehicle_type = forms.ChoiceField(choices=VEHICLE_TYPES, label=_("Vehicle type"), required=False)
-    vehicle_year = forms.ChoiceField(choices=VEHICLE_YEARS, label=_("Vehicle year"), required=False)
+    city = forms.CharField(max_length=80, label=_("City / area"))
+    vehicle_type = forms.ChoiceField(choices=VEHICLE_TYPES, label=_("Vehicle type"))
+    vehicle_year = forms.ChoiceField(choices=VEHICLE_YEARS, label=_("Vehicle year"))
     over_21 = forms.BooleanField(label=_("I am 21 or older with a valid U.S. driver's license"), required=True)
-    message = forms.CharField(widget=forms.Textarea(attrs={"rows": 3}), required=False, label=_("Anything you want us to know"))
+    message = forms.CharField(widget=forms.Textarea(attrs={"rows": 3}), label=_("Anything you want us to know"))
 
     @property
     def full_name(self):

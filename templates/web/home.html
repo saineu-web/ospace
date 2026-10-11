@@ -31,16 +31,23 @@
     <div class="hero-card">
       <h3>{% translate "Quick apply" %}</h3>
       <p class="small muted">{% translate "Two minutes. We'll take it from there." %}</p>
-      <form class="form" method="post" action="{% url 'web:drivers' %}#apply" novalidate>
+      <form class="form" method="post" action="{% url 'web:drivers' %}#apply">
         {% csrf_token %}
         {{ apply_form.website }}
         <div class="form-row">
           {% include "web/_form_field.html" with f=apply_form.first_name hide_optional=True %}
           {% include "web/_form_field.html" with f=apply_form.last_name hide_optional=True %}
         </div>
-        {% include "web/_form_field.html" with f=apply_form.phone hide_optional=True %}
-        {% include "web/_form_field.html" with f=apply_form.email hide_optional=True %}
-        {% include "web/_form_field.html" with f=apply_form.vehicle_type hide_optional=True %}
+        <div class="form-row">
+          {% include "web/_form_field.html" with f=apply_form.phone hide_optional=True %}
+          {% include "web/_form_field.html" with f=apply_form.email hide_optional=True %}
+        </div>
+        {% include "web/_form_field.html" with f=apply_form.city hide_optional=True %}
+        <div class="form-row">
+          {% include "web/_form_field.html" with f=apply_form.vehicle_type hide_optional=True %}
+          {% include "web/_form_field.html" with f=apply_form.vehicle_year hide_optional=True %}
+        </div>
+        {% include "web/_form_field.html" with f=apply_form.message hide_optional=True %}
         {% include "web/_form_field.html" with f=apply_form.over_21 %}
         <button class="btn btn-primary btn-block" type="submit">{% translate "Get started" %}</button>
       </form>
