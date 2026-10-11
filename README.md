@@ -84,6 +84,6 @@ persistent disk.
 
 - Real document list + real agreement wording (replace the generic seed in `/admin/`).
 - LinkedIn URL (`SITE["linkedin"]`) — the old site linked to Wix's own LinkedIn page.
-- Confirm pricing copy ("$25 drop-off", "$50 per 2 rides", "$150+/day") — all taken from the old site.
+- Confirm pricing copy ("$25 drop-off", "$50 per 2 rides", "$200+/day") — all taken from the old site.
 - Privacy policy names "Ospace Advanced Technologies, Inc." and "www.ospace.com" — copied as-is from the old site; legal should review.
 - SMTP credentials so form submissions and portal emails actually send.

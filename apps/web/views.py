@@ -20,7 +20,7 @@ from .models import Inquiry
 log = logging.getLogger(__name__)
 
 FAQ = [
-    (_("How much can I earn?"), _("Drivers earn a minimum of $50 for every two rides, and many earn $150 or more per day by combining morning and afternoon school runs. You are paid per completed ride.")),
+    (_("How much can I earn?"), _("Drivers earn a minimum of $50 for every two rides, and many earn $200 or more per day by combining morning and afternoon school runs. You are paid per completed ride.")),
     (_("Do I need a special vehicle?"), _("No. Any four-door vehicle manufactured within the last 15 years, clean and in good working order, qualifies. You drive your own car.")),
     (_("What are the hours?"), _("School runs happen on weekday mornings (roughly 6–9 AM) and afternoons (roughly 2–5 PM). You choose which days and windows you are available inside the driver app.")),
     (_("Who hands the student over?"), _("A parent, guardian or teacher brings the student to and from the vehicle at each end of the ride. Drivers never enter homes or school buildings.")),

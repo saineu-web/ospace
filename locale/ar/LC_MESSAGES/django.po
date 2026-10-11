@@ -15,10 +15,10 @@ msgstr "Ospace | نقل الطلاب ووظائف السائقين في هيوس
 #: templates\base.html
 msgid ""
 "Ospace connects Houston families and schools with vetted drivers for safe "
-"student rides. Drive your own car, set your hours and earn $150+ a day."
+"student rides. Drive your own car, set your hours and earn $200+ a day."
 msgstr ""
 "تربط Ospace العائلات والمدارس في هيوستن بسائقين موثوقين لتوصيل الطلاب بأمان."
-" قُد سيارتك، حدّد ساعات عملك، واكسب أكثر من 150 دولارًا يوميًا."
+" قُد سيارتك، حدّد ساعات عملك، واكسب أكثر من 200 دولارًا يوميًا."
 
 #: templates\base.html
 msgid "Ospace — Safe student rides, flexible driver income"
@@ -1051,9 +1051,9 @@ msgid "Send message"
 msgstr "إرسال الرسالة"
 
 #: templates\web\drivers.html
-msgid "Become a Driver | Ospace Houston — Earn $150+/day on school runs"
+msgid "Become a Driver | Ospace Houston — Earn $200+/day on school runs"
 msgstr ""
-"كن سائقًا | Ospace هيوستن — اكسب أكثر من 150 دولارًا يوميًا في رحلات المدارس"
+"كن سائقًا | Ospace هيوستن — اكسب أكثر من 200 دولارًا يوميًا في رحلات المدارس"
 
 #: templates\web\drivers.html
 msgid ""
@@ -1071,10 +1071,10 @@ msgstr "كن سائقًا معنا الآن"
 #: templates\web\drivers.html
 msgid ""
 "Supplemental income on your terms. Transport students to and from school in "
-"your own vehicle and earn a minimum of $50 per two rides, up to $150+ a day."
+"your own vehicle and earn a minimum of $50 per two rides, up to $200+ a day."
 msgstr ""
 "دخل إضافي بشروطك. انقل الطلاب من المدرسة وإليها بسيارتك الخاصة واكسب 50 "
-"دولارًا على الأقل عن كل رحلتين، وحتى أكثر من 150 دولارًا يوميًا."
+"دولارًا على الأقل عن كل رحلتين، وحتى أكثر من 200 دولارًا يوميًا."
 
 #: templates\web\drivers.html
 msgid "Please review all requirements before applying"
@@ -1431,11 +1431,11 @@ msgstr "قُد براحة سيارتك الخاصة مع Ospace"
 
 #: templates\web\home.html
 msgid ""
-"Earn up to $150+ a day giving safe rides to students, on a schedule you "
+"Earn up to $200+ a day giving safe rides to students, on a schedule you "
 "choose. Join a growing community of local drivers making a flexible "
 "supplemental income."
 msgstr ""
-"اكسب حتى أكثر من 150 دولارًا يوميًا بتوصيل الطلاب بأمان، وفق جدول تختاره "
+"اكسب حتى أكثر من 200 دولارًا يوميًا بتوصيل الطلاب بأمان، وفق جدول تختاره "
 "بنفسك. انضم إلى مجتمع متنامٍ من السائقين المحليين الذين يحققون دخلًا إضافيًا"
 " مرنًا."
 
@@ -2484,11 +2484,11 @@ msgstr "كم يمكنني أن أكسب؟"
 
 #: apps\web\views.py
 msgid ""
-"Drivers earn a minimum of $50 for every two rides, and many earn $150 or "
+"Drivers earn a minimum of $50 for every two rides, and many earn $200 or "
 "more per day by combining morning and afternoon school runs. You are paid "
 "per completed ride."
 msgstr ""
-"يكسب السائقون 50 دولارًا على الأقل عن كل رحلتين، ويكسب كثيرون 150 دولارًا أو"
+"يكسب السائقون 50 دولارًا على الأقل عن كل رحلتين، ويكسب كثيرون 200 دولارًا أو"
 " أكثر يوميًا بالجمع بين الرحلات الصباحية وبعد الظهر. يُدفع الأجر عن كل رحلة "
 "مكتملة."
 
