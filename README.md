@@ -59,7 +59,7 @@ lacks a translation. The privacy policy and the signed agreements stay in Englis
 | Path | What |
 |---|---|
 | `config/settings.py` | `SITE` dict = phone, email, socials, app-store links, service number |
-| `apps/web/` | marketing pages, forms → `Inquiry` model + email to `CONTACT_INBOX` |
+| `apps/web/` | marketing pages, forms → `Inquiry` model + email to `ONBOARDING_INBOX` |
 | `apps/web/privacy_policy.txt` | the original privacy policy text, verbatim |
 | `apps/portal/` | driver models, portal views, staff views, PDF builder, mail |
 | `private/` | driver uploads + signatures + signed PDFs — **never served statically**, only via permission-checked views |
@@ -77,7 +77,7 @@ One-time server setup is documented inside the script. Alternatively the `Procfi
 Railway/Render with `DATABASE_URL` + a persistent volume mounted at `PRIVATE_ROOT`.
 
 Required env in production: `SECRET_KEY`, `DEBUG=0`, `ALLOWED_HOSTS`, `SITE_URL`, `EMAIL_*`,
-`CONTACT_INBOX`, `ONBOARDING_INBOX` (default onboarding@ospacegroup.com), `SQLITE_PATH` (outside the app dir), and `PRIVATE_ROOT`/`MEDIA_ROOT` on
+`ONBOARDING_INBOX` (default onboarding@ospacegroup.com; every form goes there), `SQLITE_PATH` (outside the app dir), and `PRIVATE_ROOT`/`MEDIA_ROOT` on
 persistent disk.
 
 ## Still outstanding (needs Ospace's input)
